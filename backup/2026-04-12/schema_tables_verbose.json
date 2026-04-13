@@ -1,0 +1,4337 @@
+{
+  "images": [],
+  "is_error": false,
+  "tool": "list_tables",
+  "result": {
+    "tables": [
+      {
+        "name": "public.calling_assignments",
+        "rls_enabled": true,
+        "rows": 150,
+        "columns": [
+          {
+            "name": "id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "extensions.uuid_generate_v4()"
+          },
+          {
+            "name": "calling_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "member_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "household_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "status",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "'Proposed'::text"
+          },
+          {
+            "name": "proposed_by",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "proposed_date",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "proposed_notes",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "approved_by",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "approved_date",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "interview_assigned_to",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "interview_date",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "interview_notes",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "extended_date",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "accepted_date",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "declined_date",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "declined_reason",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "sustained_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "set_apart_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "set_apart_by",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "released_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "release_reason",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "notes",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "created_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "updated_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "calling_due_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "interview_due_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "releasing_member_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "releasing_member_name",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          }
+        ],
+        "primary_keys": [
+          "id"
+        ],
+        "foreign_key_constraints": [
+          {
+            "name": "calling_assignments_calling_id_fkey",
+            "source": "public.calling_assignments.calling_id",
+            "target": "public.callings.id"
+          },
+          {
+            "name": "calling_assignments_member_id_fkey",
+            "source": "public.calling_assignments.member_id",
+            "target": "public.members.id"
+          },
+          {
+            "name": "calling_assignments_household_id_fkey",
+            "source": "public.calling_assignments.household_id",
+            "target": "public.households.id"
+          },
+          {
+            "name": "calling_assignments_releasing_member_id_fkey",
+            "source": "public.calling_assignments.releasing_member_id",
+            "target": "public.members.id"
+          }
+        ]
+      },
+      {
+        "name": "public.profiles",
+        "rls_enabled": true,
+        "rows": 12,
+        "columns": [
+          {
+            "name": "id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "updatable"
+            ]
+          },
+          {
+            "name": "full_name",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "email",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "role",
+            "data_type": "USER-DEFINED",
+            "format": "user_role",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "'ward_council'::user_role",
+            "enums": [
+              "bishop",
+              "bishopric",
+              "exec_sec",
+              "ward_clerk",
+              "rs_president",
+              "eq_president",
+              "org_president",
+              "ward_council"
+            ]
+          },
+          {
+            "name": "created_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "org",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "can_interview",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "false"
+          }
+        ],
+        "primary_keys": [
+          "id"
+        ],
+        "foreign_key_constraints": [
+          {
+            "name": "profiles_id_fkey",
+            "source": "public.profiles.id",
+            "target": "auth.users.id"
+          },
+          {
+            "name": "visits_recorded_by_fkey",
+            "source": "public.visits.recorded_by",
+            "target": "public.profiles.id"
+          },
+          {
+            "name": "visits_assigned_to_fkey",
+            "source": "public.visits.assigned_to",
+            "target": "public.profiles.id"
+          },
+          {
+            "name": "visits_private_owner_fkey",
+            "source": "public.visits.private_owner",
+            "target": "public.profiles.id"
+          },
+          {
+            "name": "leadership_notes_entered_by_fkey",
+            "source": "public.leadership_notes.entered_by",
+            "target": "public.profiles.id"
+          },
+          {
+            "name": "tasks_assigned_to_fkey",
+            "source": "public.tasks.assigned_to",
+            "target": "public.profiles.id"
+          }
+        ]
+      },
+      {
+        "name": "public.members",
+        "rls_enabled": true,
+        "rows": 567,
+        "columns": [
+          {
+            "name": "id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "extensions.uuid_generate_v4()"
+          },
+          {
+            "name": "household_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "full_name",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "updatable"
+            ]
+          },
+          {
+            "name": "preferred_name",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "individual_email",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "individual_phone",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "gender",
+            "data_type": "USER-DEFINED",
+            "format": "gender_type",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "enums": [
+              "M",
+              "F"
+            ]
+          },
+          {
+            "name": "birth_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "birthplace",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "address",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "city",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "state",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "zip",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "spouse_name",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "marriage_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "marital_status",
+            "data_type": "USER-DEFINED",
+            "format": "marital_status_type",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "enums": [
+              "Married",
+              "Single",
+              "Divorced",
+              "Widowed"
+            ]
+          },
+          {
+            "name": "callings",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "callings_with_dates",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "class_assignment",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "temple_recommend_type",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "temple_recommend_status",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "temple_recommend_expiration",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "baptism_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "confirmation_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "endowment_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "endowment_status",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "ordination_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "sealing_to_spouse",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "has_children",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "is_born_in_covenant",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "is_convert",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "is_sealed_to_current_spouse",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "is_sealed_to_parents",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "is_single",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "is_returned_missionary",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "is_attending_seminary",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "potential_seminary_student",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "priesthood",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "priesthood_office",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "ministering_brothers",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "ministering_sisters",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "mission_country",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "mission_language",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "seminary_status",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "move_in_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "created_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "updated_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "notes",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          }
+        ],
+        "primary_keys": [
+          "id"
+        ],
+        "foreign_key_constraints": [
+          {
+            "name": "members_household_id_fkey",
+            "source": "public.members.household_id",
+            "target": "public.households.id"
+          },
+          {
+            "name": "visits_member_id_fkey",
+            "source": "public.visits.member_id",
+            "target": "public.members.id"
+          },
+          {
+            "name": "leadership_notes_member_id_fkey",
+            "source": "public.leadership_notes.member_id",
+            "target": "public.members.id"
+          },
+          {
+            "name": "bishop_notes_member_id_fkey",
+            "source": "public.bishop_notes.member_id",
+            "target": "public.members.id"
+          },
+          {
+            "name": "tasks_member_id_fkey",
+            "source": "public.tasks.member_id",
+            "target": "public.members.id"
+          },
+          {
+            "name": "calling_assignments_member_id_fkey",
+            "source": "public.calling_assignments.member_id",
+            "target": "public.members.id"
+          },
+          {
+            "name": "calling_assignments_releasing_member_id_fkey",
+            "source": "public.calling_assignments.releasing_member_id",
+            "target": "public.members.id"
+          },
+          {
+            "name": "ministering_assignments_minister_member_id_fkey",
+            "source": "public.ministering_assignments.minister_member_id",
+            "target": "public.members.id"
+          }
+        ]
+      },
+      {
+        "name": "public.leadership_notes",
+        "rls_enabled": true,
+        "rows": 0,
+        "columns": [
+          {
+            "name": "id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "extensions.uuid_generate_v4()"
+          },
+          {
+            "name": "household_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "member_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "note_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "CURRENT_DATE"
+          },
+          {
+            "name": "entered_by",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "entered_by_role",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "category",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "summary",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "spiritual_needs",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "temporal_needs",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "action_items",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "follow_up_required",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "false"
+          },
+          {
+            "name": "discuss_in_meeting",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "false"
+          },
+          {
+            "name": "sensitivity",
+            "data_type": "USER-DEFINED",
+            "format": "sensitivity_level",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "'leadership'::sensitivity_level",
+            "enums": [
+              "bishop_only",
+              "leadership",
+              "bishopric",
+              "ward_council"
+            ]
+          },
+          {
+            "name": "created_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "updated_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          }
+        ],
+        "primary_keys": [
+          "id"
+        ],
+        "foreign_key_constraints": [
+          {
+            "name": "leadership_notes_household_id_fkey",
+            "source": "public.leadership_notes.household_id",
+            "target": "public.households.id"
+          },
+          {
+            "name": "leadership_notes_member_id_fkey",
+            "source": "public.leadership_notes.member_id",
+            "target": "public.members.id"
+          },
+          {
+            "name": "leadership_notes_entered_by_fkey",
+            "source": "public.leadership_notes.entered_by",
+            "target": "public.profiles.id"
+          }
+        ]
+      },
+      {
+        "name": "public.visits",
+        "rls_enabled": true,
+        "rows": 6,
+        "columns": [
+          {
+            "name": "id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "extensions.uuid_generate_v4()"
+          },
+          {
+            "name": "household_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "member_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "visit_title",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "visit_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "CURRENT_DATE"
+          },
+          {
+            "name": "visit_type",
+            "data_type": "USER-DEFINED",
+            "format": "visit_type",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "enums": [
+              "Home Visit",
+              "Phone Call",
+              "Text Message",
+              "In-Person Meeting",
+              "Email",
+              "Sacrament",
+              "Interview",
+              "Other"
+            ]
+          },
+          {
+            "name": "recorded_by",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "recorded_by_name",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "summary",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "needs_identified",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "follow_up_required",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "false"
+          },
+          {
+            "name": "follow_up_description",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "follow_up_status",
+            "data_type": "USER-DEFINED",
+            "format": "task_status",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "'Not Started'::task_status",
+            "enums": [
+              "Not Started",
+              "In Progress",
+              "Completed",
+              "Abandoned"
+            ]
+          },
+          {
+            "name": "assigned_to",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "assigned_to_name",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "assignment_org",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "sensitivity",
+            "data_type": "USER-DEFINED",
+            "format": "sensitivity_level",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "'ward_council'::sensitivity_level",
+            "enums": [
+              "bishop_only",
+              "leadership",
+              "bishopric",
+              "ward_council"
+            ]
+          },
+          {
+            "name": "private_to_bishop",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "false"
+          },
+          {
+            "name": "private_owner",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "created_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "updated_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "call_recording_url",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "permission_level",
+            "data_type": "integer",
+            "format": "int4",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "5"
+          },
+          {
+            "name": "member_names",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          }
+        ],
+        "primary_keys": [
+          "id"
+        ],
+        "foreign_key_constraints": [
+          {
+            "name": "visits_household_id_fkey",
+            "source": "public.visits.household_id",
+            "target": "public.households.id"
+          },
+          {
+            "name": "visits_member_id_fkey",
+            "source": "public.visits.member_id",
+            "target": "public.members.id"
+          },
+          {
+            "name": "visits_recorded_by_fkey",
+            "source": "public.visits.recorded_by",
+            "target": "public.profiles.id"
+          },
+          {
+            "name": "visits_assigned_to_fkey",
+            "source": "public.visits.assigned_to",
+            "target": "public.profiles.id"
+          },
+          {
+            "name": "visits_private_owner_fkey",
+            "source": "public.visits.private_owner",
+            "target": "public.profiles.id"
+          },
+          {
+            "name": "tasks_visit_id_fkey",
+            "source": "public.tasks.visit_id",
+            "target": "public.visits.id"
+          }
+        ]
+      },
+      {
+        "name": "public.households",
+        "rls_enabled": true,
+        "rows": 311,
+        "columns": [
+          {
+            "name": "id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "extensions.uuid_generate_v4()"
+          },
+          {
+            "name": "household_name",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "updatable"
+            ]
+          },
+          {
+            "name": "address",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "city",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "state",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "zip",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "phone",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "email",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "household_status",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "'Active'::text"
+          },
+          {
+            "name": "ministering_brothers",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "ministering_sisters",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "notes",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "created_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "updated_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "activity_status",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "'Active'::text"
+          },
+          {
+            "name": "skills_talents",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "emergency_preparedness",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "latitude",
+            "data_type": "double precision",
+            "format": "float8",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "longitude",
+            "data_type": "double precision",
+            "format": "float8",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          }
+        ],
+        "primary_keys": [
+          "id"
+        ],
+        "foreign_key_constraints": [
+          {
+            "name": "members_household_id_fkey",
+            "source": "public.members.household_id",
+            "target": "public.households.id"
+          },
+          {
+            "name": "visits_household_id_fkey",
+            "source": "public.visits.household_id",
+            "target": "public.households.id"
+          },
+          {
+            "name": "leadership_notes_household_id_fkey",
+            "source": "public.leadership_notes.household_id",
+            "target": "public.households.id"
+          },
+          {
+            "name": "bishop_notes_household_id_fkey",
+            "source": "public.bishop_notes.household_id",
+            "target": "public.households.id"
+          },
+          {
+            "name": "tasks_household_id_fkey",
+            "source": "public.tasks.household_id",
+            "target": "public.households.id"
+          },
+          {
+            "name": "calling_assignments_household_id_fkey",
+            "source": "public.calling_assignments.household_id",
+            "target": "public.households.id"
+          },
+          {
+            "name": "ministering_assignments_household_id_fkey",
+            "source": "public.ministering_assignments.household_id",
+            "target": "public.households.id"
+          }
+        ]
+      },
+      {
+        "name": "public.tasks",
+        "rls_enabled": true,
+        "rows": 15,
+        "columns": [
+          {
+            "name": "id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "extensions.uuid_generate_v4()"
+          },
+          {
+            "name": "task_title",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "updatable"
+            ]
+          },
+          {
+            "name": "task_type",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "source",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "description",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "household_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "member_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "assigned_to",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "assigned_to_name",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "assignment_org",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "priority",
+            "data_type": "USER-DEFINED",
+            "format": "task_priority",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "'Medium'::task_priority",
+            "enums": [
+              "Low",
+              "Medium",
+              "High",
+              "Urgent"
+            ]
+          },
+          {
+            "name": "status",
+            "data_type": "USER-DEFINED",
+            "format": "task_status",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "'Not Started'::task_status",
+            "enums": [
+              "Not Started",
+              "In Progress",
+              "Completed",
+              "Abandoned"
+            ]
+          },
+          {
+            "name": "due_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "completion_notes",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "visit_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "created_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "updated_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "created_by",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "created_by_name",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "completed_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "assign_to_bishopric",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "false"
+          },
+          {
+            "name": "task_org",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "'Ward Council'::text"
+          },
+          {
+            "name": "permission_level",
+            "data_type": "integer",
+            "format": "int4",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "5"
+          },
+          {
+            "name": "follow_up_type",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "follow_up_priority",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "member_name",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          }
+        ],
+        "primary_keys": [
+          "id"
+        ],
+        "foreign_key_constraints": [
+          {
+            "name": "tasks_household_id_fkey",
+            "source": "public.tasks.household_id",
+            "target": "public.households.id"
+          },
+          {
+            "name": "tasks_member_id_fkey",
+            "source": "public.tasks.member_id",
+            "target": "public.members.id"
+          },
+          {
+            "name": "tasks_assigned_to_fkey",
+            "source": "public.tasks.assigned_to",
+            "target": "public.profiles.id"
+          },
+          {
+            "name": "tasks_visit_id_fkey",
+            "source": "public.tasks.visit_id",
+            "target": "public.visits.id"
+          },
+          {
+            "name": "tasks_created_by_fkey",
+            "source": "public.tasks.created_by",
+            "target": "auth.users.id"
+          }
+        ]
+      },
+      {
+        "name": "public.bishop_notes",
+        "rls_enabled": true,
+        "rows": 0,
+        "columns": [
+          {
+            "name": "id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "extensions.uuid_generate_v4()"
+          },
+          {
+            "name": "household_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "member_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "note_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "CURRENT_DATE"
+          },
+          {
+            "name": "source",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "category",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "private_notes",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "follow_up",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "otter_link",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "action_required",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "false"
+          },
+          {
+            "name": "created_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "updated_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          }
+        ],
+        "primary_keys": [
+          "id"
+        ],
+        "foreign_key_constraints": [
+          {
+            "name": "bishop_notes_household_id_fkey",
+            "source": "public.bishop_notes.household_id",
+            "target": "public.households.id"
+          },
+          {
+            "name": "bishop_notes_member_id_fkey",
+            "source": "public.bishop_notes.member_id",
+            "target": "public.members.id"
+          }
+        ]
+      },
+      {
+        "name": "public.ministering_assignments",
+        "rls_enabled": false,
+        "rows": 274,
+        "columns": [
+          {
+            "name": "id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "gen_random_uuid()"
+          },
+          {
+            "name": "minister_member_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "household_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "minister_name",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "updatable"
+            ]
+          },
+          {
+            "name": "household_name",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "assignment_type",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "updatable"
+            ],
+            "check": "assignment_type = ANY (ARRAY['brothers'::text, 'sisters'::text])"
+          },
+          {
+            "name": "created_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "updated_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          }
+        ],
+        "primary_keys": [
+          "id"
+        ],
+        "foreign_key_constraints": [
+          {
+            "name": "ministering_assignments_minister_member_id_fkey",
+            "source": "public.ministering_assignments.minister_member_id",
+            "target": "public.members.id"
+          },
+          {
+            "name": "ministering_assignments_household_id_fkey",
+            "source": "public.ministering_assignments.household_id",
+            "target": "public.households.id"
+          }
+        ]
+      },
+      {
+        "name": "public.callings",
+        "rls_enabled": true,
+        "rows": 83,
+        "columns": [
+          {
+            "name": "id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "extensions.uuid_generate_v4()"
+          },
+          {
+            "name": "calling_name",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "updatable"
+            ]
+          },
+          {
+            "name": "organization",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "'Other'::text"
+          },
+          {
+            "name": "is_leadership",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "false"
+          },
+          {
+            "name": "max_holders",
+            "data_type": "integer",
+            "format": "int4",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "1"
+          },
+          {
+            "name": "is_active",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "true"
+          },
+          {
+            "name": "priority",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "'Medium'::text"
+          },
+          {
+            "name": "created_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "updated_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          }
+        ],
+        "primary_keys": [
+          "id"
+        ],
+        "foreign_key_constraints": [
+          {
+            "name": "calling_assignments_calling_id_fkey",
+            "source": "public.calling_assignments.calling_id",
+            "target": "public.callings.id"
+          }
+        ]
+      }
+    ]
+  },
+  "connector": "supabase",
+  "output_schema": "{tables:[{name:str\n  rls_enabled:bool\n  rows:int\n  columns:[{name:str\n   data_type:str\n   format:str\n   options:str[]\n   default_value?:str\n   enums?:str[]\n   check?:str}]\n  primary_keys:str[]\n  foreign_key_constraints:[{name:str\n   source:str\n   target:str}]}]}",
+  "structure": "JSON object with 1 keys: tables",
+  "preview": {
+    "tables": [
+      {
+        "name": "public.calling_assignments",
+        "rls_enabled": true,
+        "rows": 150,
+        "columns": [
+          {
+            "name": "id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "extensions.uuid_generate_v4()"
+          },
+          {
+            "name": "calling_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "member_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "household_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "status",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "'Proposed'::text"
+          },
+          {
+            "name": "proposed_by",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "proposed_date",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "proposed_notes",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "approved_by",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "approved_date",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "interview_assigned_to",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "interview_date",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "interview_notes",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "extended_date",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "accepted_date",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "declined_date",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "declined_reason",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "sustained_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "set_apart_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "set_apart_by",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "released_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "release_reason",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "notes",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "created_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "updated_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "calling_due_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "interview_due_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "releasing_member_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "releasing_member_name",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          }
+        ],
+        "primary_keys": [
+          "id"
+        ],
+        "foreign_key_constraints": [
+          {
+            "name": "calling_assignments_calling_id_fkey",
+            "source": "public.calling_assignments.calling_id",
+            "target": "public.callings.id"
+          },
+          {
+            "name": "calling_assignments_member_id_fkey",
+            "source": "public.calling_assignments.member_id",
+            "target": "public.members.id"
+          },
+          {
+            "name": "calling_assignments_household_id_fkey",
+            "source": "public.calling_assignments.household_id",
+            "target": "public.households.id"
+          },
+          {
+            "name": "calling_assignments_releasing_member_id_fkey",
+            "source": "public.calling_assignments.releasing_member_id",
+            "target": "public.members.id"
+          }
+        ]
+      },
+      {
+        "name": "public.profiles",
+        "rls_enabled": true,
+        "rows": 12,
+        "columns": [
+          {
+            "name": "id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "updatable"
+            ]
+          },
+          {
+            "name": "full_name",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "email",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "role",
+            "data_type": "USER-DEFINED",
+            "format": "user_role",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "'ward_council'::user_role",
+            "enums": [
+              "bishop",
+              "bishopric",
+              "exec_sec",
+              "ward_clerk",
+              "rs_president",
+              "eq_president",
+              "org_president",
+              "ward_council"
+            ]
+          },
+          {
+            "name": "created_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "org",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "can_interview",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "false"
+          }
+        ],
+        "primary_keys": [
+          "id"
+        ],
+        "foreign_key_constraints": [
+          {
+            "name": "profiles_id_fkey",
+            "source": "public.profiles.id",
+            "target": "auth.users.id"
+          },
+          {
+            "name": "visits_recorded_by_fkey",
+            "source": "public.visits.recorded_by",
+            "target": "public.profiles.id"
+          },
+          {
+            "name": "visits_assigned_to_fkey",
+            "source": "public.visits.assigned_to",
+            "target": "public.profiles.id"
+          },
+          {
+            "name": "visits_private_owner_fkey",
+            "source": "public.visits.private_owner",
+            "target": "public.profiles.id"
+          },
+          {
+            "name": "leadership_notes_entered_by_fkey",
+            "source": "public.leadership_notes.entered_by",
+            "target": "public.profiles.id"
+          },
+          {
+            "name": "tasks_assigned_to_fkey",
+            "source": "public.tasks.assigned_to",
+            "target": "public.profiles.id"
+          }
+        ]
+      },
+      {
+        "name": "public.members",
+        "rls_enabled": true,
+        "rows": 567,
+        "columns": [
+          {
+            "name": "id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "extensions.uuid_generate_v4()"
+          },
+          {
+            "name": "household_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "full_name",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "updatable"
+            ]
+          },
+          {
+            "name": "preferred_name",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "individual_email",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "individual_phone",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "gender",
+            "data_type": "USER-DEFINED",
+            "format": "gender_type",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "enums": [
+              "M",
+              "F"
+            ]
+          },
+          {
+            "name": "birth_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "birthplace",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "address",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "city",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "state",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "zip",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "spouse_name",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "marriage_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "marital_status",
+            "data_type": "USER-DEFINED",
+            "format": "marital_status_type",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "enums": [
+              "Married",
+              "Single",
+              "Divorced",
+              "Widowed"
+            ]
+          },
+          {
+            "name": "callings",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "callings_with_dates",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "class_assignment",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "temple_recommend_type",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "temple_recommend_status",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "temple_recommend_expiration",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "baptism_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "confirmation_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "endowment_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "endowment_status",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "ordination_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "sealing_to_spouse",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "has_children",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "is_born_in_covenant",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "is_convert",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "is_sealed_to_current_spouse",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "is_sealed_to_parents",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "is_single",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "is_returned_missionary",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "is_attending_seminary",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "potential_seminary_student",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "priesthood",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "priesthood_office",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "ministering_brothers",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "ministering_sisters",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "mission_country",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "mission_language",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "seminary_status",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "move_in_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "created_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "updated_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "notes",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          }
+        ],
+        "primary_keys": [
+          "id"
+        ],
+        "foreign_key_constraints": [
+          {
+            "name": "members_household_id_fkey",
+            "source": "public.members.household_id",
+            "target": "public.households.id"
+          },
+          {
+            "name": "visits_member_id_fkey",
+            "source": "public.visits.member_id",
+            "target": "public.members.id"
+          },
+          {
+            "name": "leadership_notes_member_id_fkey",
+            "source": "public.leadership_notes.member_id",
+            "target": "public.members.id"
+          },
+          {
+            "name": "bishop_notes_member_id_fkey",
+            "source": "public.bishop_notes.member_id",
+            "target": "public.members.id"
+          },
+          {
+            "name": "tasks_member_id_fkey",
+            "source": "public.tasks.member_id",
+            "target": "public.members.id"
+          },
+          {
+            "name": "calling_assignments_member_id_fkey",
+            "source": "public.calling_assignments.member_id",
+            "target": "public.members.id"
+          },
+          {
+            "name": "calling_assignments_releasing_member_id_fkey",
+            "source": "public.calling_assignments.releasing_member_id",
+            "target": "public.members.id"
+          },
+          {
+            "name": "ministering_assignments_minister_member_id_fkey",
+            "source": "public.ministering_assignments.minister_member_id",
+            "target": "public.members.id"
+          }
+        ]
+      },
+      {
+        "name": "public.leadership_notes",
+        "rls_enabled": true,
+        "rows": 0,
+        "columns": [
+          {
+            "name": "id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "extensions.uuid_generate_v4()"
+          },
+          {
+            "name": "household_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "member_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "note_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "CURRENT_DATE"
+          },
+          {
+            "name": "entered_by",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "entered_by_role",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "category",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "summary",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "spiritual_needs",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "temporal_needs",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "action_items",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "follow_up_required",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "false"
+          },
+          {
+            "name": "discuss_in_meeting",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "false"
+          },
+          {
+            "name": "sensitivity",
+            "data_type": "USER-DEFINED",
+            "format": "sensitivity_level",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "'leadership'::sensitivity_level",
+            "enums": [
+              "bishop_only",
+              "leadership",
+              "bishopric",
+              "ward_council"
+            ]
+          },
+          {
+            "name": "created_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "updated_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          }
+        ],
+        "primary_keys": [
+          "id"
+        ],
+        "foreign_key_constraints": [
+          {
+            "name": "leadership_notes_household_id_fkey",
+            "source": "public.leadership_notes.household_id",
+            "target": "public.households.id"
+          },
+          {
+            "name": "leadership_notes_member_id_fkey",
+            "source": "public.leadership_notes.member_id",
+            "target": "public.members.id"
+          },
+          {
+            "name": "leadership_notes_entered_by_fkey",
+            "source": "public.leadership_notes.entered_by",
+            "target": "public.profiles.id"
+          }
+        ]
+      },
+      {
+        "name": "public.visits",
+        "rls_enabled": true,
+        "rows": 6,
+        "columns": [
+          {
+            "name": "id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "extensions.uuid_generate_v4()"
+          },
+          {
+            "name": "household_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "member_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "visit_title",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "visit_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "CURRENT_DATE"
+          },
+          {
+            "name": "visit_type",
+            "data_type": "USER-DEFINED",
+            "format": "visit_type",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "enums": [
+              "Home Visit",
+              "Phone Call",
+              "Text Message",
+              "In-Person Meeting",
+              "Email",
+              "Sacrament",
+              "Interview",
+              "Other"
+            ]
+          },
+          {
+            "name": "recorded_by",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "recorded_by_name",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "summary",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "needs_identified",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "follow_up_required",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "false"
+          },
+          {
+            "name": "follow_up_description",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "follow_up_status",
+            "data_type": "USER-DEFINED",
+            "format": "task_status",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "'Not Started'::task_status",
+            "enums": [
+              "Not Started",
+              "In Progress",
+              "Completed",
+              "Abandoned"
+            ]
+          },
+          {
+            "name": "assigned_to",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "assigned_to_name",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "assignment_org",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "sensitivity",
+            "data_type": "USER-DEFINED",
+            "format": "sensitivity_level",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "'ward_council'::sensitivity_level",
+            "enums": [
+              "bishop_only",
+              "leadership",
+              "bishopric",
+              "ward_council"
+            ]
+          },
+          {
+            "name": "private_to_bishop",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "false"
+          },
+          {
+            "name": "private_owner",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "created_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "updated_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "call_recording_url",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "permission_level",
+            "data_type": "integer",
+            "format": "int4",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "5"
+          },
+          {
+            "name": "member_names",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          }
+        ],
+        "primary_keys": [
+          "id"
+        ],
+        "foreign_key_constraints": [
+          {
+            "name": "visits_household_id_fkey",
+            "source": "public.visits.household_id",
+            "target": "public.households.id"
+          },
+          {
+            "name": "visits_member_id_fkey",
+            "source": "public.visits.member_id",
+            "target": "public.members.id"
+          },
+          {
+            "name": "visits_recorded_by_fkey",
+            "source": "public.visits.recorded_by",
+            "target": "public.profiles.id"
+          },
+          {
+            "name": "visits_assigned_to_fkey",
+            "source": "public.visits.assigned_to",
+            "target": "public.profiles.id"
+          },
+          {
+            "name": "visits_private_owner_fkey",
+            "source": "public.visits.private_owner",
+            "target": "public.profiles.id"
+          },
+          {
+            "name": "tasks_visit_id_fkey",
+            "source": "public.tasks.visit_id",
+            "target": "public.visits.id"
+          }
+        ]
+      },
+      {
+        "name": "public.households",
+        "rls_enabled": true,
+        "rows": 311,
+        "columns": [
+          {
+            "name": "id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "extensions.uuid_generate_v4()"
+          },
+          {
+            "name": "household_name",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "updatable"
+            ]
+          },
+          {
+            "name": "address",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "city",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "state",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "zip",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "phone",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "email",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "household_status",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "'Active'::text"
+          },
+          {
+            "name": "ministering_brothers",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "ministering_sisters",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "notes",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "created_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "updated_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "activity_status",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "'Active'::text"
+          },
+          {
+            "name": "skills_talents",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "emergency_preparedness",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "latitude",
+            "data_type": "double precision",
+            "format": "float8",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "longitude",
+            "data_type": "double precision",
+            "format": "float8",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          }
+        ],
+        "primary_keys": [
+          "id"
+        ],
+        "foreign_key_constraints": [
+          {
+            "name": "members_household_id_fkey",
+            "source": "public.members.household_id",
+            "target": "public.households.id"
+          },
+          {
+            "name": "visits_household_id_fkey",
+            "source": "public.visits.household_id",
+            "target": "public.households.id"
+          },
+          {
+            "name": "leadership_notes_household_id_fkey",
+            "source": "public.leadership_notes.household_id",
+            "target": "public.households.id"
+          },
+          {
+            "name": "bishop_notes_household_id_fkey",
+            "source": "public.bishop_notes.household_id",
+            "target": "public.households.id"
+          },
+          {
+            "name": "tasks_household_id_fkey",
+            "source": "public.tasks.household_id",
+            "target": "public.households.id"
+          },
+          {
+            "name": "calling_assignments_household_id_fkey",
+            "source": "public.calling_assignments.household_id",
+            "target": "public.households.id"
+          },
+          {
+            "name": "ministering_assignments_household_id_fkey",
+            "source": "public.ministering_assignments.household_id",
+            "target": "public.households.id"
+          }
+        ]
+      },
+      {
+        "name": "public.tasks",
+        "rls_enabled": true,
+        "rows": 15,
+        "columns": [
+          {
+            "name": "id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "extensions.uuid_generate_v4()"
+          },
+          {
+            "name": "task_title",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "updatable"
+            ]
+          },
+          {
+            "name": "task_type",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "source",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "description",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "household_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "member_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "assigned_to",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "assigned_to_name",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "assignment_org",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "priority",
+            "data_type": "USER-DEFINED",
+            "format": "task_priority",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "'Medium'::task_priority",
+            "enums": [
+              "Low",
+              "Medium",
+              "High",
+              "Urgent"
+            ]
+          },
+          {
+            "name": "status",
+            "data_type": "USER-DEFINED",
+            "format": "task_status",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "'Not Started'::task_status",
+            "enums": [
+              "Not Started",
+              "In Progress",
+              "Completed",
+              "Abandoned"
+            ]
+          },
+          {
+            "name": "due_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "completion_notes",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "visit_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "created_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "updated_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "created_by",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "created_by_name",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "completed_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "assign_to_bishopric",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "false"
+          },
+          {
+            "name": "task_org",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "'Ward Council'::text"
+          },
+          {
+            "name": "permission_level",
+            "data_type": "integer",
+            "format": "int4",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "5"
+          },
+          {
+            "name": "follow_up_type",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "follow_up_priority",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "member_name",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          }
+        ],
+        "primary_keys": [
+          "id"
+        ],
+        "foreign_key_constraints": [
+          {
+            "name": "tasks_household_id_fkey",
+            "source": "public.tasks.household_id",
+            "target": "public.households.id"
+          },
+          {
+            "name": "tasks_member_id_fkey",
+            "source": "public.tasks.member_id",
+            "target": "public.members.id"
+          },
+          {
+            "name": "tasks_assigned_to_fkey",
+            "source": "public.tasks.assigned_to",
+            "target": "public.profiles.id"
+          },
+          {
+            "name": "tasks_visit_id_fkey",
+            "source": "public.tasks.visit_id",
+            "target": "public.visits.id"
+          },
+          {
+            "name": "tasks_created_by_fkey",
+            "source": "public.tasks.created_by",
+            "target": "auth.users.id"
+          }
+        ]
+      },
+      {
+        "name": "public.bishop_notes",
+        "rls_enabled": true,
+        "rows": 0,
+        "columns": [
+          {
+            "name": "id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "extensions.uuid_generate_v4()"
+          },
+          {
+            "name": "household_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "member_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "note_date",
+            "data_type": "date",
+            "format": "date",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "CURRENT_DATE"
+          },
+          {
+            "name": "source",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "category",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "private_notes",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "follow_up",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "otter_link",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "action_required",
+            "data_type": "boolean",
+            "format": "bool",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "false"
+          },
+          {
+            "name": "created_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "updated_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          }
+        ],
+        "primary_keys": [
+          "id"
+        ],
+        "foreign_key_constraints": [
+          {
+            "name": "bishop_notes_household_id_fkey",
+            "source": "public.bishop_notes.household_id",
+            "target": "public.households.id"
+          },
+          {
+            "name": "bishop_notes_member_id_fkey",
+            "source": "public.bishop_notes.member_id",
+            "target": "public.members.id"
+          }
+        ]
+      },
+      {
+        "name": "public.ministering_assignments",
+        "rls_enabled": false,
+        "rows": 274,
+        "columns": [
+          {
+            "name": "id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "updatable"
+            ],
+            "default_value": "gen_random_uuid()"
+          },
+          {
+            "name": "minister_member_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "household_id",
+            "data_type": "uuid",
+            "format": "uuid",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "minister_name",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "updatable"
+            ]
+          },
+          {
+            "name": "household_name",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "nullable",
+              "updatable"
+            ]
+          },
+          {
+            "name": "assignment_type",
+            "data_type": "text",
+            "format": "text",
+            "options": [
+              "updatable"
+            ],
+            "check": "assignment_type = ANY (ARRAY['brothers'::text, 'sisters'::text])"
+          },
+          {
+            "name": "created_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          },
+          {
+            "name": "updated_at",
+            "data_type": "timestamp with time zone",
+            "format": "timestamptz",
+            "options": [
+              "nullable",
+              "updatable"
+            ],
+            "default_value": "now()"
+          }
+        ],
+        "primary_keys": [
+          "id"
+        ],
+        "foreign_key_constraints": [
+          {
+            "name": "ministering_assignments_minister_member_id_fkey",
+            "source": "public.ministering_assignments.minister_member_id",
+            "target": "public.members.id"
+          },
+          {
+            "name": "ministering_assignments_household_id_fkey",
+            "source": "public.ministering_assignments.household_id",
+            "target": "public.households.id"
+          }
+        ]
+      }
+    ]
+  }
+}
