@@ -1,0 +1,14 @@
+[
+  {
+    "trigger_name": "trg_members_sync_full_name",
+    "event_manipulation": "INSERT",
+    "event_object_table": "members",
+    "action_statement": "EXECUTE FUNCTION members_sync_full_name()"
+  },
+  {
+    "trigger_name": "trg_members_sync_full_name",
+    "event_manipulation": "UPDATE",
+    "event_object_table": "members",
+    "action_statement": "EXECUTE FUNCTION members_sync_full_name()"
+  }
+]

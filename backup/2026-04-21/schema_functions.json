@@ -1,0 +1,27 @@
+[
+  {
+    "routine_name": "admin_delete_user",
+    "routine_type": "FUNCTION",
+    "data_type": "json"
+  },
+  {
+    "routine_name": "admin_list_users",
+    "routine_type": "FUNCTION",
+    "data_type": "json"
+  },
+  {
+    "routine_name": "admin_update_role",
+    "routine_type": "FUNCTION",
+    "data_type": "json"
+  },
+  {
+    "routine_name": "get_my_role",
+    "routine_type": "FUNCTION",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "routine_name": "members_sync_full_name",
+    "routine_type": "FUNCTION",
+    "data_type": "trigger"
+  }
+]
