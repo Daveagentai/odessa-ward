@@ -1,0 +1,46 @@
+[
+  {
+    "table_schema": "public",
+    "table_name": "bishop_notes"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "calling_assignments"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "callings"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "households"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "leadership_notes"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "member_contact_changes"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "members"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "ministering_assignments"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "profiles"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "tasks"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "visits"
+  }
+]

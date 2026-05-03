@@ -1,0 +1,205 @@
+[
+  {
+    "tablename": "bishop_notes",
+    "policyname": "bishop_notes_all",
+    "cmd": "ALL",
+    "qual": "(get_my_role() = 'bishop'::user_role)",
+    "with_check": null
+  },
+  {
+    "tablename": "calling_assignments",
+    "policyname": "calling_assignments_delete",
+    "cmd": "DELETE",
+    "qual": "(EXISTS ( SELECT 1\n   FROM profiles\n  WHERE (profiles.id = auth.uid())))",
+    "with_check": null
+  },
+  {
+    "tablename": "calling_assignments",
+    "policyname": "calling_assignments_insert",
+    "cmd": "INSERT",
+    "qual": null,
+    "with_check": "(EXISTS ( SELECT 1\n   FROM profiles\n  WHERE (profiles.id = auth.uid())))"
+  },
+  {
+    "tablename": "calling_assignments",
+    "policyname": "calling_assignments_select",
+    "cmd": "SELECT",
+    "qual": "true",
+    "with_check": null
+  },
+  {
+    "tablename": "calling_assignments",
+    "policyname": "calling_assignments_update",
+    "cmd": "UPDATE",
+    "qual": "(EXISTS ( SELECT 1\n   FROM profiles\n  WHERE (profiles.id = auth.uid())))",
+    "with_check": "(EXISTS ( SELECT 1\n   FROM profiles\n  WHERE (profiles.id = auth.uid())))"
+  },
+  {
+    "tablename": "callings",
+    "policyname": "callings_insert",
+    "cmd": "INSERT",
+    "qual": null,
+    "with_check": "(EXISTS ( SELECT 1\n   FROM profiles\n  WHERE (profiles.id = auth.uid())))"
+  },
+  {
+    "tablename": "callings",
+    "policyname": "callings_select",
+    "cmd": "SELECT",
+    "qual": "true",
+    "with_check": null
+  },
+  {
+    "tablename": "callings",
+    "policyname": "callings_update",
+    "cmd": "UPDATE",
+    "qual": "(EXISTS ( SELECT 1\n   FROM profiles\n  WHERE (profiles.id = auth.uid())))",
+    "with_check": "(EXISTS ( SELECT 1\n   FROM profiles\n  WHERE (profiles.id = auth.uid())))"
+  },
+  {
+    "tablename": "households",
+    "policyname": "households_all_read",
+    "cmd": "SELECT",
+    "qual": "(auth.role() = 'authenticated'::text)",
+    "with_check": null
+  },
+  {
+    "tablename": "households",
+    "policyname": "households_leadership_update",
+    "cmd": "UPDATE",
+    "qual": "(auth.role() = 'authenticated'::text)",
+    "with_check": null
+  },
+  {
+    "tablename": "households",
+    "policyname": "households_leadership_write",
+    "cmd": "INSERT",
+    "qual": null,
+    "with_check": "(auth.role() = 'authenticated'::text)"
+  },
+  {
+    "tablename": "leadership_notes",
+    "policyname": "leadership_notes_insert",
+    "cmd": "INSERT",
+    "qual": null,
+    "with_check": "(get_my_role() = ANY (ARRAY['bishop'::user_role, 'rs_president'::user_role, 'eq_president'::user_role]))"
+  },
+  {
+    "tablename": "leadership_notes",
+    "policyname": "leadership_notes_select",
+    "cmd": "SELECT",
+    "qual": "(get_my_role() = ANY (ARRAY['bishop'::user_role, 'rs_president'::user_role, 'eq_president'::user_role]))",
+    "with_check": null
+  },
+  {
+    "tablename": "member_contact_changes",
+    "policyname": "Allow authenticated read",
+    "cmd": "SELECT",
+    "qual": "true",
+    "with_check": null
+  },
+  {
+    "tablename": "member_contact_changes",
+    "policyname": "member_contact_changes_insert",
+    "cmd": "INSERT",
+    "qual": null,
+    "with_check": "(EXISTS ( SELECT 1\n   FROM profiles\n  WHERE (profiles.id = auth.uid())))"
+  },
+  {
+    "tablename": "member_contact_changes",
+    "policyname": "member_contact_changes_update",
+    "cmd": "UPDATE",
+    "qual": "(EXISTS ( SELECT 1\n   FROM profiles\n  WHERE (profiles.id = auth.uid())))",
+    "with_check": "(EXISTS ( SELECT 1\n   FROM profiles\n  WHERE (profiles.id = auth.uid())))"
+  },
+  {
+    "tablename": "members",
+    "policyname": "members_all_read",
+    "cmd": "SELECT",
+    "qual": "(auth.role() = 'authenticated'::text)",
+    "with_check": null
+  },
+  {
+    "tablename": "members",
+    "policyname": "members_insert",
+    "cmd": "INSERT",
+    "qual": null,
+    "with_check": "(auth.role() = 'authenticated'::text)"
+  },
+  {
+    "tablename": "members",
+    "policyname": "members_update",
+    "cmd": "UPDATE",
+    "qual": "(auth.role() = 'authenticated'::text)",
+    "with_check": "(auth.role() = 'authenticated'::text)"
+  },
+  {
+    "tablename": "ministering_assignments",
+    "policyname": "ministering_assignments_delete",
+    "cmd": "DELETE",
+    "qual": "(EXISTS ( SELECT 1\n   FROM profiles\n  WHERE (profiles.id = auth.uid())))",
+    "with_check": null
+  },
+  {
+    "tablename": "ministering_assignments",
+    "policyname": "ministering_assignments_insert",
+    "cmd": "INSERT",
+    "qual": null,
+    "with_check": "(EXISTS ( SELECT 1\n   FROM profiles\n  WHERE (profiles.id = auth.uid())))"
+  },
+  {
+    "tablename": "ministering_assignments",
+    "policyname": "ministering_assignments_read",
+    "cmd": "SELECT",
+    "qual": "(EXISTS ( SELECT 1\n   FROM profiles\n  WHERE (profiles.id = auth.uid())))",
+    "with_check": null
+  },
+  {
+    "tablename": "ministering_assignments",
+    "policyname": "ministering_assignments_update",
+    "cmd": "UPDATE",
+    "qual": "(EXISTS ( SELECT 1\n   FROM profiles\n  WHERE (profiles.id = auth.uid())))",
+    "with_check": "(EXISTS ( SELECT 1\n   FROM profiles\n  WHERE (profiles.id = auth.uid())))"
+  },
+  {
+    "tablename": "profiles",
+    "policyname": "profiles_select",
+    "cmd": "SELECT",
+    "qual": "(id = auth.uid())",
+    "with_check": null
+  },
+  {
+    "tablename": "profiles",
+    "policyname": "profiles_update",
+    "cmd": "UPDATE",
+    "qual": "(id = auth.uid())",
+    "with_check": null
+  },
+  {
+    "tablename": "tasks",
+    "policyname": "tasks_insert",
+    "cmd": "INSERT",
+    "qual": null,
+    "with_check": "(auth.role() = 'authenticated'::text)"
+  },
+  {
+    "tablename": "tasks",
+    "policyname": "tasks_select",
+    "cmd": "SELECT",
+    "qual": "(auth.role() = 'authenticated'::text)",
+    "with_check": null
+  },
+  {
+    "tablename": "visits",
+    "policyname": "visits_insert",
+    "cmd": "INSERT",
+    "qual": null,
+    "with_check": "(auth.role() = 'authenticated'::text)"
+  },
+  {
+    "tablename": "visits",
+    "policyname": "visits_select",
+    "cmd": "SELECT",
+    "qual": "(auth.role() = 'authenticated'::text)",
+    "with_check": null
+  }
+]
