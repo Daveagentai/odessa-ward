@@ -4,3 +4,9 @@
 !.dev.vars.example
 .env*
 !.env.example
+
+# LCR import — generated SQL, source xlsx
+tools/lcr_import/*.sql
+tools/lcr_import/*.xlsx
+__pycache__/
+*.pyc
