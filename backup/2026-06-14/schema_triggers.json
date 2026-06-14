@@ -1,0 +1,18 @@
+[
+  {
+    "event_object_schema": "public",
+    "event_object_table": "members",
+    "trigger_name": "trg_members_sync_full_name",
+    "event_manipulation": "INSERT",
+    "action_timing": "BEFORE",
+    "action_statement": "EXECUTE FUNCTION members_sync_full_name()"
+  },
+  {
+    "event_object_schema": "public",
+    "event_object_table": "members",
+    "trigger_name": "trg_members_sync_full_name",
+    "event_manipulation": "UPDATE",
+    "action_timing": "BEFORE",
+    "action_statement": "EXECUTE FUNCTION members_sync_full_name()"
+  }
+]

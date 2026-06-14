@@ -1,0 +1,57 @@
+[
+  {
+    "table_schema": "public",
+    "table_name": "bishop_notes",
+    "table_type": "BASE TABLE"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "calling_assignments",
+    "table_type": "BASE TABLE"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "callings",
+    "table_type": "BASE TABLE"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "households",
+    "table_type": "BASE TABLE"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "leadership_notes",
+    "table_type": "BASE TABLE"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "member_contact_changes",
+    "table_type": "BASE TABLE"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "members",
+    "table_type": "BASE TABLE"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "ministering_assignments",
+    "table_type": "BASE TABLE"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "profiles",
+    "table_type": "BASE TABLE"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "tasks",
+    "table_type": "BASE TABLE"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "visits",
+    "table_type": "BASE TABLE"
+  }
+]

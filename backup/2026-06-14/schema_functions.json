@@ -1,0 +1,42 @@
+[
+  {
+    "routine_schema": "public",
+    "routine_name": "admin_delete_user",
+    "routine_type": "FUNCTION",
+    "return_type": "json",
+    "external_language": "PLPGSQL",
+    "routine_definition": " DECLARE caller_role text; BEGIN SELECT role INTO caller_role FROM profiles WHERE id = auth.uid(); IF caller_role IS NULL OR caller_role != 'bishop' THEN RAISE EXCEPTION 'Bishop access required'; END IF; IF p_user_id = auth.uid() THEN RAISE EXCEPTION 'Cannot delete yourself'; END IF; DELETE FROM profiles WHERE id = p_user_id; DELETE FROM auth.identities WHERE user_id = p_user_id; DELETE FROM auth.refresh_tokens WHERE (session_id IN (SELECT id FROM auth.sessions WHERE user_id = p_user_id)); DELETE FROM auth.sessions WHERE user_id = p_user_id; DELETE FROM auth.users WHERE id = p_user_id; RETURN json_build_object('success', true); END; "
+  },
+  {
+    "routine_schema": "public",
+    "routine_name": "admin_list_users",
+    "routine_type": "FUNCTION",
+    "return_type": "json",
+    "external_language": "PLPGSQL",
+    "routine_definition": " DECLARE caller_role text; result json; BEGIN SELECT role::text INTO caller_role FROM profiles WHERE id = auth.uid(); IF caller_role IS NULL OR caller_role != 'bishop' THEN RAISE EXCEPTION 'Bishop access required'; END IF; SELECT json_agg(row_to_json(t)) INTO result FROM (SELECT au.id, au.email, au.created_at, au.last_sign_in_at, COALESCE(p.role::text, 'none') as role, p.full_name FROM auth.users au LEFT JOIN profiles p ON p.id = au.id ORDER BY au.created_at DESC) t; RETURN COALESCE(result, '[]'::json); END; "
+  },
+  {
+    "routine_schema": "public",
+    "routine_name": "admin_update_role",
+    "routine_type": "FUNCTION",
+    "return_type": "json",
+    "external_language": "PLPGSQL",
+    "routine_definition": " DECLARE caller_role text; BEGIN SELECT role::text INTO caller_role FROM profiles WHERE id = auth.uid(); IF caller_role IS NULL OR caller_role != 'bishop' THEN RAISE EXCEPTION 'Bishop access required'; END IF; IF p_role NOT IN ('bishop', 'leadership', 'bishopric', 'org_president', 'ward_council') THEN RAISE EXCEPTION 'Invalid role'; END IF; INSERT INTO profiles (id, role, full_name) VALUES (p_user_id, p_role::user_role, p_full_name) ON CONFLICT (id) DO UPDATE SET role = EXCLUDED.role, full_name = COALESCE(EXCLUDED.full_name, profiles.full_name); RETURN json_build_object('success', true); END; "
+  },
+  {
+    "routine_schema": "public",
+    "routine_name": "get_my_role",
+    "routine_type": "FUNCTION",
+    "return_type": "USER-DEFINED",
+    "external_language": "SQL",
+    "routine_definition": "\n                                                                                                                                                      SELECT role FROM profiles WHERE id = auth.uid();\n                                                                                                                                                      "
+  },
+  {
+    "routine_schema": "public",
+    "routine_name": "members_sync_full_name",
+    "routine_type": "FUNCTION",
+    "return_type": "trigger",
+    "external_language": "PLPGSQL",
+    "routine_definition": "\nBEGIN\n  -- Invariant: original_full_name = the true LCR full name.\n  --            full_name = preferred_name if set, else original_full_name (the display name).\n  -- This lets the app's existing UI continue to use .full_name everywhere\n  -- and automatically get the preferred-name display.\n\n  IF TG_OP = 'INSERT' THEN\n    -- If caller didn't set original_full_name, derive it from full_name\n    IF NEW.original_full_name IS NULL OR NEW.original_full_name = '' THEN\n      NEW.original_full_name := NEW.full_name;\n    END IF;\n  ELSIF TG_OP = 'UPDATE' THEN\n    -- LCR import sends full_name = true full name. Capture it into original_full_name.\n    -- Detect LCR-style updates by: full_name changed AND matches the LCR-provided value.\n    -- Simpler: if NEW.full_name contains more words than NEW.preferred_name (or is different from OLD.preferred_name), it's a fresh LCR name. Update original_full_name.\n    -- Even simpler rule: if full_name differs from preferred_name on the NEW row, treat full_name as a fresh canonical name and capture it.\n    IF NEW.preferred_name IS NOT NULL AND NEW.preferred_name <> '' AND NEW.full_name <> NEW.preferred_name THEN\n      NEW.original_full_name := NEW.full_name;\n    END IF;\n  END IF;\n\n  -- Now enforce display invariant: full_name = preferred_name if set, else original_full_name\n  IF NEW.preferred_name IS NOT NULL AND NEW.preferred_name <> '' THEN\n    NEW.full_name := NEW.preferred_name;\n  ELSIF NEW.original_full_name IS NOT NULL AND NEW.original_full_name <> '' THEN\n    NEW.full_name := NEW.original_full_name;\n  END IF;\n\n  RETURN NEW;\nEND;\n"
+  }
+]

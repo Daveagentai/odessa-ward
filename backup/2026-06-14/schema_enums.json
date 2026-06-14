@@ -1,0 +1,192 @@
+[
+  {
+    "enum_name": "gender_type",
+    "enum_value": "M",
+    "sortorder": 1
+  },
+  {
+    "enum_name": "gender_type",
+    "enum_value": "F",
+    "sortorder": 2
+  },
+  {
+    "enum_name": "marital_status",
+    "enum_value": "Married",
+    "sortorder": 1
+  },
+  {
+    "enum_name": "marital_status",
+    "enum_value": "Single",
+    "sortorder": 2
+  },
+  {
+    "enum_name": "marital_status",
+    "enum_value": "Divorced",
+    "sortorder": 3
+  },
+  {
+    "enum_name": "marital_status",
+    "enum_value": "Widowed",
+    "sortorder": 4
+  },
+  {
+    "enum_name": "marital_status_type",
+    "enum_value": "Married",
+    "sortorder": 1
+  },
+  {
+    "enum_name": "marital_status_type",
+    "enum_value": "Single",
+    "sortorder": 2
+  },
+  {
+    "enum_name": "marital_status_type",
+    "enum_value": "Divorced",
+    "sortorder": 3
+  },
+  {
+    "enum_name": "marital_status_type",
+    "enum_value": "Widowed",
+    "sortorder": 4
+  },
+  {
+    "enum_name": "sensitivity_level",
+    "enum_value": "bishop_only",
+    "sortorder": 1
+  },
+  {
+    "enum_name": "sensitivity_level",
+    "enum_value": "leadership",
+    "sortorder": 2
+  },
+  {
+    "enum_name": "sensitivity_level",
+    "enum_value": "bishopric",
+    "sortorder": 3
+  },
+  {
+    "enum_name": "sensitivity_level",
+    "enum_value": "ward_council",
+    "sortorder": 4
+  },
+  {
+    "enum_name": "task_priority",
+    "enum_value": "Low",
+    "sortorder": 1
+  },
+  {
+    "enum_name": "task_priority",
+    "enum_value": "Medium",
+    "sortorder": 2
+  },
+  {
+    "enum_name": "task_priority",
+    "enum_value": "High",
+    "sortorder": 3
+  },
+  {
+    "enum_name": "task_priority",
+    "enum_value": "Urgent",
+    "sortorder": 4
+  },
+  {
+    "enum_name": "task_status",
+    "enum_value": "Not Started",
+    "sortorder": 1
+  },
+  {
+    "enum_name": "task_status",
+    "enum_value": "In Progress",
+    "sortorder": 2
+  },
+  {
+    "enum_name": "task_status",
+    "enum_value": "Completed",
+    "sortorder": 3
+  },
+  {
+    "enum_name": "task_status",
+    "enum_value": "Abandoned",
+    "sortorder": 4
+  },
+  {
+    "enum_name": "user_role",
+    "enum_value": "bishop",
+    "sortorder": 1
+  },
+  {
+    "enum_name": "user_role",
+    "enum_value": "bishopric",
+    "sortorder": 2
+  },
+  {
+    "enum_name": "user_role",
+    "enum_value": "exec_sec",
+    "sortorder": 3
+  },
+  {
+    "enum_name": "user_role",
+    "enum_value": "ward_clerk",
+    "sortorder": 4
+  },
+  {
+    "enum_name": "user_role",
+    "enum_value": "rs_president",
+    "sortorder": 5
+  },
+  {
+    "enum_name": "user_role",
+    "enum_value": "eq_president",
+    "sortorder": 6
+  },
+  {
+    "enum_name": "user_role",
+    "enum_value": "org_president",
+    "sortorder": 7
+  },
+  {
+    "enum_name": "user_role",
+    "enum_value": "ward_council",
+    "sortorder": 8
+  },
+  {
+    "enum_name": "visit_type",
+    "enum_value": "Home Visit",
+    "sortorder": 1
+  },
+  {
+    "enum_name": "visit_type",
+    "enum_value": "Phone Call",
+    "sortorder": 2
+  },
+  {
+    "enum_name": "visit_type",
+    "enum_value": "Text Message",
+    "sortorder": 3
+  },
+  {
+    "enum_name": "visit_type",
+    "enum_value": "In-Person Meeting",
+    "sortorder": 4
+  },
+  {
+    "enum_name": "visit_type",
+    "enum_value": "Email",
+    "sortorder": 5
+  },
+  {
+    "enum_name": "visit_type",
+    "enum_value": "Sacrament",
+    "sortorder": 6
+  },
+  {
+    "enum_name": "visit_type",
+    "enum_value": "Interview",
+    "sortorder": 7
+  },
+  {
+    "enum_name": "visit_type",
+    "enum_value": "Other",
+    "sortorder": 8
+  }
+]

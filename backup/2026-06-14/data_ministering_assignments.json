@@ -1,0 +1,2742 @@
+[
+  {
+    "id": "e0f48422-10c6-467a-a9b5-61af3db72932",
+    "minister_member_id": "646b7513-2ca9-4d0d-a72d-4713fc6accac",
+    "household_id": "5a484e06-f440-437b-90a2-6e7db9b9f806",
+    "minister_name": "Foote, Scott",
+    "household_name": "Clements, Benjamin Silas & Whitney",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "2d80b299-5564-48a1-b58b-32230204a1b0",
+    "minister_member_id": "32c4d88f-c1ec-40f7-a061-f32352b764cd",
+    "household_id": "5a484e06-f440-437b-90a2-6e7db9b9f806",
+    "minister_name": "Mendoza, Lauryn",
+    "household_name": "Clements, Benjamin Silas & Whitney",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "8d1b1ec8-99f2-4449-a502-ff228e31ecbd",
+    "minister_member_id": "8adb3182-788e-481b-84b5-38b6256ef6de",
+    "household_id": "0335f963-d83b-4c8f-8e6f-2fbd35302bfa",
+    "minister_name": "Kemple, Kooper",
+    "household_name": "Dudas, Ronald Alan & Brenda Mae",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "99233f73-128b-4ca5-bcb0-9f7b2ee46bc9",
+    "minister_member_id": "7646be15-4071-4a49-81bf-c31aa920e6ba",
+    "household_id": "0335f963-d83b-4c8f-8e6f-2fbd35302bfa",
+    "minister_name": "Luker, Eric",
+    "household_name": "Dudas, Ronald Alan & Brenda Mae",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "15f9b840-ca05-4a68-8f55-58f1fa370605",
+    "minister_member_id": "904fe124-6634-402c-8e97-8c8c4705abf3",
+    "household_id": "0335f963-d83b-4c8f-8e6f-2fbd35302bfa",
+    "minister_name": "Hamm, Maria",
+    "household_name": "Dudas, Ronald Alan & Brenda Mae",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "deb8ab6a-1351-4373-b456-f9a74cf29753",
+    "minister_member_id": "1b216513-78fe-4660-a13b-c53589cef946",
+    "household_id": "9ecaf979-b1a5-46b0-8545-24a5a1626ffb",
+    "minister_name": "Garner, Sophia",
+    "household_name": "Hardin, Jared & BreAnne",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "69db9a86-7fb0-4f26-a305-54b1f69bd253",
+    "minister_member_id": "6d8400f7-703c-4445-b8bc-7331ca0ce331",
+    "household_id": "9ecaf979-b1a5-46b0-8545-24a5a1626ffb",
+    "minister_name": "Clements, Whitney",
+    "household_name": "Hardin, Jared & BreAnne",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "9545870c-86f2-49bc-87c4-f7b499504d16",
+    "minister_member_id": "59f5377c-eef1-4e5f-8aba-f81299f4afcb",
+    "household_id": "0b309fa5-54ef-4d3c-95b3-45592cc2fff3",
+    "minister_name": "Starkey, Joshua",
+    "household_name": "K\u00e4\u00e4ri\u00e4, Kristoffer & Isa",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "560401a4-f443-4684-bc6a-2179dfcac6bb",
+    "minister_member_id": "c6787ef9-12de-4480-a2dc-23c4fe5a6a5b",
+    "household_id": "f375f28a-1b5c-4dcf-af3a-3504857439bd",
+    "minister_name": "Gross, Mark",
+    "household_name": "Gillen, James & Katherine",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "57e45f12-81c9-4875-8bcd-a79231aa376d",
+    "minister_member_id": "5aef0096-c1ef-4642-942e-3696b042b3cf",
+    "household_id": "f375f28a-1b5c-4dcf-af3a-3504857439bd",
+    "minister_name": "Cluney, Wilson",
+    "household_name": "Gillen, James & Katherine",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "05777e77-6add-4e7b-806d-0f9e03ac32d2",
+    "minister_member_id": "dd38722d-637f-4e5b-8eb9-67c462d894aa",
+    "household_id": "f375f28a-1b5c-4dcf-af3a-3504857439bd",
+    "minister_name": "Constantino, John",
+    "household_name": "Gillen, James & Katherine",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "2bee0c07-cec7-4e3f-a7b8-d08b11bc2cc0",
+    "minister_member_id": "ff0c6587-7b24-4cb5-abd2-c1bcf11738a6",
+    "household_id": "f375f28a-1b5c-4dcf-af3a-3504857439bd",
+    "minister_name": "Lupton, Brittany",
+    "household_name": "Gillen, James & Katherine",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "dd76f9a5-9dd6-45d8-b334-080621687e2d",
+    "minister_member_id": "f0b01f00-cf45-468d-90f0-4c4c04d620dd",
+    "household_id": "f375f28a-1b5c-4dcf-af3a-3504857439bd",
+    "minister_name": "Masterson, Sharisa",
+    "household_name": "Gillen, James & Katherine",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "af82c5b2-dc00-4aa9-98e8-1415f14c19f8",
+    "minister_member_id": "f45f1f8a-8807-48cd-8516-77e5d63c0f14",
+    "household_id": "56a15495-84c1-4951-9d03-a4cd5ed8b538",
+    "minister_name": "Gillen-Sanchez, Seth Leoncio",
+    "household_name": "James, Ben & Lei",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "e53373d0-93b6-42b6-bbe7-0e946a6c6d82",
+    "minister_member_id": "976ee3d1-355e-4795-86d6-29a302e734d4",
+    "household_id": "56a15495-84c1-4951-9d03-a4cd5ed8b538",
+    "minister_name": "Gillen, James",
+    "household_name": "James, Ben & Lei",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "45525488-6877-484c-a425-636edd0a4299",
+    "minister_member_id": "ba7b41f1-0602-4f6b-b14a-1d0675158d76",
+    "household_id": "56a15495-84c1-4951-9d03-a4cd5ed8b538",
+    "minister_name": "Ribeiro, Nadira Rocha",
+    "household_name": "James, Ben & Lei",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "f52b1753-c816-47be-8b1e-5df65cde59b7",
+    "minister_member_id": "c6787ef9-12de-4480-a2dc-23c4fe5a6a5b",
+    "household_id": "4171bbd1-4674-46c2-a989-cdf75b29972e",
+    "minister_name": "Gross, Mark",
+    "household_name": "Messias, Felipe & Annalee",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "d69d6cf6-7959-4fa9-9f6f-2f50a81cdc41",
+    "minister_member_id": "5aef0096-c1ef-4642-942e-3696b042b3cf",
+    "household_id": "4171bbd1-4674-46c2-a989-cdf75b29972e",
+    "minister_name": "Cluney, Wilson",
+    "household_name": "Messias, Felipe & Annalee",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "e01cd48c-4f64-45e9-8519-bb2a7d629241",
+    "minister_member_id": "dd38722d-637f-4e5b-8eb9-67c462d894aa",
+    "household_id": "4171bbd1-4674-46c2-a989-cdf75b29972e",
+    "minister_name": "Constantino, John",
+    "household_name": "Messias, Felipe & Annalee",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "a90a7097-e5da-4b40-afc2-08974dffa552",
+    "minister_member_id": "73d12325-9f7d-4b5c-bde4-21a0194c05e2",
+    "household_id": "4171bbd1-4674-46c2-a989-cdf75b29972e",
+    "minister_name": "Behling, Katherine",
+    "household_name": "Messias, Felipe & Annalee",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "d68b8ec1-0599-4af5-9669-ee6b3baced89",
+    "minister_member_id": "945477f2-41aa-4232-abed-880f80eb39c9",
+    "household_id": "4171bbd1-4674-46c2-a989-cdf75b29972e",
+    "minister_name": "Shepherdson, Elaine Kay",
+    "household_name": "Messias, Felipe & Annalee",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "c482a51a-1883-4cda-8067-ba959152f5be",
+    "minister_member_id": "1b17abbe-36be-4e40-a226-36d546cbdd3c",
+    "household_id": "b56fbe96-1e81-4ed5-a25b-68369532afab",
+    "minister_name": "Johnston, Thomas",
+    "household_name": "Myers, Cole & Mary",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "87122a6c-f085-45f6-8ec6-b18713906ba6",
+    "minister_member_id": "df19fbe6-cc5b-4052-a824-fbee01578815",
+    "household_id": "b56fbe96-1e81-4ed5-a25b-68369532afab",
+    "minister_name": "Watson, Travis Dale",
+    "household_name": "Myers, Cole & Mary",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "0661b20e-0e6c-468d-ac62-090cdb5b1b7c",
+    "minister_member_id": "874bc1b5-d5b7-473c-bf33-e7ab63ea7b74",
+    "household_id": "b56fbe96-1e81-4ed5-a25b-68369532afab",
+    "minister_name": "Cluney, Ava",
+    "household_name": "Myers, Cole & Mary",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "82d6c616-76d4-4f76-b270-0d464fe98a1f",
+    "minister_member_id": "7ce5dec5-7ce4-4bf1-97f0-4ab0cb0974f0",
+    "household_id": "b56fbe96-1e81-4ed5-a25b-68369532afab",
+    "minister_name": "Cluney, Lindsey",
+    "household_name": "Myers, Cole & Mary",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "62b03179-fbd5-4f42-96fe-f691d764c58f",
+    "minister_member_id": "4a87c804-8ecf-4679-b553-6d0a13646e38",
+    "household_id": "0215ab8d-a332-44d1-b270-cdc60a77e5c1",
+    "minister_name": "Ribeiro, Wladimir",
+    "household_name": "Velasco, Ernesto Evangelista & Imelda Ann",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "e255a1c5-0a83-4dd5-8e08-05a6caf7fc30",
+    "minister_member_id": "29e9995d-3313-4670-bf2f-bb9cea892333",
+    "household_id": "0215ab8d-a332-44d1-b270-cdc60a77e5c1",
+    "minister_name": "McArthur, Corrie",
+    "household_name": "Velasco, Ernesto Evangelista & Imelda Ann",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "73fc6fa3-4902-44cf-8149-bf845aaf79d5",
+    "minister_member_id": "b35b3634-e17a-417f-abb0-502a2df7cb36",
+    "household_id": "0215ab8d-a332-44d1-b270-cdc60a77e5c1",
+    "minister_name": "Paoli, Karena",
+    "household_name": "Velasco, Ernesto Evangelista & Imelda Ann",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "40320786-51d0-4f77-b33c-4641c6ee1458",
+    "minister_member_id": "7806abac-fcff-451e-b6cd-3608d2e800cc",
+    "household_id": "b5bfcde4-e843-479a-868b-ea56a97ed0b1",
+    "minister_name": "Hardin, Landon",
+    "household_name": "Poirier, Paul Leroy & Claudette",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "c0e125ab-2854-4841-a35c-ecf5f1f99f7b",
+    "minister_member_id": "85fb3561-6bb7-4e63-964c-b7f5497e3dcb",
+    "household_id": "b5bfcde4-e843-479a-868b-ea56a97ed0b1",
+    "minister_name": "Hardin, Jared",
+    "household_name": "Poirier, Paul Leroy & Claudette",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "8b1efe1a-f9b0-4fff-8947-62eac577bd59",
+    "minister_member_id": "27463e21-9da3-4517-8d85-f00da4f86f9a",
+    "household_id": "b5bfcde4-e843-479a-868b-ea56a97ed0b1",
+    "minister_name": "Clements, Benjamin Silas",
+    "household_name": "Poirier, Paul Leroy & Claudette",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "e7723b1c-6ec9-4337-8803-62d576d9e4c3",
+    "minister_member_id": "29e9995d-3313-4670-bf2f-bb9cea892333",
+    "household_id": "b5bfcde4-e843-479a-868b-ea56a97ed0b1",
+    "minister_name": "McArthur, Corrie",
+    "household_name": "Poirier, Paul Leroy & Claudette",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "72c300b3-a353-40a7-9168-7eadd4daa0bc",
+    "minister_member_id": "b35b3634-e17a-417f-abb0-502a2df7cb36",
+    "household_id": "b5bfcde4-e843-479a-868b-ea56a97ed0b1",
+    "minister_name": "Paoli, Karena",
+    "household_name": "Poirier, Paul Leroy & Claudette",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "60c7e65a-5443-4090-a4ad-68d23d4cc173",
+    "minister_member_id": "f190c814-4f66-4cd7-a29e-968cb9c67e31",
+    "household_id": "31101e25-4bd7-463b-b648-1579688a241c",
+    "minister_name": "Messias, Annalee",
+    "household_name": "Paoli, Justin & Karena",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "acd02a21-c7c8-4c0b-a8c9-dd061729e480",
+    "minister_member_id": "977388c6-a062-41f0-adc2-eb9b1e72571a",
+    "household_id": "31101e25-4bd7-463b-b648-1579688a241c",
+    "minister_name": "Constantino, Sara",
+    "household_name": "Paoli, Justin & Karena",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "5c468b38-dbc8-4450-8587-56f80feef241",
+    "minister_member_id": "1ba82bf1-251f-4581-bd62-4c7b568903f3",
+    "household_id": "42fb7780-e40f-4c82-abbd-ae2385d6fbbb",
+    "minister_name": "Reynolds, Korbyn",
+    "household_name": "Agurto, David Abraham",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "f073fe68-af22-4a43-bae6-416b22b223a2",
+    "minister_member_id": "1ba82bf1-251f-4581-bd62-4c7b568903f3",
+    "household_id": "e8e88ec9-2ee4-4857-8f79-4a94f29f4b32",
+    "minister_name": "Reynolds, Korbyn",
+    "household_name": "Begg, Bea",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "0b5ad1c8-dec9-4084-86c4-46ea4eb84262",
+    "minister_member_id": "dd0f5c2e-1744-4f50-ab75-2792798e2485",
+    "household_id": "e8e88ec9-2ee4-4857-8f79-4a94f29f4b32",
+    "minister_name": "Thomas, Tanya Marie",
+    "household_name": "Begg, Bea",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "d8c990f6-d5ad-4e5b-85b3-ce161ae52c26",
+    "minister_member_id": "1d34db59-4990-4667-b241-f0e58b35dd1b",
+    "household_id": "e8e88ec9-2ee4-4857-8f79-4a94f29f4b32",
+    "minister_name": "Houssian, Helen",
+    "household_name": "Begg, Bea",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "77a8999a-3bfe-4e68-a554-022db129de10",
+    "minister_member_id": "353d11b5-b91e-468d-9710-7dfb3af41360",
+    "household_id": "c509e352-3f26-4dd2-a298-91bc606cfff1",
+    "minister_name": "Velasco, Ernesto Evangelista",
+    "household_name": "Cook, Curtis & Kimberly",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "2b8d6888-c7ab-4d9e-ba7e-fdecdc73f91d",
+    "minister_member_id": "4c0ec09e-c5cb-49d6-96c7-7438b178d0d5",
+    "household_id": "c509e352-3f26-4dd2-a298-91bc606cfff1",
+    "minister_name": "Rollins, Tonya",
+    "household_name": "Cook, Curtis & Kimberly",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "c3518517-49b9-4836-b536-af4351ec045f",
+    "minister_member_id": "a0ac52ae-23dc-421a-aa99-4d3e84a33e96",
+    "household_id": "c509e352-3f26-4dd2-a298-91bc606cfff1",
+    "minister_name": "Sumsion, Amber",
+    "household_name": "Cook, Curtis & Kimberly",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "7ed4b8a7-07c6-4a60-96af-16ec7d8f1178",
+    "minister_member_id": "4cec829f-45ee-4a3b-81c5-ec770af291a3",
+    "household_id": "9c593c51-7958-4899-b9cd-870945122594",
+    "minister_name": "Cook, Kimberly",
+    "household_name": "Widmar, Eric & Jennifer",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "d5d4e410-d4e7-4ce9-bf87-d69ebea5b947",
+    "minister_member_id": "333d3283-de82-4355-8c06-96777780d37c",
+    "household_id": "9c593c51-7958-4899-b9cd-870945122594",
+    "minister_name": "Trenz-Brower, Christa Maria",
+    "household_name": "Widmar, Eric & Jennifer",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "609a386f-f1b5-4abe-9fcb-6de7fb01affe",
+    "minister_member_id": "d52b6f1f-b4a9-4485-b584-02b945cd9c64",
+    "household_id": "65c00197-67b4-4c96-a31b-dfab800b1905",
+    "minister_name": "Jellings, Zane",
+    "household_name": "Douthitt, Gary David & Cheryl Lenore",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "eb9280b6-def8-44db-969a-551e256f6a9a",
+    "minister_member_id": "99515f58-9e7a-49e8-a5d5-746090b35b6d",
+    "household_id": "65c00197-67b4-4c96-a31b-dfab800b1905",
+    "minister_name": "Begg, Odalys",
+    "household_name": "Douthitt, Gary David & Cheryl Lenore",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "40a315f6-86a7-4a8c-87a6-a1106dcafa2c",
+    "minister_member_id": "faf6ca5e-a626-48fc-ad8c-2b84e65377d3",
+    "household_id": "a1ac8c3b-9a70-4d7d-86ec-c5fd023e6d6e",
+    "minister_name": "Hardin, BreAnne",
+    "household_name": "Garner, Kenn & Sophia",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "b8f1f5bb-ac75-42de-bb71-02f4b05ac030",
+    "minister_member_id": "00bbb3c1-634d-4d95-b22b-ca462f8f663a",
+    "household_id": "a1ac8c3b-9a70-4d7d-86ec-c5fd023e6d6e",
+    "minister_name": "Hardin, Kensington",
+    "household_name": "Garner, Kenn & Sophia",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "59187538-e721-4c0d-8a67-9503ec2e2ddb",
+    "minister_member_id": "539387ac-b838-42f8-8f15-8d102d0bc463",
+    "household_id": "f9c3acaa-ef66-42a3-b0f3-f1cee1842195",
+    "minister_name": "Johnson, Jordan",
+    "household_name": "Paris, Joyce",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "0eb12c1b-beb7-447e-b318-80aa75859406",
+    "minister_member_id": "dcd5d88c-3473-4a23-9437-0d7837c6692c",
+    "household_id": "f9c3acaa-ef66-42a3-b0f3-f1cee1842195",
+    "minister_name": "Tykhomyrov, Ivan",
+    "household_name": "Paris, Joyce",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.515987+00:00",
+    "updated_at": "2026-04-12T21:26:38.515987+00:00"
+  },
+  {
+    "id": "cd865049-a78d-4e28-bcd0-fe906715813b",
+    "minister_member_id": "0d3da392-45ad-4bbb-861a-5033aee91102",
+    "household_id": "f9c3acaa-ef66-42a3-b0f3-f1cee1842195",
+    "minister_name": "Gillen, Katherine",
+    "household_name": "Paris, Joyce",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "6f81a6df-74dc-46b2-a768-cb1ea21f95c4",
+    "minister_member_id": "3f94ab49-856a-461f-982c-1e505d8e5719",
+    "household_id": "5d503b80-6ab2-4244-9b5b-8030ab8f2596",
+    "minister_name": "Watson, Sarah Colleen",
+    "household_name": "Rendina, Joanne",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "b7195955-a47a-4acc-8068-4315118a040d",
+    "minister_member_id": "3c8fb05c-31ac-44d2-bddc-ab0e28189a77",
+    "household_id": "5d503b80-6ab2-4244-9b5b-8030ab8f2596",
+    "minister_name": "Watson, Reagan",
+    "household_name": "Rendina, Joanne",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "5ebc810a-760a-43ba-b794-dc921edbf2fd",
+    "minister_member_id": "3a78cfa2-3f91-4275-aefa-743632dd7346",
+    "household_id": "e82d8bab-ac20-45f7-bce3-dfb9bfdb995a",
+    "minister_name": "Tripp, Matthew Allen",
+    "household_name": "Starkey, Joshua & Trishia",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "95bdd2c7-6cc0-40e0-8498-947da3ccb210",
+    "minister_member_id": "1b216513-78fe-4660-a13b-c53589cef946",
+    "household_id": "e82d8bab-ac20-45f7-bce3-dfb9bfdb995a",
+    "minister_name": "Garner, Sophia",
+    "household_name": "Starkey, Joshua & Trishia",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "25e5b226-bfab-44c2-be6c-8b09896661a9",
+    "minister_member_id": "6d8400f7-703c-4445-b8bc-7331ca0ce331",
+    "household_id": "e82d8bab-ac20-45f7-bce3-dfb9bfdb995a",
+    "minister_name": "Clements, Whitney",
+    "household_name": "Starkey, Joshua & Trishia",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "bdd19302-2985-4b16-896a-579c007a395c",
+    "minister_member_id": "439481d7-277e-4db5-b5f8-68aa9454987d",
+    "household_id": "be8de7d4-4b61-48cc-a603-297848f3fb10",
+    "minister_name": "Davies, April",
+    "household_name": "Gardner, Matthew Grant & Jeane",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "377abd29-a546-45be-9218-3045bbd6203f",
+    "minister_member_id": "97f10400-4591-40ee-a64e-58019c946cef",
+    "household_id": "be8de7d4-4b61-48cc-a603-297848f3fb10",
+    "minister_name": "Davies, Emma",
+    "household_name": "Gardner, Matthew Grant & Jeane",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "8f9a9876-5863-4f9d-8731-d460b7dc847d",
+    "minister_member_id": "b64508af-cb0f-483d-9950-bbd0607787cc",
+    "household_id": "be8de7d4-4b61-48cc-a603-297848f3fb10",
+    "minister_name": "Davies, Kaitlyn",
+    "household_name": "Gardner, Matthew Grant & Jeane",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "fce1651e-9409-4d54-b5d3-95b5199e5b92",
+    "minister_member_id": "abd16aec-7bfd-4ef4-a3a8-e0ac3e50abd5",
+    "household_id": "14236e2a-f556-424d-9a9a-d1d390b8887f",
+    "minister_name": "Sampson, Destin",
+    "household_name": "Jellings, Don & Nicole",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "72d8527f-bb94-4c67-b274-baee7e2c29a5",
+    "minister_member_id": "db6392c2-3b0e-49be-bd2e-309af8ae847c",
+    "household_id": "14236e2a-f556-424d-9a9a-d1d390b8887f",
+    "minister_name": "Sampson, Spencer",
+    "household_name": "Jellings, Don & Nicole",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "1e7bf870-80da-4d84-a148-5acf0c8ecca6",
+    "minister_member_id": "efbc2f53-4191-4196-a272-32493a3c0c6e",
+    "household_id": "14236e2a-f556-424d-9a9a-d1d390b8887f",
+    "minister_name": "Starkey, Rose",
+    "household_name": "Jellings, Don & Nicole",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "657b6f5e-aa4d-4a04-9baa-37cdd035091b",
+    "minister_member_id": "df67299c-97ee-4b15-b42b-a597db595eae",
+    "household_id": "14236e2a-f556-424d-9a9a-d1d390b8887f",
+    "minister_name": "Starkey, Trishia",
+    "household_name": "Jellings, Don & Nicole",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "1e375346-9512-4867-a5b1-115a8d956a6d",
+    "minister_member_id": "afbf5e0d-2b0d-4b6f-857d-c209e947dca6",
+    "household_id": "14236e2a-f556-424d-9a9a-d1d390b8887f",
+    "minister_name": "Starkey, Eva",
+    "household_name": "Jellings, Don & Nicole",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "35e9b8fa-f000-4d10-a561-87035617d45f",
+    "minister_member_id": "1b17abbe-36be-4e40-a226-36d546cbdd3c",
+    "household_id": "b90d1d4c-e7ff-446e-95d7-4c17dec282c9",
+    "minister_name": "Johnston, Thomas",
+    "household_name": "Kemple, Nicole",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "e98cc22d-37b4-415d-8519-dd71a142aad0",
+    "minister_member_id": "df19fbe6-cc5b-4052-a824-fbee01578815",
+    "household_id": "b90d1d4c-e7ff-446e-95d7-4c17dec282c9",
+    "minister_name": "Watson, Travis Dale",
+    "household_name": "Kemple, Nicole",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "99ac0389-2b76-4e92-be2a-6743cf8a843c",
+    "minister_member_id": "0d3da392-45ad-4bbb-861a-5033aee91102",
+    "household_id": "b90d1d4c-e7ff-446e-95d7-4c17dec282c9",
+    "minister_name": "Gillen, Katherine",
+    "household_name": "Kemple, Nicole",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "04e7308e-f478-41a5-9270-6d087491281e",
+    "minister_member_id": "f7ad579e-accd-452c-8596-713c8d73ee9a",
+    "household_id": "c3e90475-647e-4431-88f4-15e73be43e92",
+    "minister_name": "James, Isabella",
+    "household_name": "Masterson, Mike & Sharisa",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "ac3f3c45-5297-4d1c-9b28-2b77db9ad633",
+    "minister_member_id": "5892991e-4a12-41b5-83f4-c9b64499a17c",
+    "household_id": "c3e90475-647e-4431-88f4-15e73be43e92",
+    "minister_name": "James, Lei",
+    "household_name": "Masterson, Mike & Sharisa",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "e57bb410-8c2e-4e8d-b7ca-2f00f6d2c77c",
+    "minister_member_id": "646b7513-2ca9-4d0d-a72d-4713fc6accac",
+    "household_id": "2be10fd8-edb5-42af-9b67-6d7779ca2187",
+    "minister_name": "Foote, Scott",
+    "household_name": "Sampson, Destin & Nicole",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "0a66bb53-2985-4d34-97f2-0c158dca3035",
+    "minister_member_id": "66227c4d-d9ef-4676-a57a-11dff96fa6d1",
+    "household_id": "2be10fd8-edb5-42af-9b67-6d7779ca2187",
+    "minister_name": "Foote, Rochelle",
+    "household_name": "Sampson, Destin & Nicole",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "ff3772d8-58fd-4dca-9732-2feecf0373eb",
+    "minister_member_id": "97e3035e-cb84-4251-9545-ee8def78e285",
+    "household_id": "40a96a1f-a229-4190-98d2-659caf57eaca",
+    "minister_name": "Messias, Felipe",
+    "household_name": "Shepherdson, Eddie & Elaine Kay",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "d03c4e0b-fd64-434b-b152-51f2ed738446",
+    "minister_member_id": "7e82832f-2daa-4f4f-8b79-d61c40664c3c",
+    "household_id": "40a96a1f-a229-4190-98d2-659caf57eaca",
+    "minister_name": "Roy, Mikel",
+    "household_name": "Shepherdson, Eddie & Elaine Kay",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "30efd56d-b316-47dd-b4b1-273d83928c3d",
+    "minister_member_id": "3f94ab49-856a-461f-982c-1e505d8e5719",
+    "household_id": "40a96a1f-a229-4190-98d2-659caf57eaca",
+    "minister_name": "Watson, Sarah Colleen",
+    "household_name": "Shepherdson, Eddie & Elaine Kay",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "ef6195fa-51aa-4d6b-9520-7cedbbeda628",
+    "minister_member_id": "3c8fb05c-31ac-44d2-bddc-ab0e28189a77",
+    "household_id": "40a96a1f-a229-4190-98d2-659caf57eaca",
+    "minister_name": "Watson, Reagan",
+    "household_name": "Shepherdson, Eddie & Elaine Kay",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "8a03e654-dc24-4fbb-a27d-a212d9de1745",
+    "minister_member_id": "4cec829f-45ee-4a3b-81c5-ec770af291a3",
+    "household_id": "db5a4bf2-1e6f-459c-8daa-5806345233de",
+    "minister_name": "Cook, Kimberly",
+    "household_name": "Begg, Joe & Odalys",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "17fe40e7-c2f4-4be4-b9d3-690244721a4c",
+    "minister_member_id": "333d3283-de82-4355-8c06-96777780d37c",
+    "household_id": "db5a4bf2-1e6f-459c-8daa-5806345233de",
+    "minister_name": "Trenz-Brower, Christa Maria",
+    "household_name": "Begg, Joe & Odalys",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "c4c2e259-14bf-463f-a62f-e3ba360c2b13",
+    "minister_member_id": "e2afd4ab-320f-4991-9655-621e0f7b436c",
+    "household_id": "f466e73b-7b73-42f2-be23-d7ce6f6989a4",
+    "minister_name": "Cook, Curtis",
+    "household_name": "Behling, Jimmy & Katherine",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "31300c86-0d83-4ebf-9881-d12aa1bdeb44",
+    "minister_member_id": "1d614301-b8af-4a78-8a22-3fe02617468f",
+    "household_id": "f466e73b-7b73-42f2-be23-d7ce6f6989a4",
+    "minister_name": "Cook, Bryson",
+    "household_name": "Behling, Jimmy & Katherine",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "f00a0d7d-840f-400d-aba0-e8a7fcba5765",
+    "minister_member_id": "faf6ca5e-a626-48fc-ad8c-2b84e65377d3",
+    "household_id": "f466e73b-7b73-42f2-be23-d7ce6f6989a4",
+    "minister_name": "Hardin, BreAnne",
+    "household_name": "Behling, Jimmy & Katherine",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "cb95081c-279b-4048-a1ae-26d76f67eb95",
+    "minister_member_id": "00bbb3c1-634d-4d95-b22b-ca462f8f663a",
+    "household_id": "f466e73b-7b73-42f2-be23-d7ce6f6989a4",
+    "minister_name": "Hardin, Kensington",
+    "household_name": "Behling, Jimmy & Katherine",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "3603eddf-bffb-4d4a-93c9-7b9af11a1284",
+    "minister_member_id": "d52b6f1f-b4a9-4485-b584-02b945cd9c64",
+    "household_id": "2561d144-982e-434d-99ac-851d2afa6bee",
+    "minister_name": "Jellings, Zane",
+    "household_name": "Benjamin, Christine",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "9d817f06-8ac3-4a2b-8894-94f2600c17c5",
+    "minister_member_id": "f9a86819-5a67-4856-b027-9fa541b9c455",
+    "household_id": "2561d144-982e-434d-99ac-851d2afa6bee",
+    "minister_name": "Langi, Sara",
+    "household_name": "Benjamin, Christine",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "df3b97d6-31ec-434d-bcff-0ee808e1bf7a",
+    "minister_member_id": "874deb04-78ce-4cae-ac53-3234c5625514",
+    "household_id": "2561d144-982e-434d-99ac-851d2afa6bee",
+    "minister_name": "Johnston, Vanessa",
+    "household_name": "Benjamin, Christine",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "61ee0c5b-fc58-46d3-b021-23bb25b3f3b9",
+    "minister_member_id": "1ba82bf1-251f-4581-bd62-4c7b568903f3",
+    "household_id": "1e7f661d-8ade-4f55-884f-b9ea06eb36b8",
+    "minister_name": "Reynolds, Korbyn",
+    "household_name": "Davies, Rod & April",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "26e872b4-173a-45d5-824c-cbc306de04ea",
+    "minister_member_id": "a178f003-e9fd-4d48-9686-1dac71c49ee4",
+    "household_id": "1e7f661d-8ade-4f55-884f-b9ea06eb36b8",
+    "minister_name": "Scott, Diane Mary",
+    "household_name": "Davies, Rod & April",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "39212679-c71e-4878-9a7c-faca64c13f24",
+    "minister_member_id": "edbdfc11-ebc1-4138-ac74-bed482bc7414",
+    "household_id": "1e7f661d-8ade-4f55-884f-b9ea06eb36b8",
+    "minister_name": "Schultz, Jessica Rachel",
+    "household_name": "Davies, Rod & April",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "1946e2aa-fe0a-4b2e-9ac6-37d603ad3f60",
+    "minister_member_id": "1b17abbe-36be-4e40-a226-36d546cbdd3c",
+    "household_id": "20160a3d-5324-4b1d-9a9f-0e0c3fb610c6",
+    "minister_name": "Johnston, Thomas",
+    "household_name": "Cluney, Wilson & Lindsey",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "bb126c1e-f054-4acf-86e8-41a0266249cc",
+    "minister_member_id": "df19fbe6-cc5b-4052-a824-fbee01578815",
+    "household_id": "20160a3d-5324-4b1d-9a9f-0e0c3fb610c6",
+    "minister_name": "Watson, Travis Dale",
+    "household_name": "Cluney, Wilson & Lindsey",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "9f41e113-491f-4413-9c23-f35334421d67",
+    "minister_member_id": "6044694b-e71d-4ebb-a210-91697c04a194",
+    "household_id": "20160a3d-5324-4b1d-9a9f-0e0c3fb610c6",
+    "minister_name": "Gross, Andrea",
+    "household_name": "Cluney, Wilson & Lindsey",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "2fe522d4-3b9d-4671-9ac1-f40cbce2d643",
+    "minister_member_id": "d5a2cfb0-6e82-4dda-b56f-ded239f8f335",
+    "household_id": "20160a3d-5324-4b1d-9a9f-0e0c3fb610c6",
+    "minister_name": "Sampson, Nicole",
+    "household_name": "Cluney, Wilson & Lindsey",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "001c3bbd-ad7e-488a-947a-bbfe2f82ae23",
+    "minister_member_id": "1b17abbe-36be-4e40-a226-36d546cbdd3c",
+    "household_id": "75329247-90b5-4798-9bc9-1239ad214a44",
+    "minister_name": "Johnston, Thomas",
+    "household_name": "Burns, Brian & Tammi",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "3c18c720-50f7-45d8-a2d8-5fdd331d0eff",
+    "minister_member_id": "df19fbe6-cc5b-4052-a824-fbee01578815",
+    "household_id": "75329247-90b5-4798-9bc9-1239ad214a44",
+    "minister_name": "Watson, Travis Dale",
+    "household_name": "Burns, Brian & Tammi",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "102ba3f5-78a5-4ad2-af36-6bad134d47b9",
+    "minister_member_id": "fe47d85b-8ec3-4b05-af99-c39c22b46aae",
+    "household_id": "75329247-90b5-4798-9bc9-1239ad214a44",
+    "minister_name": "Reynolds, Kazlynn",
+    "household_name": "Burns, Brian & Tammi",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "07f22c56-b369-4fd3-84b2-471e1c68fd8e",
+    "minister_member_id": "87709d79-a29f-40c4-a61e-0133f6b77145",
+    "household_id": "75329247-90b5-4798-9bc9-1239ad214a44",
+    "minister_name": "Reynolds, Tricia",
+    "household_name": "Burns, Brian & Tammi",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "8e61eba1-fd2a-49b8-8ab8-b831adda0fe2",
+    "minister_member_id": "8adb3182-788e-481b-84b5-38b6256ef6de",
+    "household_id": "329ff4f6-9080-4a17-b965-85dfba198b1b",
+    "minister_name": "Kemple, Kooper",
+    "household_name": "Dudas, Rachel",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "03261c04-91dc-4c71-bd69-5731c45cda79",
+    "minister_member_id": "7646be15-4071-4a49-81bf-c31aa920e6ba",
+    "household_id": "329ff4f6-9080-4a17-b965-85dfba198b1b",
+    "minister_name": "Luker, Eric",
+    "household_name": "Dudas, Rachel",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "cc202446-49b3-4871-927d-df3ad1c09fde",
+    "minister_member_id": "453d7d6f-ec5e-444b-b02a-b8287978a81d",
+    "household_id": "ef016a23-04db-4287-88df-c9c53d4f274a",
+    "minister_name": "Thompson, Marilyn",
+    "household_name": "De Bouter, Lillian",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "987c55b6-af0a-4132-b16a-fa79efbe90e4",
+    "minister_member_id": "760ec2f4-2509-4b2d-9ca8-b3e8ecbcf23e",
+    "household_id": "ef016a23-04db-4287-88df-c9c53d4f274a",
+    "minister_name": "Houssian, Molly",
+    "household_name": "De Bouter, Lillian",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "d955be45-2a24-42e9-993b-7ed1677d29c2",
+    "minister_member_id": "f190c814-4f66-4cd7-a29e-968cb9c67e31",
+    "household_id": "34088d71-9dc8-402a-8fa4-926753cf6754",
+    "minister_name": "Messias, Annalee",
+    "household_name": "Burgin, Tracey",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.673638+00:00",
+    "updated_at": "2026-04-12T21:26:38.673638+00:00"
+  },
+  {
+    "id": "1e49d594-1e32-4f48-9750-7039fa833aac",
+    "minister_member_id": "977388c6-a062-41f0-adc2-eb9b1e72571a",
+    "household_id": "34088d71-9dc8-402a-8fa4-926753cf6754",
+    "minister_name": "Constantino, Sara",
+    "household_name": "Burgin, Tracey",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "cb8d0b9f-9ede-4722-8c10-ff4c3454f59d",
+    "minister_member_id": "7806abac-fcff-451e-b6cd-3608d2e800cc",
+    "household_id": "9aa88777-1586-429e-8e52-ccc602d0560c",
+    "minister_name": "Hardin, Landon",
+    "household_name": "Clement, Hayden",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "8d1b92cc-5622-4d7b-b871-0c166e87273d",
+    "minister_member_id": "85fb3561-6bb7-4e63-964c-b7f5497e3dcb",
+    "household_id": "9aa88777-1586-429e-8e52-ccc602d0560c",
+    "minister_name": "Hardin, Jared",
+    "household_name": "Clement, Hayden",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "6d522aea-38aa-4506-ab0f-f54d021ca29c",
+    "minister_member_id": "27463e21-9da3-4517-8d85-f00da4f86f9a",
+    "household_id": "9aa88777-1586-429e-8e52-ccc602d0560c",
+    "minister_name": "Clements, Benjamin Silas",
+    "household_name": "Clement, Hayden",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "22bff7b3-c425-40fa-bbe1-4fbacef68d85",
+    "minister_member_id": "353d11b5-b91e-468d-9710-7dfb3af41360",
+    "household_id": "483be29b-98aa-4834-8763-9418e1194cae",
+    "minister_name": "Velasco, Ernesto Evangelista",
+    "household_name": "Drazy, Christine Lynn",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "3ab79f71-d533-4ae9-b5bd-6337ed8e44c2",
+    "minister_member_id": "f9a86819-5a67-4856-b027-9fa541b9c455",
+    "household_id": "409e30d5-d6f0-4d7a-be7d-2093edef1b7c",
+    "minister_name": "Langi, Sara",
+    "household_name": "Camacho, Iris",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "e7bb77a1-5f37-402c-92b6-8280c44156d0",
+    "minister_member_id": "874deb04-78ce-4cae-ac53-3234c5625514",
+    "household_id": "409e30d5-d6f0-4d7a-be7d-2093edef1b7c",
+    "minister_name": "Johnston, Vanessa",
+    "household_name": "Camacho, Iris",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "0c962a65-0979-46b0-b575-50ae02f39e00",
+    "minister_member_id": "d0586c23-e1ed-4abb-aabf-990b00292f0d",
+    "household_id": "88ed4b8c-32dd-4aac-8aab-8e1d6b8d4a87",
+    "minister_name": "Garner, Kenn",
+    "household_name": "Constantino, John & Sara",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "5584eb60-771d-4210-94e8-e542b5555a7f",
+    "minister_member_id": "26f51be7-ccfc-4e8d-9cd1-c7b58236b2cf",
+    "household_id": "88ed4b8c-32dd-4aac-8aab-8e1d6b8d4a87",
+    "minister_name": "Lupton, Darian",
+    "household_name": "Constantino, John & Sara",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "b61a1c8c-afad-49ba-97d4-bc4a824db73d",
+    "minister_member_id": "1b216513-78fe-4660-a13b-c53589cef946",
+    "household_id": "88ed4b8c-32dd-4aac-8aab-8e1d6b8d4a87",
+    "minister_name": "Garner, Sophia",
+    "household_name": "Constantino, John & Sara",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "e2663d61-e040-42c3-a74c-e165698fc87c",
+    "minister_member_id": "6d8400f7-703c-4445-b8bc-7331ca0ce331",
+    "household_id": "88ed4b8c-32dd-4aac-8aab-8e1d6b8d4a87",
+    "minister_name": "Clements, Whitney",
+    "household_name": "Constantino, John & Sara",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "cb6557d1-fa76-4f92-85a9-eb011de84d0e",
+    "minister_member_id": "a1646f4b-f977-4f08-aaf5-ccf423eec497",
+    "household_id": "58b5fe5e-009b-42e8-a706-2c3e4c82e8a6",
+    "minister_name": "Johnston, Matthew",
+    "household_name": "Corbett, Robert",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "56f9f6e4-a4e1-4ef2-8c33-5a198cf6cc25",
+    "minister_member_id": "8adb3182-788e-481b-84b5-38b6256ef6de",
+    "household_id": "e519d6c5-ceda-44d9-8c19-c1214a6b1641",
+    "minister_name": "Kemple, Kooper",
+    "household_name": "Dudas, Jared Dathan & Angela Marie",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "8fc230ae-499c-486b-ba0b-be0d92e5fe97",
+    "minister_member_id": "7646be15-4071-4a49-81bf-c31aa920e6ba",
+    "household_id": "e519d6c5-ceda-44d9-8c19-c1214a6b1641",
+    "minister_name": "Luker, Eric",
+    "household_name": "Dudas, Jared Dathan & Angela Marie",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "8731af0c-c288-4593-855a-39eab7b096cc",
+    "minister_member_id": "73d12325-9f7d-4b5c-bde4-21a0194c05e2",
+    "household_id": "d630118a-8c50-4ac4-9b84-4b18e645c6cd",
+    "minister_name": "Behling, Katherine",
+    "household_name": "Gay, Kevin & Serena",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "86ac0446-1fc1-419d-8fa7-dbc278d00ea6",
+    "minister_member_id": "945477f2-41aa-4232-abed-880f80eb39c9",
+    "household_id": "d630118a-8c50-4ac4-9b84-4b18e645c6cd",
+    "minister_name": "Shepherdson, Elaine Kay",
+    "household_name": "Gay, Kevin & Serena",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "890cd8b7-0018-45fb-b34c-4a1ff1622cad",
+    "minister_member_id": "1ecf03ba-2741-437b-8d20-8ba247014284",
+    "household_id": "0403da35-0625-4fa7-b079-92631c0db22d",
+    "minister_name": "Paoli, Justin",
+    "household_name": "Forman, Walter Frank & Orpha Mae",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "0a23fdd4-5892-4e86-8dba-836dd6d3b1ef",
+    "minister_member_id": "70ec986c-ccbc-446d-8258-a75e6086958c",
+    "household_id": "401b7de7-27c0-405f-be4f-c445bb022b48",
+    "minister_name": "Dudas, Ronald Alan",
+    "household_name": "Duffy, Bruce Bagg & Sandra Ellen",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "7a2dea2c-c1b6-453b-8507-d35adf44eebc",
+    "minister_member_id": "e331d642-71a9-4f77-bb5c-5d04082808ef",
+    "household_id": "401b7de7-27c0-405f-be4f-c445bb022b48",
+    "minister_name": "Hanney, Vicki",
+    "household_name": "Duffy, Bruce Bagg & Sandra Ellen",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "c0a46303-b342-45b1-8280-830e4cf025d1",
+    "minister_member_id": "0a18363c-073d-4610-8e78-0f832c35c46f",
+    "household_id": "401b7de7-27c0-405f-be4f-c445bb022b48",
+    "minister_name": "Kemple, Nicole",
+    "household_name": "Duffy, Bruce Bagg & Sandra Ellen",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "2a5a9a7d-29b8-4c64-9c2c-051af1925539",
+    "minister_member_id": "e2afd4ab-320f-4991-9655-621e0f7b436c",
+    "household_id": "19f5b1f8-a7d1-46d4-b4ea-57c5c74a1e93",
+    "minister_name": "Cook, Curtis",
+    "household_name": "Foote, Scott & Rochelle",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "f27b1f78-e186-4cee-abea-e5c0e39ab2b4",
+    "minister_member_id": "1d614301-b8af-4a78-8a22-3fe02617468f",
+    "household_id": "19f5b1f8-a7d1-46d4-b4ea-57c5c74a1e93",
+    "minister_name": "Cook, Bryson",
+    "household_name": "Foote, Scott & Rochelle",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "ff5103f7-2ba2-4d48-924d-56513a7234b7",
+    "minister_member_id": "439481d7-277e-4db5-b5f8-68aa9454987d",
+    "household_id": "19f5b1f8-a7d1-46d4-b4ea-57c5c74a1e93",
+    "minister_name": "Davies, April",
+    "household_name": "Foote, Scott & Rochelle",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "f47c88f9-f1a6-41b8-a379-4826488ba31a",
+    "minister_member_id": "97f10400-4591-40ee-a64e-58019c946cef",
+    "household_id": "19f5b1f8-a7d1-46d4-b4ea-57c5c74a1e93",
+    "minister_name": "Davies, Emma",
+    "household_name": "Foote, Scott & Rochelle",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "b72785b5-2ba8-4cd7-a381-2a8d97af46c0",
+    "minister_member_id": "b64508af-cb0f-483d-9950-bbd0607787cc",
+    "household_id": "19f5b1f8-a7d1-46d4-b4ea-57c5c74a1e93",
+    "minister_name": "Davies, Kaitlyn",
+    "household_name": "Foote, Scott & Rochelle",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "3acaafc4-470c-463a-add0-2a17f0356ea7",
+    "minister_member_id": "8adb3182-788e-481b-84b5-38b6256ef6de",
+    "household_id": "08c639e1-2169-4ed3-91fc-46a5198b39fa",
+    "minister_name": "Kemple, Kooper",
+    "household_name": "Getty, Kayla",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "0f6b1418-ab47-40c5-b19a-97b1d5384ed6",
+    "minister_member_id": "7646be15-4071-4a49-81bf-c31aa920e6ba",
+    "household_id": "08c639e1-2169-4ed3-91fc-46a5198b39fa",
+    "minister_name": "Luker, Eric",
+    "household_name": "Getty, Kayla",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "21fbd598-4177-49e6-8eca-127971cc7168",
+    "minister_member_id": "904fe124-6634-402c-8e97-8c8c4705abf3",
+    "household_id": "08c639e1-2169-4ed3-91fc-46a5198b39fa",
+    "minister_name": "Hamm, Maria",
+    "household_name": "Getty, Kayla",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "bc42565f-eac9-46cc-9403-9f8fb1a6cca4",
+    "minister_member_id": "f45f1f8a-8807-48cd-8516-77e5d63c0f14",
+    "household_id": "5de25f9e-7dcf-476f-b01e-3b49d638e183",
+    "minister_name": "Gillen-Sanchez, Seth Leoncio",
+    "household_name": "Gross, Lucas",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "185a7234-6e84-449e-a02c-72f0bef7e196",
+    "minister_member_id": "976ee3d1-355e-4795-86d6-29a302e734d4",
+    "household_id": "5de25f9e-7dcf-476f-b01e-3b49d638e183",
+    "minister_name": "Gillen, James",
+    "household_name": "Gross, Lucas",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "b2bcd98f-d52b-47e5-af3e-bf9abe536631",
+    "minister_member_id": "05dd926a-4ac3-4ad4-ad61-a21b39d9a53c",
+    "household_id": "dd56fb10-57db-45c9-8cee-cff727ab0454",
+    "minister_name": "Thomas, William",
+    "household_name": "Gross, Mark & Andrea",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "56820725-fa3d-473f-a828-baf8f80b5f6f",
+    "minister_member_id": "4c0ec09e-c5cb-49d6-96c7-7438b178d0d5",
+    "household_id": "dd56fb10-57db-45c9-8cee-cff727ab0454",
+    "minister_name": "Rollins, Tonya",
+    "household_name": "Gross, Mark & Andrea",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "19ee893e-ed5a-4025-b6b3-7557fc30587b",
+    "minister_member_id": "a0ac52ae-23dc-421a-aa99-4d3e84a33e96",
+    "household_id": "dd56fb10-57db-45c9-8cee-cff727ab0454",
+    "minister_name": "Sumsion, Amber",
+    "household_name": "Gross, Mark & Andrea",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "32f69c37-73ba-4edb-88cb-c989944943b6",
+    "minister_member_id": "3a78cfa2-3f91-4275-aefa-743632dd7346",
+    "household_id": "5db78dc3-d79a-416a-8909-21ddabdcdb07",
+    "minister_name": "Tripp, Matthew Allen",
+    "household_name": "Jones, Vaughn & Karen",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "a504c31d-0ed8-4c6e-b7ec-45f44aed67a5",
+    "minister_member_id": "4cec829f-45ee-4a3b-81c5-ec770af291a3",
+    "household_id": "5db78dc3-d79a-416a-8909-21ddabdcdb07",
+    "minister_name": "Cook, Kimberly",
+    "household_name": "Jones, Vaughn & Karen",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "c893e0c5-f28c-4484-b83c-3978c262a703",
+    "minister_member_id": "333d3283-de82-4355-8c06-96777780d37c",
+    "household_id": "5db78dc3-d79a-416a-8909-21ddabdcdb07",
+    "minister_name": "Trenz-Brower, Christa Maria",
+    "household_name": "Jones, Vaughn & Karen",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "4d9ae66f-869c-47df-982d-221411528397",
+    "minister_member_id": "59f5377c-eef1-4e5f-8aba-f81299f4afcb",
+    "household_id": "0856b234-f0f6-43b7-816d-33163ff98b27",
+    "minister_name": "Starkey, Joshua",
+    "household_name": "Johnston, Will & Ashley",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "5f88e491-6ff4-4c13-93bb-d3632ba73592",
+    "minister_member_id": "325d7579-e5c6-42ee-b246-aa0f7e3d40e1",
+    "household_id": "0856b234-f0f6-43b7-816d-33163ff98b27",
+    "minister_name": "Jones, Karen",
+    "household_name": "Johnston, Will & Ashley",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "9fc2a070-9783-4305-a536-9f2d5ef9fd0f",
+    "minister_member_id": "f181b72a-f5f6-42fd-9d70-3e9918d79aab",
+    "household_id": "0856b234-f0f6-43b7-816d-33163ff98b27",
+    "minister_name": "Washburn, Roseli",
+    "household_name": "Johnston, Will & Ashley",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "397edf52-4f60-4125-8ac7-807ff8ca20c5",
+    "minister_member_id": "1ecf03ba-2741-437b-8d20-8ba247014284",
+    "household_id": "e5b1c53d-f74d-41f7-9d7c-a914c4a05241",
+    "minister_name": "Paoli, Justin",
+    "household_name": "Johnston, Matthew & Vanessa",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "b2402f05-b4f1-4435-aea5-537487a66e4f",
+    "minister_member_id": "874bc1b5-d5b7-473c-bf33-e7ab63ea7b74",
+    "household_id": "e5b1c53d-f74d-41f7-9d7c-a914c4a05241",
+    "minister_name": "Cluney, Ava",
+    "household_name": "Johnston, Matthew & Vanessa",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "b37d3f3b-233f-4fb6-b8bb-041c864530a0",
+    "minister_member_id": "7ce5dec5-7ce4-4bf1-97f0-4ab0cb0974f0",
+    "household_id": "e5b1c53d-f74d-41f7-9d7c-a914c4a05241",
+    "minister_name": "Cluney, Lindsey",
+    "household_name": "Johnston, Matthew & Vanessa",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "23c13cdb-4a29-4cbf-b55f-2f481269ecd5",
+    "minister_member_id": "59f5377c-eef1-4e5f-8aba-f81299f4afcb",
+    "household_id": "a5e05b0c-c1db-4cd8-8c1b-a1c3e7f8b6ae",
+    "minister_name": "Starkey, Joshua",
+    "household_name": "Hamm, Vincent Jr. & Maria",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "53dd9eb5-100f-4164-94f8-46bcc723d536",
+    "minister_member_id": "e8830ee7-d1b7-47ad-a08b-42acf7e3d3c3",
+    "household_id": "a5e05b0c-c1db-4cd8-8c1b-a1c3e7f8b6ae",
+    "minister_name": "Neumeier, Cynthia",
+    "household_name": "Hamm, Vincent Jr. & Maria",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "2be8dee8-3dff-4971-8840-c39a91d46e16",
+    "minister_member_id": "539387ac-b838-42f8-8f15-8d102d0bc463",
+    "household_id": "e71c9219-fe63-4514-8136-b70359318ea6",
+    "minister_name": "Johnson, Jordan",
+    "household_name": "Jones, Victoria",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "d1e33f22-5274-4a14-a975-c5505f3ce692",
+    "minister_member_id": "dcd5d88c-3473-4a23-9437-0d7837c6692c",
+    "household_id": "e71c9219-fe63-4514-8136-b70359318ea6",
+    "minister_name": "Tykhomyrov, Ivan",
+    "household_name": "Jones, Victoria",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "fbd880aa-1fc0-4541-8e69-9d31494f53ab",
+    "minister_member_id": "f71cd7bd-983a-4db7-a8ea-f456a0c5a114",
+    "household_id": "e71c9219-fe63-4514-8136-b70359318ea6",
+    "minister_name": "Johnson, Rachel",
+    "household_name": "Jones, Victoria",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "f70b73cf-79dd-4ebb-a656-3dd75fe5c1c1",
+    "minister_member_id": "4bd28f38-c3dc-4825-a485-43325dbf989e",
+    "household_id": "e71c9219-fe63-4514-8136-b70359318ea6",
+    "minister_name": "Luker, Lindsey",
+    "household_name": "Jones, Victoria",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "9b1c76f0-4560-4909-a788-f5c8815066f3",
+    "minister_member_id": "dd0f5c2e-1744-4f50-ab75-2792798e2485",
+    "household_id": "b8a4f997-bdd2-432e-971e-2d769f8deb15",
+    "minister_name": "Thomas, Tanya Marie",
+    "household_name": "Hanney, Vicki",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "8790ac41-5160-4731-b4ea-8a5019fbbb7c",
+    "minister_member_id": "1d34db59-4990-4667-b241-f0e58b35dd1b",
+    "household_id": "b8a4f997-bdd2-432e-971e-2d769f8deb15",
+    "minister_name": "Houssian, Helen",
+    "household_name": "Hanney, Vicki",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.782726+00:00",
+    "updated_at": "2026-04-12T21:26:38.782726+00:00"
+  },
+  {
+    "id": "ef2456f2-7fff-4825-9940-932025882ece",
+    "minister_member_id": "59f5377c-eef1-4e5f-8aba-f81299f4afcb",
+    "household_id": "7c609f0d-d230-4794-a338-a838529da5ac",
+    "minister_name": "Starkey, Joshua",
+    "household_name": "Hart, Jackson Christopher",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "d81b3dd7-d400-4105-be51-fc876873c4cc",
+    "minister_member_id": "e2afd4ab-320f-4991-9655-621e0f7b436c",
+    "household_id": "86e05252-b96d-423b-b785-88afee4c5e6f",
+    "minister_name": "Cook, Curtis",
+    "household_name": "Hoard, Gary & Patricia",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "33bcfb53-beea-4a9e-989c-3ff3a2307237",
+    "minister_member_id": "1d614301-b8af-4a78-8a22-3fe02617468f",
+    "household_id": "86e05252-b96d-423b-b785-88afee4c5e6f",
+    "minister_name": "Cook, Bryson",
+    "household_name": "Hoard, Gary & Patricia",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "cb5ea2d2-b49d-4d31-a9af-b9b36fe9a7c6",
+    "minister_member_id": "66227c4d-d9ef-4676-a57a-11dff96fa6d1",
+    "household_id": "ef47fe1b-4f5d-484a-a9a1-164e1cdbd432",
+    "minister_name": "Foote, Rochelle",
+    "household_name": "Johnson, Sherri",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "e7e94f09-d060-4268-a79d-0f8b79635422",
+    "minister_member_id": "faf6ca5e-a626-48fc-ad8c-2b84e65377d3",
+    "household_id": "d30cd73d-2e14-4bd2-98ec-46eb8a45eb78",
+    "minister_name": "Hardin, BreAnne",
+    "household_name": "Houssian, Helen",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "c5cc92ec-7356-43da-aaa2-efe329b72a71",
+    "minister_member_id": "00bbb3c1-634d-4d95-b22b-ca462f8f663a",
+    "household_id": "d30cd73d-2e14-4bd2-98ec-46eb8a45eb78",
+    "minister_name": "Hardin, Kensington",
+    "household_name": "Houssian, Helen",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "a3ff6da7-4b50-4180-a477-2bec3d759e74",
+    "minister_member_id": "d0586c23-e1ed-4abb-aabf-990b00292f0d",
+    "household_id": "c49d7444-dd8e-4cc4-b9fe-f34373b39b19",
+    "minister_name": "Garner, Kenn",
+    "household_name": "Johnson, Jordan & Rachel",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "4f04a7c6-85b1-4ad1-b6a5-233a0309e6e2",
+    "minister_member_id": "26f51be7-ccfc-4e8d-9cd1-c7b58236b2cf",
+    "household_id": "c49d7444-dd8e-4cc4-b9fe-f34373b39b19",
+    "minister_name": "Lupton, Darian",
+    "household_name": "Johnson, Jordan & Rachel",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "ea5edee1-3b0b-4f0b-bc2a-9ae058e8da1d",
+    "minister_member_id": "32c4d88f-c1ec-40f7-a061-f32352b764cd",
+    "household_id": "c49d7444-dd8e-4cc4-b9fe-f34373b39b19",
+    "minister_name": "Mendoza, Lauryn",
+    "household_name": "Johnson, Jordan & Rachel",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "265cf71c-e257-4c30-a030-96cb17ccae88",
+    "minister_member_id": "a1646f4b-f977-4f08-aaf5-ccf423eec497",
+    "household_id": "f82c98ed-1a75-4471-a3c6-4096361ba879",
+    "minister_name": "Johnston, Matthew",
+    "household_name": "Luker, Eric & Lindsey",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "c845e160-3bfc-449d-9c00-b21d84d2b303",
+    "minister_member_id": "9d6983d8-f36e-4df8-8fe9-495e82e80f33",
+    "household_id": "f82c98ed-1a75-4471-a3c6-4096361ba879",
+    "minister_name": "Roy, Danika",
+    "household_name": "Luker, Eric & Lindsey",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "50cfaab2-806f-49bc-b8a0-ce9693333e4b",
+    "minister_member_id": "863ef374-6f17-4988-a84a-82f9c2ad6441",
+    "household_id": "f82c98ed-1a75-4471-a3c6-4096361ba879",
+    "minister_name": "Burns, Tammi",
+    "household_name": "Luker, Eric & Lindsey",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "ee6b039b-0e3b-426a-8b16-6dd97b7cdaa4",
+    "minister_member_id": "f45f1f8a-8807-48cd-8516-77e5d63c0f14",
+    "household_id": "611a0b65-7a33-4db5-bf6d-e11eb3a6bf32",
+    "minister_name": "Gillen-Sanchez, Seth Leoncio",
+    "household_name": "Lupton, Darian & Brittany",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "f81c9bc4-a45d-421b-812a-a4cb28077806",
+    "minister_member_id": "976ee3d1-355e-4795-86d6-29a302e734d4",
+    "household_id": "611a0b65-7a33-4db5-bf6d-e11eb3a6bf32",
+    "minister_name": "Gillen, James",
+    "household_name": "Lupton, Darian & Brittany",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "aa3b2b34-f4e0-448c-a9fc-c36f56c88419",
+    "minister_member_id": "3dd300d4-5137-4c2e-a016-a8071180a93f",
+    "household_id": "611a0b65-7a33-4db5-bf6d-e11eb3a6bf32",
+    "minister_name": "Jones, Victoria",
+    "household_name": "Lupton, Darian & Brittany",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "accb0f37-3207-43e8-ab8e-8d27989f7d51",
+    "minister_member_id": "0487cc54-44fe-4847-bdc3-f86c83a8daa8",
+    "household_id": "611a0b65-7a33-4db5-bf6d-e11eb3a6bf32",
+    "minister_name": "Johnston, Ashley",
+    "household_name": "Lupton, Darian & Brittany",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "19a641b1-092e-4f30-a0d2-1ac481779c4e",
+    "minister_member_id": "d353df12-3811-4fe5-8444-663a96638564",
+    "household_id": "663d2862-417c-4da7-b3a5-ac7ebbca8d1d",
+    "minister_name": "Widmar, Eric",
+    "household_name": "Mather, David",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "8a9cd181-1165-4b50-b7b0-1bf65269d8b7",
+    "minister_member_id": "b69f6f99-cdf7-43e4-a5e2-9113527500b9",
+    "household_id": "663d2862-417c-4da7-b3a5-ac7ebbca8d1d",
+    "minister_name": "Jones, Vaughn",
+    "household_name": "Mather, David",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "41c10ba8-1a9c-4af2-ad2b-a856cca2c8fd",
+    "minister_member_id": "4a87c804-8ecf-4679-b553-6d0a13646e38",
+    "household_id": "e8ccb2fa-e698-4a0b-9dd1-fce7dc72a209",
+    "minister_name": "Ribeiro, Wladimir",
+    "household_name": "Mendoza, Zackery & Lauryn",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "b3e72611-33aa-4875-9341-242599312ed8",
+    "minister_member_id": "ff0c6587-7b24-4cb5-abd2-c1bcf11738a6",
+    "household_id": "e8ccb2fa-e698-4a0b-9dd1-fce7dc72a209",
+    "minister_name": "Lupton, Brittany",
+    "household_name": "Mendoza, Zackery & Lauryn",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "db1d57cc-6733-45ad-8f29-f5c953cdc0ec",
+    "minister_member_id": "f0b01f00-cf45-468d-90f0-4c4c04d620dd",
+    "household_id": "e8ccb2fa-e698-4a0b-9dd1-fce7dc72a209",
+    "minister_name": "Masterson, Sharisa",
+    "household_name": "Mendoza, Zackery & Lauryn",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "208688ea-a6d0-4ad1-9633-0ecc72ebe44d",
+    "minister_member_id": "00b49877-4a9c-4a66-a40e-04144e203e1b",
+    "household_id": "d19aae03-3074-4cd0-9bc4-9ea75919a407",
+    "minister_name": "Velasco, Imelda Ann",
+    "household_name": "Linn, Jennifer",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "1f2ddfa2-2a2e-46b5-b8b4-f91a7bf447f8",
+    "minister_member_id": "19bb7c88-6187-4c39-b736-3367a6d02d2a",
+    "household_id": "d19aae03-3074-4cd0-9bc4-9ea75919a407",
+    "minister_name": "Velasco, Vanessa",
+    "household_name": "Linn, Jennifer",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "a7fec2e5-a9a1-4ec6-aeed-733240e3d960",
+    "minister_member_id": "d0586c23-e1ed-4abb-aabf-990b00292f0d",
+    "household_id": "5b8b7dac-31ca-4934-87a8-6e5233cb00c8",
+    "minister_name": "Garner, Kenn",
+    "household_name": "Langi, Tafu & Sara",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "10cf4b44-3c1f-470f-9920-cf4375e8f0e4",
+    "minister_member_id": "26f51be7-ccfc-4e8d-9cd1-c7b58236b2cf",
+    "household_id": "5b8b7dac-31ca-4934-87a8-6e5233cb00c8",
+    "minister_name": "Lupton, Darian",
+    "household_name": "Langi, Tafu & Sara",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "10a50238-37c7-4621-ae6b-2d6078ecf859",
+    "minister_member_id": "a178f003-e9fd-4d48-9686-1dac71c49ee4",
+    "household_id": "5b8b7dac-31ca-4934-87a8-6e5233cb00c8",
+    "minister_name": "Scott, Diane Mary",
+    "household_name": "Langi, Tafu & Sara",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "88e0c464-f6b6-4de3-9c31-439ce87c6bf7",
+    "minister_member_id": "edbdfc11-ebc1-4138-ac74-bed482bc7414",
+    "household_id": "5b8b7dac-31ca-4934-87a8-6e5233cb00c8",
+    "minister_name": "Schultz, Jessica Rachel",
+    "household_name": "Langi, Tafu & Sara",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "db9c0239-392c-47f1-8798-0146e36ba54d",
+    "minister_member_id": "7806abac-fcff-451e-b6cd-3608d2e800cc",
+    "household_id": "021ff764-8a3c-4d8b-9a46-89831ef8afdc",
+    "minister_name": "Hardin, Landon",
+    "household_name": "Lovelace, Nic & Kristen",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "303664d7-fdc2-49cc-bec8-a42b5d3a7518",
+    "minister_member_id": "85fb3561-6bb7-4e63-964c-b7f5497e3dcb",
+    "household_id": "021ff764-8a3c-4d8b-9a46-89831ef8afdc",
+    "minister_name": "Hardin, Jared",
+    "household_name": "Lovelace, Nic & Kristen",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "08e87e5d-c968-48c8-803e-133d88e91d71",
+    "minister_member_id": "27463e21-9da3-4517-8d85-f00da4f86f9a",
+    "household_id": "021ff764-8a3c-4d8b-9a46-89831ef8afdc",
+    "minister_name": "Clements, Benjamin Silas",
+    "household_name": "Lovelace, Nic & Kristen",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "113fd410-4bad-4614-81ae-b22e682860c8",
+    "minister_member_id": "f71cd7bd-983a-4db7-a8ea-f456a0c5a114",
+    "household_id": "021ff764-8a3c-4d8b-9a46-89831ef8afdc",
+    "minister_name": "Johnson, Rachel",
+    "household_name": "Lovelace, Nic & Kristen",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "db53e441-4b1b-4ea0-b27a-4aa08b62918e",
+    "minister_member_id": "4bd28f38-c3dc-4825-a485-43325dbf989e",
+    "household_id": "021ff764-8a3c-4d8b-9a46-89831ef8afdc",
+    "minister_name": "Luker, Lindsey",
+    "household_name": "Lovelace, Nic & Kristen",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "29fa20cf-7f6d-42d2-863c-27bf9290046a",
+    "minister_member_id": "a1646f4b-f977-4f08-aaf5-ccf423eec497",
+    "household_id": "6e83da97-ee87-4e1a-b9fc-fbdd865d9b9c",
+    "minister_name": "Johnston, Matthew",
+    "household_name": "McArthur, Larry & Corrie",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "dc4a2afa-b376-41c9-a3b1-0ccec36bb31e",
+    "minister_member_id": "f263d8b9-3ddd-4091-b312-99d211f49f52",
+    "household_id": "6e83da97-ee87-4e1a-b9fc-fbdd865d9b9c",
+    "minister_name": "Widmar, Jennifer",
+    "household_name": "McArthur, Larry & Corrie",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "ea1e7280-7e8c-4eaf-b0ed-50c3950f7eb6",
+    "minister_member_id": "18e0907c-935a-456e-9191-49c9ee8ea04d",
+    "household_id": "6e83da97-ee87-4e1a-b9fc-fbdd865d9b9c",
+    "minister_name": "Johnson, Sherri",
+    "household_name": "McArthur, Larry & Corrie",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "e51b3cde-a23d-46ac-8600-5b740d2cca1a",
+    "minister_member_id": "7806abac-fcff-451e-b6cd-3608d2e800cc",
+    "household_id": "4b228e24-85b8-40c6-982e-f0413008e01f",
+    "minister_name": "Hardin, Landon",
+    "household_name": "Mills, Keith & Jackie Anne",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "7a8aff63-be12-4240-a4b8-9ed76f3687e8",
+    "minister_member_id": "85fb3561-6bb7-4e63-964c-b7f5497e3dcb",
+    "household_id": "4b228e24-85b8-40c6-982e-f0413008e01f",
+    "minister_name": "Hardin, Jared",
+    "household_name": "Mills, Keith & Jackie Anne",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "c303f305-6aa3-4eda-955b-fc0bab911ff8",
+    "minister_member_id": "27463e21-9da3-4517-8d85-f00da4f86f9a",
+    "household_id": "4b228e24-85b8-40c6-982e-f0413008e01f",
+    "minister_name": "Clements, Benjamin Silas",
+    "household_name": "Mills, Keith & Jackie Anne",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "c072e83e-0bbb-401c-be21-8802d4d0707b",
+    "minister_member_id": "539387ac-b838-42f8-8f15-8d102d0bc463",
+    "household_id": "93fce873-756a-4453-9330-6149a562eb77",
+    "minister_name": "Johnson, Jordan",
+    "household_name": "Mundo, Aylin",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "ed2c7d8d-66ba-4c25-aa4d-be118e7b6c49",
+    "minister_member_id": "dcd5d88c-3473-4a23-9437-0d7837c6692c",
+    "household_id": "93fce873-756a-4453-9330-6149a562eb77",
+    "minister_name": "Tykhomyrov, Ivan",
+    "household_name": "Mundo, Aylin",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "07adf02f-26ea-4104-afea-e7b489c022ac",
+    "minister_member_id": "539387ac-b838-42f8-8f15-8d102d0bc463",
+    "household_id": "2bc4fe0f-6e2e-4fbd-89ba-37f327f50d5c",
+    "minister_name": "Johnson, Jordan",
+    "household_name": "Olson, Julea Regina",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "bc8eac55-7402-437b-9cec-c33bc9daab3f",
+    "minister_member_id": "dcd5d88c-3473-4a23-9437-0d7837c6692c",
+    "household_id": "2bc4fe0f-6e2e-4fbd-89ba-37f327f50d5c",
+    "minister_name": "Tykhomyrov, Ivan",
+    "household_name": "Olson, Julea Regina",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "4c6e57f8-107e-4482-87f8-ac7c33d12b93",
+    "minister_member_id": "e8830ee7-d1b7-47ad-a08b-42acf7e3d3c3",
+    "household_id": "2bc4fe0f-6e2e-4fbd-89ba-37f327f50d5c",
+    "minister_name": "Neumeier, Cynthia",
+    "household_name": "Olson, Julea Regina",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "180cbe72-84e4-4f9c-8f81-b7ef46b2baa9",
+    "minister_member_id": "ff0c6587-7b24-4cb5-abd2-c1bcf11738a6",
+    "household_id": "3033c1ba-f447-4b32-af6b-eb5511506a70",
+    "minister_name": "Lupton, Brittany",
+    "household_name": "Owens, Gracy",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "eae41f18-349c-458e-8e7c-8b9f3b2c5a4a",
+    "minister_member_id": "f0b01f00-cf45-468d-90f0-4c4c04d620dd",
+    "household_id": "3033c1ba-f447-4b32-af6b-eb5511506a70",
+    "minister_name": "Masterson, Sharisa",
+    "household_name": "Owens, Gracy",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "4d51b6df-491b-4c90-9048-3febdc2c1ea5",
+    "minister_member_id": "05dd926a-4ac3-4ad4-ad61-a21b39d9a53c",
+    "household_id": "5b015cc4-605c-45a5-9a47-5fb628fbce65",
+    "minister_name": "Thomas, William",
+    "household_name": "Parker, Will & Bonnie",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "88a0130d-3ca7-4046-8d8b-571663f21d7e",
+    "minister_member_id": "f9a86819-5a67-4856-b027-9fa541b9c455",
+    "household_id": "5b015cc4-605c-45a5-9a47-5fb628fbce65",
+    "minister_name": "Langi, Sara",
+    "household_name": "Parker, Will & Bonnie",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "2b5e91bd-70cd-4e8e-8e38-73cd6bacb2da",
+    "minister_member_id": "874deb04-78ce-4cae-ac53-3234c5625514",
+    "household_id": "5b015cc4-605c-45a5-9a47-5fb628fbce65",
+    "minister_name": "Johnston, Vanessa",
+    "household_name": "Parker, Will & Bonnie",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "5086c27d-7492-45dd-a1ae-4117dc223299",
+    "minister_member_id": "7806abac-fcff-451e-b6cd-3608d2e800cc",
+    "household_id": "949e2cc9-5494-41db-b543-bbb33a670640",
+    "minister_name": "Hardin, Landon",
+    "household_name": "Pirela Matos, Rafael Enrique & Yanette del Carmen Villarreal Pernalette",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "dfb627d6-b390-4fc8-a8af-a72494789001",
+    "minister_member_id": "85fb3561-6bb7-4e63-964c-b7f5497e3dcb",
+    "household_id": "949e2cc9-5494-41db-b543-bbb33a670640",
+    "minister_name": "Hardin, Jared",
+    "household_name": "Pirela Matos, Rafael Enrique & Yanette del Carmen Villarreal Pernalette",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.890291+00:00",
+    "updated_at": "2026-04-12T21:26:38.890291+00:00"
+  },
+  {
+    "id": "9e2a20b2-8f85-4359-b865-83b04006178f",
+    "minister_member_id": "27463e21-9da3-4517-8d85-f00da4f86f9a",
+    "household_id": "949e2cc9-5494-41db-b543-bbb33a670640",
+    "minister_name": "Clements, Benjamin Silas",
+    "household_name": "Pirela Matos, Rafael Enrique & Yanette del Carmen Villarreal Pernalette",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "6626ff49-d293-4f97-9ca0-0d61e541c9b9",
+    "minister_member_id": "f71cd7bd-983a-4db7-a8ea-f456a0c5a114",
+    "household_id": "80febeea-1e46-44cc-a148-a08827357cf4",
+    "minister_name": "Johnson, Rachel",
+    "household_name": "Morales, Donna",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "1d4d8724-2242-481e-90f9-c16a3fde2dfe",
+    "minister_member_id": "4bd28f38-c3dc-4825-a485-43325dbf989e",
+    "household_id": "80febeea-1e46-44cc-a148-a08827357cf4",
+    "minister_name": "Luker, Lindsey",
+    "household_name": "Morales, Donna",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "46ac4cea-37a6-41ee-89a0-6c413fb63930",
+    "minister_member_id": "00b49877-4a9c-4a66-a40e-04144e203e1b",
+    "household_id": "b4319afe-712a-44b5-94c4-c3254981521a",
+    "minister_name": "Velasco, Imelda Ann",
+    "household_name": "Nancy Marie Thomas",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "dbf51e16-4b2b-4a9b-b636-c0f44c481f78",
+    "minister_member_id": "19bb7c88-6187-4c39-b736-3367a6d02d2a",
+    "household_id": "b4319afe-712a-44b5-94c4-c3254981521a",
+    "minister_name": "Velasco, Vanessa",
+    "household_name": "Nancy Marie Thomas",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "756e444a-93af-4a3a-abcb-2cf03d954342",
+    "minister_member_id": "d52b6f1f-b4a9-4485-b584-02b945cd9c64",
+    "household_id": "4eb925c8-30dd-498c-96f3-7143a3f45a76",
+    "minister_name": "Jellings, Zane",
+    "household_name": "Neumeier, Cynthia",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "5fdfa8d8-e18f-4b57-8e4e-46259e7a007f",
+    "minister_member_id": "99515f58-9e7a-49e8-a5d5-746090b35b6d",
+    "household_id": "4eb925c8-30dd-498c-96f3-7143a3f45a76",
+    "minister_name": "Begg, Odalys",
+    "household_name": "Neumeier, Cynthia",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "0add6001-8176-44e7-bca3-2bb634bea674",
+    "minister_member_id": "353d11b5-b91e-468d-9710-7dfb3af41360",
+    "household_id": "1dac1476-a7db-4492-9342-4ad2602f512b",
+    "minister_name": "Velasco, Ernesto Evangelista",
+    "household_name": "Nikoliv, Fred",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "4dccd4f1-2ba6-4084-abd2-9e00b985b68d",
+    "minister_member_id": "1ecf03ba-2741-437b-8d20-8ba247014284",
+    "household_id": "d5cc1335-1227-4d7f-8f16-5ac9d3b8df8f",
+    "minister_name": "Paoli, Justin",
+    "household_name": "Owens, Brad",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "6a45e31a-5206-4193-8833-af2353011800",
+    "minister_member_id": "d0586c23-e1ed-4abb-aabf-990b00292f0d",
+    "household_id": "9cb49568-53ed-4839-8b99-bc18357e732d",
+    "minister_name": "Garner, Kenn",
+    "household_name": "Ribeiro, Wladimir & Nadira Rocha",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "b0320fac-969a-407f-8446-155f0dfb7964",
+    "minister_member_id": "26f51be7-ccfc-4e8d-9cd1-c7b58236b2cf",
+    "household_id": "9cb49568-53ed-4839-8b99-bc18357e732d",
+    "minister_name": "Lupton, Darian",
+    "household_name": "Ribeiro, Wladimir & Nadira Rocha",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "44584df5-c48c-4b38-aa64-d5eba633717c",
+    "minister_member_id": "453d7d6f-ec5e-444b-b02a-b8287978a81d",
+    "household_id": "9cb49568-53ed-4839-8b99-bc18357e732d",
+    "minister_name": "Thompson, Marilyn",
+    "household_name": "Ribeiro, Wladimir & Nadira Rocha",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "164224a1-1bd9-44db-bdb4-8532890697b2",
+    "minister_member_id": "760ec2f4-2509-4b2d-9ca8-b3e8ecbcf23e",
+    "household_id": "9cb49568-53ed-4839-8b99-bc18357e732d",
+    "minister_name": "Houssian, Molly",
+    "household_name": "Ribeiro, Wladimir & Nadira Rocha",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "5e77e44f-54c4-43cc-b0b9-f4f4fd4491b3",
+    "minister_member_id": "3dd300d4-5137-4c2e-a016-a8071180a93f",
+    "household_id": "7d2ae246-53fb-4266-99eb-4992dddf1588",
+    "minister_name": "Jones, Victoria",
+    "household_name": "Schultz, Jessica Rachel",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "c8ab8d59-c249-4544-b328-15aaad7f4134",
+    "minister_member_id": "0487cc54-44fe-4847-bdc3-f86c83a8daa8",
+    "household_id": "7d2ae246-53fb-4266-99eb-4992dddf1588",
+    "minister_name": "Johnston, Ashley",
+    "household_name": "Schultz, Jessica Rachel",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "2fad4440-4783-48fe-aced-7620e363367a",
+    "minister_member_id": "99515f58-9e7a-49e8-a5d5-746090b35b6d",
+    "household_id": "445049f1-e7b9-4ac1-ad59-d7c34e54cd72",
+    "minister_name": "Begg, Odalys",
+    "household_name": "Robinson, Christina",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "55a77b5c-b099-44de-ab51-afb23c27e542",
+    "minister_member_id": "4a87c804-8ecf-4679-b553-6d0a13646e38",
+    "household_id": "dde85c96-56e3-4af4-a2c8-f84926eea4b8",
+    "minister_name": "Ribeiro, Wladimir",
+    "household_name": "Roy, Mikel & Danika",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "6e7f8d5e-23db-4945-bc3d-17eed78ba949",
+    "minister_member_id": "f190c814-4f66-4cd7-a29e-968cb9c67e31",
+    "household_id": "dde85c96-56e3-4af4-a2c8-f84926eea4b8",
+    "minister_name": "Messias, Annalee",
+    "household_name": "Roy, Mikel & Danika",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "804ed30b-9bbf-41fd-ae8e-097be018667f",
+    "minister_member_id": "977388c6-a062-41f0-adc2-eb9b1e72571a",
+    "household_id": "dde85c96-56e3-4af4-a2c8-f84926eea4b8",
+    "minister_name": "Constantino, Sara",
+    "household_name": "Roy, Mikel & Danika",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "043840b9-8e13-41b3-87f6-c8a51bc775d2",
+    "minister_member_id": "3dd300d4-5137-4c2e-a016-a8071180a93f",
+    "household_id": "fe7ea6dc-0aca-4f01-b3f8-44e8eb211bbd",
+    "minister_name": "Jones, Victoria",
+    "household_name": "Scott, Diane Mary",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "4c032e75-ef14-4be0-bbce-3f5df5aeb404",
+    "minister_member_id": "0487cc54-44fe-4847-bdc3-f86c83a8daa8",
+    "household_id": "fe7ea6dc-0aca-4f01-b3f8-44e8eb211bbd",
+    "minister_name": "Johnston, Ashley",
+    "household_name": "Scott, Diane Mary",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "976fd376-410c-4826-be89-c05bddc5bfc2",
+    "minister_member_id": "abd16aec-7bfd-4ef4-a3a8-e0ac3e50abd5",
+    "household_id": "36cf46f9-9962-4946-bbbc-2855eef88cbc",
+    "minister_name": "Sampson, Destin",
+    "household_name": "Pittman, Gloria Jean",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "c9aea9aa-f97d-4793-9e3a-37cfbbc9bace",
+    "minister_member_id": "db6392c2-3b0e-49be-bd2e-309af8ae847c",
+    "household_id": "36cf46f9-9962-4946-bbbc-2855eef88cbc",
+    "minister_name": "Sampson, Spencer",
+    "household_name": "Pittman, Gloria Jean",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "a50a616c-10de-42de-b47b-29d8fb1f4c36",
+    "minister_member_id": "646b7513-2ca9-4d0d-a72d-4713fc6accac",
+    "household_id": "52fb1287-337b-48f4-a11e-5189077f3b1e",
+    "minister_name": "Foote, Scott",
+    "household_name": "Reynolds, Spencer & Tricia",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "a9dcb581-9986-4d5e-9de8-a94ab13eb099",
+    "minister_member_id": "453d7d6f-ec5e-444b-b02a-b8287978a81d",
+    "household_id": "52fb1287-337b-48f4-a11e-5189077f3b1e",
+    "minister_name": "Thompson, Marilyn",
+    "household_name": "Reynolds, Spencer & Tricia",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "53ed0532-4860-41b5-9ce4-3b1f35cbdaa3",
+    "minister_member_id": "760ec2f4-2509-4b2d-9ca8-b3e8ecbcf23e",
+    "household_id": "52fb1287-337b-48f4-a11e-5189077f3b1e",
+    "minister_name": "Houssian, Molly",
+    "household_name": "Reynolds, Spencer & Tricia",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "396caa38-ebd5-45da-bc58-5cfd2ef13728",
+    "minister_member_id": "4fd2b4e5-0846-4309-a0b6-bf5ec3543dc1",
+    "household_id": "62d3b369-8865-4531-82a0-58591318408d",
+    "minister_name": "Lovelace, Kristen",
+    "household_name": "Porter, May",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "69e686c3-cb01-42e6-9062-300544bf91fa",
+    "minister_member_id": "089e46db-bb3b-42af-8694-7bb9a013ec97",
+    "household_id": "62d3b369-8865-4531-82a0-58591318408d",
+    "minister_name": "Lovelace, Ella",
+    "household_name": "Porter, May",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "852012e0-2f69-4100-bf6d-127d4ff6a3e9",
+    "minister_member_id": "d353df12-3811-4fe5-8444-663a96638564",
+    "household_id": "04b9995f-37e8-48bd-a354-3586599a9e53",
+    "minister_name": "Widmar, Eric",
+    "household_name": "Rollins, Tonya",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "49fa2414-f297-4e34-be46-265c8c175e06",
+    "minister_member_id": "b69f6f99-cdf7-43e4-a5e2-9113527500b9",
+    "household_id": "04b9995f-37e8-48bd-a354-3586599a9e53",
+    "minister_name": "Jones, Vaughn",
+    "household_name": "Rollins, Tonya",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "d3faf535-803d-46d0-a6ec-199018252944",
+    "minister_member_id": "e331d642-71a9-4f77-bb5c-5d04082808ef",
+    "household_id": "04b9995f-37e8-48bd-a354-3586599a9e53",
+    "minister_name": "Hanney, Vicki",
+    "household_name": "Rollins, Tonya",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "d81c5767-3156-49f9-a19b-b886989f927b",
+    "minister_member_id": "0a18363c-073d-4610-8e78-0f832c35c46f",
+    "household_id": "04b9995f-37e8-48bd-a354-3586599a9e53",
+    "minister_name": "Kemple, Nicole",
+    "household_name": "Rollins, Tonya",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "d97cf0c8-02cf-4035-9888-6e8398ce397c",
+    "minister_member_id": "5dab9a8d-77c2-4469-b74d-fa8d26a3b67e",
+    "household_id": "4853c3f8-4d7d-4777-8785-cb61417a4a71",
+    "minister_name": "Douthitt, Gary David",
+    "household_name": "Vigil, Sebastian Lee Gerald",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "f2cc8b5d-bd16-452f-826a-c6c54f675acf",
+    "minister_member_id": "4c0ec09e-c5cb-49d6-96c7-7438b178d0d5",
+    "household_id": "67603e82-b2bd-41bb-9986-0987b83e2acb",
+    "minister_name": "Rollins, Tonya",
+    "household_name": "Shepherdson, Beth Elaine",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "53964575-d92f-48d1-a949-1236b57f2ee3",
+    "minister_member_id": "a0ac52ae-23dc-421a-aa99-4d3e84a33e96",
+    "household_id": "67603e82-b2bd-41bb-9986-0987b83e2acb",
+    "minister_name": "Sumsion, Amber",
+    "household_name": "Shepherdson, Beth Elaine",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "d0e21557-f55b-427a-8b4b-4248ebb18135",
+    "minister_member_id": "6044694b-e71d-4ebb-a210-91697c04a194",
+    "household_id": "f14e6e75-633c-4766-8fb0-c1d69040e531",
+    "minister_name": "Gross, Andrea",
+    "household_name": "Strite, Melody",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "ee36906a-a040-4400-a938-b9a4cd5d3b84",
+    "minister_member_id": "d5a2cfb0-6e82-4dda-b56f-ded239f8f335",
+    "household_id": "f14e6e75-633c-4766-8fb0-c1d69040e531",
+    "minister_name": "Sampson, Nicole",
+    "household_name": "Strite, Melody",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "bc8b92b2-3339-4bd5-965a-793e6ad72624",
+    "minister_member_id": "97e3035e-cb84-4251-9545-ee8def78e285",
+    "household_id": "e6bc0e94-55ad-4fff-a438-cdecbb8c921b",
+    "minister_name": "Messias, Felipe",
+    "household_name": "Sumsion, Amber",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "fbc9ae86-d331-49a3-a1f0-fe3ce1a7d6cb",
+    "minister_member_id": "7e82832f-2daa-4f4f-8b79-d61c40664c3c",
+    "household_id": "e6bc0e94-55ad-4fff-a438-cdecbb8c921b",
+    "minister_name": "Roy, Mikel",
+    "household_name": "Sumsion, Amber",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "26e2ad94-bcb5-4606-a6e6-3cecf1039e4e",
+    "minister_member_id": "e331d642-71a9-4f77-bb5c-5d04082808ef",
+    "household_id": "e6bc0e94-55ad-4fff-a438-cdecbb8c921b",
+    "minister_name": "Hanney, Vicki",
+    "household_name": "Sumsion, Amber",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "0ff8b135-1575-45be-8c98-fcc61e1723c8",
+    "minister_member_id": "0a18363c-073d-4610-8e78-0f832c35c46f",
+    "household_id": "e6bc0e94-55ad-4fff-a438-cdecbb8c921b",
+    "minister_name": "Kemple, Nicole",
+    "household_name": "Sumsion, Amber",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "48c0d834-5c07-4e90-81b8-30415fba8d71",
+    "minister_member_id": "f45f1f8a-8807-48cd-8516-77e5d63c0f14",
+    "household_id": "2c461da9-5c50-4e17-8f81-042f5d5f2ae6",
+    "minister_name": "Gillen-Sanchez, Seth Leoncio",
+    "household_name": "Todd, John Wayne & Esther",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "49b6d41d-fb11-44ea-b3e9-0e31f4e69317",
+    "minister_member_id": "976ee3d1-355e-4795-86d6-29a302e734d4",
+    "household_id": "2c461da9-5c50-4e17-8f81-042f5d5f2ae6",
+    "minister_name": "Gillen, James",
+    "household_name": "Todd, John Wayne & Esther",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "e9ef1824-06d6-44fc-b0b0-3da2aa7982de",
+    "minister_member_id": "4c0ec09e-c5cb-49d6-96c7-7438b178d0d5",
+    "household_id": "c06fcba7-d557-4a03-a9f2-726c2efbadf5",
+    "minister_name": "Rollins, Tonya",
+    "household_name": "Silvernail, Sarah Huijie",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "f649d797-fb17-47f2-a698-ae11065fdb73",
+    "minister_member_id": "a0ac52ae-23dc-421a-aa99-4d3e84a33e96",
+    "household_id": "c06fcba7-d557-4a03-a9f2-726c2efbadf5",
+    "minister_name": "Sumsion, Amber",
+    "household_name": "Silvernail, Sarah Huijie",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "919df1ea-704a-43a7-bcf7-4d2a32240f7a",
+    "minister_member_id": "29e9995d-3313-4670-bf2f-bb9cea892333",
+    "household_id": "c960baa1-719b-4d30-ab9e-fb0f59103785",
+    "minister_name": "McArthur, Corrie",
+    "household_name": "Smith, Brenda",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "68fda628-e7ab-4bdb-b84e-2d8990331035",
+    "minister_member_id": "b35b3634-e17a-417f-abb0-502a2df7cb36",
+    "household_id": "c960baa1-719b-4d30-ab9e-fb0f59103785",
+    "minister_name": "Paoli, Karena",
+    "household_name": "Smith, Brenda",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "36e2ae4a-e959-43ce-9de1-a491783de509",
+    "minister_member_id": "8adb3182-788e-481b-84b5-38b6256ef6de",
+    "household_id": "8c33b1f2-9bee-4fb9-a60d-b9d9f4d158c9",
+    "minister_name": "Kemple, Kooper",
+    "household_name": "Tripp, Matthew Allen & Debbie",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "df55b41f-db64-455a-a206-1f4f5e95b133",
+    "minister_member_id": "7646be15-4071-4a49-81bf-c31aa920e6ba",
+    "household_id": "8c33b1f2-9bee-4fb9-a60d-b9d9f4d158c9",
+    "minister_name": "Luker, Eric",
+    "household_name": "Tripp, Matthew Allen & Debbie",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "c44b0459-9912-4b87-8d3c-186c875c502a",
+    "minister_member_id": "efbc2f53-4191-4196-a272-32493a3c0c6e",
+    "household_id": "8c33b1f2-9bee-4fb9-a60d-b9d9f4d158c9",
+    "minister_name": "Starkey, Rose",
+    "household_name": "Tripp, Matthew Allen & Debbie",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:38.99071+00:00",
+    "updated_at": "2026-04-12T21:26:38.99071+00:00"
+  },
+  {
+    "id": "83985533-67e0-469e-a8f8-cd1eb0be00bc",
+    "minister_member_id": "df67299c-97ee-4b15-b42b-a597db595eae",
+    "household_id": "8c33b1f2-9bee-4fb9-a60d-b9d9f4d158c9",
+    "minister_name": "Starkey, Trishia",
+    "household_name": "Tripp, Matthew Allen & Debbie",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:39.096168+00:00",
+    "updated_at": "2026-04-12T21:26:39.096168+00:00"
+  },
+  {
+    "id": "2f426e7d-dd82-4e20-a39d-7dfe17d1c263",
+    "minister_member_id": "afbf5e0d-2b0d-4b6f-857d-c209e947dca6",
+    "household_id": "8c33b1f2-9bee-4fb9-a60d-b9d9f4d158c9",
+    "minister_name": "Starkey, Eva",
+    "household_name": "Tripp, Matthew Allen & Debbie",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:39.096168+00:00",
+    "updated_at": "2026-04-12T21:26:39.096168+00:00"
+  },
+  {
+    "id": "52871191-19b9-479d-bb60-19acd60e9de1",
+    "minister_member_id": "1ba82bf1-251f-4581-bd62-4c7b568903f3",
+    "household_id": "5c8d20f0-8da3-45eb-8cd1-bbda732c74f4",
+    "minister_name": "Reynolds, Korbyn",
+    "household_name": "Shelley, Tyler & Ashley Nicole-Olivia",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:39.096168+00:00",
+    "updated_at": "2026-04-12T21:26:39.096168+00:00"
+  },
+  {
+    "id": "c409488a-add3-4a6e-944e-391eb54c95f0",
+    "minister_member_id": "c6787ef9-12de-4480-a2dc-23c4fe5a6a5b",
+    "household_id": "0b255a61-1bfb-4a90-809c-43d6a90fe26d",
+    "minister_name": "Gross, Mark",
+    "household_name": "Speer, Gerald",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:39.096168+00:00",
+    "updated_at": "2026-04-12T21:26:39.096168+00:00"
+  },
+  {
+    "id": "37cc7cc7-031b-4c46-9c46-72531c36eca7",
+    "minister_member_id": "5aef0096-c1ef-4642-942e-3696b042b3cf",
+    "household_id": "0b255a61-1bfb-4a90-809c-43d6a90fe26d",
+    "minister_name": "Cluney, Wilson",
+    "household_name": "Speer, Gerald",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:39.096168+00:00",
+    "updated_at": "2026-04-12T21:26:39.096168+00:00"
+  },
+  {
+    "id": "a442acd5-bd46-42e4-9436-2cd6dc56d513",
+    "minister_member_id": "dd38722d-637f-4e5b-8eb9-67c462d894aa",
+    "household_id": "0b255a61-1bfb-4a90-809c-43d6a90fe26d",
+    "minister_name": "Constantino, John",
+    "household_name": "Speer, Gerald",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:39.096168+00:00",
+    "updated_at": "2026-04-12T21:26:39.096168+00:00"
+  },
+  {
+    "id": "b243e65b-4c30-434c-b8f7-4eb05437c37a",
+    "minister_member_id": "99515f58-9e7a-49e8-a5d5-746090b35b6d",
+    "household_id": "8205e7a0-7c95-44d3-8025-e7819905f502",
+    "minister_name": "Begg, Odalys",
+    "household_name": "Thomas, William & Tanya Marie",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:39.096168+00:00",
+    "updated_at": "2026-04-12T21:26:39.096168+00:00"
+  },
+  {
+    "id": "707b275e-8ec4-4e42-bcfc-a0d0284dc2f4",
+    "minister_member_id": "325d7579-e5c6-42ee-b246-aa0f7e3d40e1",
+    "household_id": "6ad07876-b968-4ae4-a01f-735f4aa58734",
+    "minister_name": "Jones, Karen",
+    "household_name": "Thompson, Marilyn",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:39.096168+00:00",
+    "updated_at": "2026-04-12T21:26:39.096168+00:00"
+  },
+  {
+    "id": "21809ae2-418c-41e5-9d8c-70ba9b1a6236",
+    "minister_member_id": "f181b72a-f5f6-42fd-9d70-3e9918d79aab",
+    "household_id": "6ad07876-b968-4ae4-a01f-735f4aa58734",
+    "minister_name": "Washburn, Roseli",
+    "household_name": "Thompson, Marilyn",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:39.096168+00:00",
+    "updated_at": "2026-04-12T21:26:39.096168+00:00"
+  },
+  {
+    "id": "33e3bca2-a9d9-4f61-9f71-5ddbaa60760d",
+    "minister_member_id": "9d6983d8-f36e-4df8-8fe9-495e82e80f33",
+    "household_id": "1845512f-cac8-4115-af1f-a4c72ddf7754",
+    "minister_name": "Roy, Danika",
+    "household_name": "Tykhomyrov, Ivan & Ali",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:39.096168+00:00",
+    "updated_at": "2026-04-12T21:26:39.096168+00:00"
+  },
+  {
+    "id": "f2e493aa-80b0-41b3-a495-1d9a5963cb56",
+    "minister_member_id": "863ef374-6f17-4988-a84a-82f9c2ad6441",
+    "household_id": "1845512f-cac8-4115-af1f-a4c72ddf7754",
+    "minister_name": "Burns, Tammi",
+    "household_name": "Tykhomyrov, Ivan & Ali",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:39.096168+00:00",
+    "updated_at": "2026-04-12T21:26:39.096168+00:00"
+  },
+  {
+    "id": "1b86878f-c729-42d0-9df3-bcbc2678cf0b",
+    "minister_member_id": "05dd926a-4ac3-4ad4-ad61-a21b39d9a53c",
+    "household_id": "8f4cfe51-85e4-4d35-bf5e-59956361d0c9",
+    "minister_name": "Thomas, William",
+    "household_name": "Houssian, Dave & Molly",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:39.096168+00:00",
+    "updated_at": "2026-04-12T21:26:39.096168+00:00"
+  },
+  {
+    "id": "fb3cccc7-a853-4934-9221-ee318cf28197",
+    "minister_member_id": "439481d7-277e-4db5-b5f8-68aa9454987d",
+    "household_id": "8f4cfe51-85e4-4d35-bf5e-59956361d0c9",
+    "minister_name": "Davies, April",
+    "household_name": "Houssian, Dave & Molly",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:39.096168+00:00",
+    "updated_at": "2026-04-12T21:26:39.096168+00:00"
+  },
+  {
+    "id": "fa14205a-6dc9-4e68-ba0c-97af5d9af1b5",
+    "minister_member_id": "97f10400-4591-40ee-a64e-58019c946cef",
+    "household_id": "8f4cfe51-85e4-4d35-bf5e-59956361d0c9",
+    "minister_name": "Davies, Emma",
+    "household_name": "Houssian, Dave & Molly",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:39.096168+00:00",
+    "updated_at": "2026-04-12T21:26:39.096168+00:00"
+  },
+  {
+    "id": "ec280874-93cd-4dad-b73a-c4998ede5b1a",
+    "minister_member_id": "b64508af-cb0f-483d-9950-bbd0607787cc",
+    "household_id": "8f4cfe51-85e4-4d35-bf5e-59956361d0c9",
+    "minister_name": "Davies, Kaitlyn",
+    "household_name": "Houssian, Dave & Molly",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:39.096168+00:00",
+    "updated_at": "2026-04-12T21:26:39.096168+00:00"
+  },
+  {
+    "id": "3b2dcff3-d52f-4a2d-9c8a-4b7a74b2263d",
+    "minister_member_id": "73d12325-9f7d-4b5c-bde4-21a0194c05e2",
+    "household_id": "d513b8c0-398e-4bd2-b617-f8b45497a75c",
+    "minister_name": "Behling, Katherine",
+    "household_name": "Washburn, Jeff & Roseli",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:39.096168+00:00",
+    "updated_at": "2026-04-12T21:26:39.096168+00:00"
+  },
+  {
+    "id": "76a494dc-fcf3-47be-a724-adc217baddc2",
+    "minister_member_id": "945477f2-41aa-4232-abed-880f80eb39c9",
+    "household_id": "d513b8c0-398e-4bd2-b617-f8b45497a75c",
+    "minister_name": "Shepherdson, Elaine Kay",
+    "household_name": "Washburn, Jeff & Roseli",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:39.096168+00:00",
+    "updated_at": "2026-04-12T21:26:39.096168+00:00"
+  },
+  {
+    "id": "d81a30f1-8f3c-4f1b-a02e-c8239e175d3c",
+    "minister_member_id": "d353df12-3811-4fe5-8444-663a96638564",
+    "household_id": "b95537e8-7ffd-4913-ac1c-648173ee52ff",
+    "minister_name": "Widmar, Eric",
+    "household_name": "Adams, Derek & Valerie Renee",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:39.096168+00:00",
+    "updated_at": "2026-04-12T21:26:39.096168+00:00"
+  },
+  {
+    "id": "7888ada8-2290-4c8b-b626-d60cac1f81e0",
+    "minister_member_id": "b69f6f99-cdf7-43e4-a5e2-9113527500b9",
+    "household_id": "b95537e8-7ffd-4913-ac1c-648173ee52ff",
+    "minister_name": "Jones, Vaughn",
+    "household_name": "Adams, Derek & Valerie Renee",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:39.096168+00:00",
+    "updated_at": "2026-04-12T21:26:39.096168+00:00"
+  },
+  {
+    "id": "d4dc4957-8d03-4342-a435-c93fc738885d",
+    "minister_member_id": "ba7b41f1-0602-4f6b-b14a-1d0675158d76",
+    "household_id": "b95537e8-7ffd-4913-ac1c-648173ee52ff",
+    "minister_name": "Ribeiro, Nadira Rocha",
+    "household_name": "Adams, Derek & Valerie Renee",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:39.096168+00:00",
+    "updated_at": "2026-04-12T21:26:39.096168+00:00"
+  },
+  {
+    "id": "1c1a747a-c493-431a-bd0a-784a2ca3e59b",
+    "minister_member_id": "abd16aec-7bfd-4ef4-a3a8-e0ac3e50abd5",
+    "household_id": "d9d73019-43a2-4dcf-9ab7-4265f8e968c6",
+    "minister_name": "Sampson, Destin",
+    "household_name": "Watson, Travis Dale & Sarah Colleen",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:39.096168+00:00",
+    "updated_at": "2026-04-12T21:26:39.096168+00:00"
+  },
+  {
+    "id": "71dcdd9b-1aee-4594-af24-ac7fac993af5",
+    "minister_member_id": "db6392c2-3b0e-49be-bd2e-309af8ae847c",
+    "household_id": "d9d73019-43a2-4dcf-9ab7-4265f8e968c6",
+    "minister_name": "Sampson, Spencer",
+    "household_name": "Watson, Travis Dale & Sarah Colleen",
+    "assignment_type": "brothers",
+    "created_at": "2026-04-12T21:26:39.096168+00:00",
+    "updated_at": "2026-04-12T21:26:39.096168+00:00"
+  },
+  {
+    "id": "fb28fc83-a9d1-4c5b-8b1e-1421453d1071",
+    "minister_member_id": "fe47d85b-8ec3-4b05-af99-c39c22b46aae",
+    "household_id": "d9d73019-43a2-4dcf-9ab7-4265f8e968c6",
+    "minister_name": "Reynolds, Kazlynn",
+    "household_name": "Watson, Travis Dale & Sarah Colleen",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:39.096168+00:00",
+    "updated_at": "2026-04-12T21:26:39.096168+00:00"
+  },
+  {
+    "id": "3007ab3c-ac01-4bb8-9e72-ffc4fd191fd7",
+    "minister_member_id": "87709d79-a29f-40c4-a61e-0133f6b77145",
+    "household_id": "d9d73019-43a2-4dcf-9ab7-4265f8e968c6",
+    "minister_name": "Reynolds, Tricia",
+    "household_name": "Watson, Travis Dale & Sarah Colleen",
+    "assignment_type": "sisters",
+    "created_at": "2026-04-12T21:26:39.096168+00:00",
+    "updated_at": "2026-04-12T21:26:39.096168+00:00"
+  }
+]

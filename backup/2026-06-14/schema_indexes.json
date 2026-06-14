@@ -1,0 +1,146 @@
+[
+  {
+    "schemaname": "public",
+    "tablename": "bishop_notes",
+    "indexname": "bishop_notes_pkey",
+    "indexdef": "CREATE UNIQUE INDEX bishop_notes_pkey ON public.bishop_notes USING btree (id)"
+  },
+  {
+    "schemaname": "public",
+    "tablename": "calling_assignments",
+    "indexname": "calling_assignments_pkey",
+    "indexdef": "CREATE UNIQUE INDEX calling_assignments_pkey ON public.calling_assignments USING btree (id)"
+  },
+  {
+    "schemaname": "public",
+    "tablename": "calling_assignments",
+    "indexname": "idx_calling_assignments_active",
+    "indexdef": "CREATE INDEX idx_calling_assignments_active ON public.calling_assignments USING btree (status, member_id) WHERE (archived_at IS NULL)"
+  },
+  {
+    "schemaname": "public",
+    "tablename": "callings",
+    "indexname": "callings_pkey",
+    "indexdef": "CREATE UNIQUE INDEX callings_pkey ON public.callings USING btree (id)"
+  },
+  {
+    "schemaname": "public",
+    "tablename": "households",
+    "indexname": "households_household_name_unique",
+    "indexdef": "CREATE UNIQUE INDEX households_household_name_unique ON public.households USING btree (household_name)"
+  },
+  {
+    "schemaname": "public",
+    "tablename": "households",
+    "indexname": "households_pkey",
+    "indexdef": "CREATE UNIQUE INDEX households_pkey ON public.households USING btree (id)"
+  },
+  {
+    "schemaname": "public",
+    "tablename": "leadership_notes",
+    "indexname": "leadership_notes_pkey",
+    "indexdef": "CREATE UNIQUE INDEX leadership_notes_pkey ON public.leadership_notes USING btree (id)"
+  },
+  {
+    "schemaname": "public",
+    "tablename": "member_contact_changes",
+    "indexname": "idx_mcc_member",
+    "indexdef": "CREATE INDEX idx_mcc_member ON public.member_contact_changes USING btree (member_id)"
+  },
+  {
+    "schemaname": "public",
+    "tablename": "member_contact_changes",
+    "indexname": "idx_mcc_synced",
+    "indexdef": "CREATE INDEX idx_mcc_synced ON public.member_contact_changes USING btree (synced_to_lcr) WHERE (synced_to_lcr = false)"
+  },
+  {
+    "schemaname": "public",
+    "tablename": "member_contact_changes",
+    "indexname": "member_contact_changes_pkey",
+    "indexdef": "CREATE UNIQUE INDEX member_contact_changes_pkey ON public.member_contact_changes USING btree (id)"
+  },
+  {
+    "schemaname": "public",
+    "tablename": "members",
+    "indexname": "idx_members_household",
+    "indexdef": "CREATE INDEX idx_members_household ON public.members USING btree (household_id)"
+  },
+  {
+    "schemaname": "public",
+    "tablename": "members",
+    "indexname": "idx_members_lcr_status",
+    "indexdef": "CREATE INDEX idx_members_lcr_status ON public.members USING btree (lcr_status)"
+  },
+  {
+    "schemaname": "public",
+    "tablename": "members",
+    "indexname": "idx_members_name",
+    "indexdef": "CREATE INDEX idx_members_name ON public.members USING btree (full_name)"
+  },
+  {
+    "schemaname": "public",
+    "tablename": "members",
+    "indexname": "members_pkey",
+    "indexdef": "CREATE UNIQUE INDEX members_pkey ON public.members USING btree (id)"
+  },
+  {
+    "schemaname": "public",
+    "tablename": "ministering_assignments",
+    "indexname": "idx_ministering_household",
+    "indexdef": "CREATE INDEX idx_ministering_household ON public.ministering_assignments USING btree (household_id)"
+  },
+  {
+    "schemaname": "public",
+    "tablename": "ministering_assignments",
+    "indexname": "idx_ministering_minister",
+    "indexdef": "CREATE INDEX idx_ministering_minister ON public.ministering_assignments USING btree (minister_member_id)"
+  },
+  {
+    "schemaname": "public",
+    "tablename": "ministering_assignments",
+    "indexname": "ministering_assignments_minister_member_id_household_id_ass_key",
+    "indexdef": "CREATE UNIQUE INDEX ministering_assignments_minister_member_id_household_id_ass_key ON public.ministering_assignments USING btree (minister_member_id, household_id, assignment_type)"
+  },
+  {
+    "schemaname": "public",
+    "tablename": "ministering_assignments",
+    "indexname": "ministering_assignments_pkey",
+    "indexdef": "CREATE UNIQUE INDEX ministering_assignments_pkey ON public.ministering_assignments USING btree (id)"
+  },
+  {
+    "schemaname": "public",
+    "tablename": "profiles",
+    "indexname": "profiles_pkey",
+    "indexdef": "CREATE UNIQUE INDEX profiles_pkey ON public.profiles USING btree (id)"
+  },
+  {
+    "schemaname": "public",
+    "tablename": "tasks",
+    "indexname": "idx_tasks_due",
+    "indexdef": "CREATE INDEX idx_tasks_due ON public.tasks USING btree (due_date)"
+  },
+  {
+    "schemaname": "public",
+    "tablename": "tasks",
+    "indexname": "idx_tasks_status",
+    "indexdef": "CREATE INDEX idx_tasks_status ON public.tasks USING btree (status)"
+  },
+  {
+    "schemaname": "public",
+    "tablename": "tasks",
+    "indexname": "tasks_pkey",
+    "indexdef": "CREATE UNIQUE INDEX tasks_pkey ON public.tasks USING btree (id)"
+  },
+  {
+    "schemaname": "public",
+    "tablename": "visits",
+    "indexname": "idx_visits_date",
+    "indexdef": "CREATE INDEX idx_visits_date ON public.visits USING btree (visit_date DESC)"
+  },
+  {
+    "schemaname": "public",
+    "tablename": "visits",
+    "indexname": "visits_pkey",
+    "indexdef": "CREATE UNIQUE INDEX visits_pkey ON public.visits USING btree (id)"
+  }
+]
