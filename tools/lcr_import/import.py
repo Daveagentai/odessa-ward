@@ -19,6 +19,7 @@ Writes SQL files into the same directory as the xlsx:
     <xlsx-dir>/lcr_import_members.sql
     <xlsx-dir>/lcr_import_missing.sql      (read-only audit query)
     <xlsx-dir>/lcr_import_clear_pending.sql
+    <xlsx-dir>/lcr_import_moveout_flag.sql (auto-flag households with all members missing)
 
 Matching strategy (CRITICAL):
     Members are matched on COALESCE(m.original_full_name, m.full_name) = l.full_name.
@@ -304,6 +305,62 @@ RETURNING mcc.id;
 """
 Path(OUT.replace('.sql','_clear_pending.sql')).write_text(clear_sql)
 
+# Auto-flag households for Check for Moved Out / auto-restore when members reappear.
+# Logic:
+#   - Only members with lcr_status='active' are counted. Deceased / already-moved-out
+#     members are excluded so their households don't get re-flagged on every import.
+#   - A household is flagged 'Check for Moved Out' when it has 1+ previously-active
+#     members and ZERO of them were refreshed by this LCR pull (i.e. every active
+#     member is missing).
+#   - When previously-flagged households have any active member refreshed, restore
+#     the original activity_status (saved in prior_activity_status) and clear the flag.
+#   - Friends (is_non_member=TRUE) are ignored for this calculation.
+#   - prior_activity_status is preserved across re-flags (we only set it when flagging
+#     a household that is NOT already flagged).
+moveout_sql = """
+WITH hh_status AS (
+  SELECT
+    household_id,
+    COUNT(*) FILTER (WHERE is_non_member IS DISTINCT FROM TRUE
+                       AND lcr_status = 'active') AS total_active,
+    COUNT(*) FILTER (WHERE is_non_member IS DISTINCT FROM TRUE
+                       AND lcr_status = 'active'
+                       AND lcr_last_seen_at >= now() - interval '1 hour') AS present_now
+  FROM members
+  WHERE household_id IS NOT NULL
+  GROUP BY household_id
+),
+flagged AS (
+  UPDATE households h
+  SET prior_activity_status = COALESCE(h.prior_activity_status, h.activity_status),
+      activity_status = 'Check for Moved Out',
+      updated_at = now()
+  FROM hh_status hs
+  WHERE h.id = hs.household_id
+    AND hs.total_active > 0
+    AND hs.present_now = 0
+    AND COALESCE(h.activity_status, '') <> 'Check for Moved Out'
+  RETURNING h.id, h.household_name
+),
+restored AS (
+  UPDATE households h
+  SET activity_status = COALESCE(h.prior_activity_status, 'Active'),
+      prior_activity_status = NULL,
+      updated_at = now()
+  FROM hh_status hs
+  WHERE h.id = hs.household_id
+    AND hs.present_now > 0
+    AND h.activity_status = 'Check for Moved Out'
+  RETURNING h.id, h.household_name
+)
+SELECT
+  (SELECT COUNT(*) FROM flagged)  AS flagged_count,
+  (SELECT COUNT(*) FROM restored) AS restored_count,
+  (SELECT json_agg(household_name ORDER BY household_name) FROM flagged)  AS flagged_households,
+  (SELECT json_agg(household_name ORDER BY household_name) FROM restored) AS restored_households;
+"""
+Path(OUT.replace('.sql','_moveout_flag.sql')).write_text(moveout_sql)
+
 print(f"Records: {len(records)}, Households: {len(households)}")
 print(f"Household SQL size: {len(sql)}")
 print(f"Members SQL size: {len(members_sql)}")
@@ -311,4 +368,5 @@ print(f"\nNext: run the SQL files via Supabase, in this order:")
 print(f"  1. {OUT.replace('.sql','_households.sql')}")
 print(f"  2. {OUT.replace('.sql','_members.sql')}    ← returns updated_count, inserted_count")
 print(f"  3. {OUT.replace('.sql','_clear_pending.sql')}  (auto-clear synced contact-change badges)")
-print(f"  4. {OUT.replace('.sql','_missing.sql')}        (audit: who's not in this LCR pull)")
+print(f"  4. {OUT.replace('.sql','_moveout_flag.sql')} (auto-flag/restore Check for Moved Out households)")
+print(f"  5. {OUT.replace('.sql','_missing.sql')}        (audit: who's not in this LCR pull)")
