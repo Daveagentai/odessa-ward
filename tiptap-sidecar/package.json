@@ -1,0 +1,25 @@
+{
+  "name": "odessa-tiptap-sidecar",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Self-contained Tiptap rich-text editor sidecar bundle for the Odessa Ward CRM",
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@tiptap/react": "^3.26.1",
+    "@tiptap/starter-kit": "^3.26.1",
+    "@tiptap/extension-placeholder": "^3.26.1",
+    "@tiptap/pm": "^3.26.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "vite": "^5",
+    "@vitejs/plugin-react": "^4",
+    "typescript": "^5",
+    "@types/react": "^18",
+    "@types/react-dom": "^18"
+  }
+}
