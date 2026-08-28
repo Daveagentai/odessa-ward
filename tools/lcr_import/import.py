@@ -229,7 +229,8 @@ WITH lcr_members AS (
     is_returned_missionary boolean
   )
 ),
-updated AS (
+-- Pass 1: strict match on original_full_name (or full_name if never renamed)
+updated_pass1 AS (
   UPDATE members m SET
     household_id = h.id,
     preferred_name = l.preferred_name,
@@ -282,11 +283,79 @@ updated AS (
   JOIN households h ON h.household_name = l.household_name
   WHERE COALESCE(m.original_full_name, m.full_name) = l.full_name
     AND (m.is_non_member IS DISTINCT FROM TRUE)
+  RETURNING m.id, l.full_name AS lcr_full_name, l.preferred_name AS lcr_preferred_name, l.household_name AS lcr_household_name
+),
+-- Pass 2: LCR name changed (marriage / middle name added or dropped). Fall back to
+-- (preferred_name, household_name) which is stable across renames and unique across
+-- active members. Also refresh original_full_name so pass 1 catches it next time.
+updated_pass2 AS (
+  UPDATE members m SET
+    original_full_name = l.full_name,
+    household_id = h.id,
+    preferred_name = l.preferred_name,
+    individual_email = l.individual_email,
+    individual_phone = l.individual_phone,
+    gender = l.gender::gender_type,
+    birth_date = l.birth_date,
+    birthplace = l.birthplace,
+    address = l.address,
+    city = l.city,
+    state = l.state,
+    zip = l.zip,
+    spouse_name = l.spouse_name,
+    marriage_date = l.marriage_date,
+    is_single = l.is_single,
+    marital_status = l.marital_status::marital_status_type,
+    callings = l.callings,
+    callings_with_dates = l.callings_with_dates,
+    temple_recommend_type = l.temple_recommend_type,
+    temple_recommend_status = l.temple_recommend_status,
+    temple_recommend_expiration = l.temple_recommend_expiration,
+    class_assignment = l.class_assignment,
+    confirmation_date = l.confirmation_date,
+    has_children = l.has_children,
+    is_born_in_covenant = l.is_born_in_covenant,
+    is_convert = l.is_convert,
+    is_sealed_to_current_spouse = l.is_sealed_to_current_spouse,
+    is_sealed_to_parents = l.is_sealed_to_parents,
+    is_sealed_to_prior_spouse = l.is_sealed_to_prior_spouse,
+    ministering_brothers = l.ministering_brothers,
+    ministering_sisters = l.ministering_sisters,
+    mission_country = l.mission_country,
+    mission_language = l.mission_language,
+    priesthood_office = l.priesthood_office,
+    priesthood = l.priesthood,
+    move_in_date = l.move_in_date,
+    ordination_date = l.ordination_date,
+    sealing_to_spouse = l.sealing_to_spouse,
+    seminary_status = l.seminary_status,
+    is_attending_seminary = l.is_attending_seminary,
+    potential_seminary_student = l.potential_seminary_student,
+    endowment_date = l.endowment_date,
+    endowment_status = l.endowment_status,
+    baptism_date = l.baptism_date,
+    is_returned_missionary = l.is_returned_missionary,
+    lcr_status = 'active',
+    lcr_last_seen_at = now(),
+    updated_at = now()
+  FROM lcr_members l
+  JOIN households h ON h.household_name = l.household_name
+  WHERE m.preferred_name = l.preferred_name
+    AND h.id = m.household_id
+    AND (m.is_non_member IS DISTINCT FROM TRUE)
+    AND NOT EXISTS (
+      SELECT 1 FROM updated_pass1 u WHERE u.id = m.id
+    )
+    AND NOT EXISTS (
+      SELECT 1 FROM updated_pass1 u WHERE u.lcr_full_name = l.full_name
+        AND u.lcr_preferred_name = l.preferred_name
+        AND u.lcr_household_name = l.household_name
+    )
   RETURNING m.id
 ),
 inserted AS (
   INSERT INTO members (
-    household_id, full_name, preferred_name, individual_email, individual_phone, gender,
+    household_id, full_name, original_full_name, preferred_name, individual_email, individual_phone, gender,
     birth_date, birthplace, address, city, state, zip, spouse_name, marriage_date,
     is_single, marital_status, callings, callings_with_dates, temple_recommend_type,
     temple_recommend_status, temple_recommend_expiration, class_assignment,
@@ -298,7 +367,7 @@ inserted AS (
     baptism_date, is_returned_missionary, lcr_status, lcr_last_seen_at, is_non_member
   )
   SELECT
-    h.id, l.full_name, l.preferred_name, l.individual_email, l.individual_phone, l.gender::gender_type,
+    h.id, l.full_name, l.full_name, l.preferred_name, l.individual_email, l.individual_phone, l.gender::gender_type,
     l.birth_date, l.birthplace, l.address, l.city, l.state, l.zip, l.spouse_name, l.marriage_date,
     l.is_single, l.marital_status::marital_status_type, l.callings, l.callings_with_dates, l.temple_recommend_type,
     l.temple_recommend_status, l.temple_recommend_expiration, l.class_assignment,
@@ -311,12 +380,21 @@ inserted AS (
   FROM lcr_members l
   JOIN households h ON h.household_name = l.household_name
   WHERE NOT EXISTS (
-    SELECT 1 FROM members m WHERE COALESCE(m.original_full_name, m.full_name) = l.full_name AND (m.is_non_member IS DISTINCT FROM TRUE)
+    SELECT 1 FROM members m
+     WHERE COALESCE(m.original_full_name, m.full_name) = l.full_name
+       AND (m.is_non_member IS DISTINCT FROM TRUE)
+  )
+  AND NOT EXISTS (
+    SELECT 1 FROM members m
+     WHERE m.preferred_name = l.preferred_name
+       AND m.household_id = h.id
+       AND (m.is_non_member IS DISTINCT FROM TRUE)
   )
   RETURNING id
 )
 SELECT
-  (SELECT COUNT(*) FROM updated) AS updated_count,
+  (SELECT COUNT(*) FROM updated_pass1) AS updated_count,
+  (SELECT COUNT(*) FROM updated_pass2) AS renamed_count,
   (SELECT COUNT(*) FROM inserted) AS inserted_count;
 """
 Path(OUT.replace('.sql','_02_members.sql')).write_text(members_sql)
