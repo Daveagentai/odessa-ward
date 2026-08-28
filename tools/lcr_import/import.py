@@ -62,6 +62,15 @@ def iso_date(v):
     if v is None: return None
     if isinstance(v, (datetime, date)):
         return v.strftime('%Y-%m-%d')
+    if isinstance(v, str):
+        s = v.strip()
+        if not s: return None
+        # LCR / Google Sheets string format: '17 Mar 2011'
+        for fmt in ('%d %b %Y', '%Y-%m-%d', '%m/%d/%Y'):
+            try:
+                return datetime.strptime(s, fmt).date().strftime('%Y-%m-%d')
+            except ValueError:
+                continue
     return None  # skip anything weird
 
 records = []
@@ -142,6 +151,27 @@ mem_json = json.dumps(records, ensure_ascii=False)
 # Escape single quotes for SQL literal
 def esc(s): return s.replace("'", "''")
 
+# Chunk the members JSON list into ~50KB pieces so each staging INSERT fits
+# comfortably in one execute_sql call. Uses dollar-quoted strings so the JSON
+# doesn't need single-quote escaping.
+CHUNK_TARGET_BYTES = 50_000
+def chunk_records(recs, target_bytes=CHUNK_TARGET_BYTES):
+    out = []
+    cur = []
+    cur_len = 2  # []
+    for r in recs:
+        s = json.dumps(r, ensure_ascii=False)
+        if cur and cur_len + len(s) + 1 > target_bytes:
+            out.append(cur)
+            cur = []
+            cur_len = 2
+        cur.append(r)
+        cur_len += len(s) + 1
+    if cur: out.append(cur)
+    return out
+
+mem_chunks = chunk_records(records)
+
 sql = f"""
 -- Upsert households from JSON staging
 WITH lcr_households AS (
@@ -160,6 +190,21 @@ ON CONFLICT (household_name) DO UPDATE SET
 
 Path(OUT.replace('.sql','_households.sql')).write_text(sql)
 
+# Emit staging setup + one chunk file per ~50KB batch + main SQL that reads
+# from the staging table. This keeps every execute_sql call under the argv/token
+# limits that block passing the full 800KB SQL inline.
+setup_sql = """
+DROP TABLE IF EXISTS _lcr_import_staging;
+CREATE TABLE _lcr_import_staging (data jsonb);
+"""
+Path(OUT.replace('.sql','_00_setup.sql')).write_text(setup_sql)
+
+for i, chunk in enumerate(mem_chunks):
+    chunk_json = json.dumps(chunk, ensure_ascii=False)
+    # Dollar-quoted literal — no single-quote escaping needed.
+    chunk_sql = f"INSERT INTO _lcr_import_staging(data) SELECT jsonb_array_elements($lcr${chunk_json}$lcr$::jsonb);\n"
+    Path(OUT.replace('.sql', f'_01_chunk_{i:02d}.sql')).write_text(chunk_sql)
+
 # IMPORTANT: Match on original_full_name (the long-form LCR name) not full_name.
 # The trg_members_sync_full_name trigger overwrites members.full_name to equal
 # preferred_name, while the original LCR-style name is preserved in original_full_name.
@@ -167,7 +212,7 @@ Path(OUT.replace('.sql','_households.sql')).write_text(sql)
 # legacy rows where original_full_name was never populated.
 members_sql = f"""
 WITH lcr_members AS (
-  SELECT * FROM jsonb_to_recordset('{esc(mem_json)}'::jsonb) AS x(
+  SELECT * FROM jsonb_to_recordset( (SELECT jsonb_agg(data) FROM _lcr_import_staging) ) AS x(
     household_name text, full_name text, preferred_name text,
     individual_email text, individual_phone text, gender text,
     birth_date date, birthplace text, address text, city text, state text, zip text,
@@ -274,7 +319,11 @@ SELECT
   (SELECT COUNT(*) FROM updated) AS updated_count,
   (SELECT COUNT(*) FROM inserted) AS inserted_count;
 """
-Path(OUT.replace('.sql','_members.sql')).write_text(members_sql)
+Path(OUT.replace('.sql','_02_members.sql')).write_text(members_sql)
+
+# Teardown for the staging table
+teardown_sql = "DROP TABLE IF EXISTS _lcr_import_staging;\n"
+Path(OUT.replace('.sql','_03_teardown.sql')).write_text(teardown_sql)
 
 # Missing members detection
 missing_sql = """
@@ -364,11 +413,15 @@ SELECT
 Path(OUT.replace('.sql','_moveout_flag.sql')).write_text(moveout_sql)
 
 print(f"Records: {len(records)}, Households: {len(households)}")
+print(f"Chunks: {len(mem_chunks)} (target {CHUNK_TARGET_BYTES} bytes each)")
 print(f"Household SQL size: {len(sql)}")
 print(f"Members SQL size: {len(members_sql)}")
 print(f"\nNext: run the SQL files via Supabase, in this order:")
 print(f"  1. {OUT.replace('.sql','_households.sql')}")
-print(f"  2. {OUT.replace('.sql','_members.sql')}    ← returns updated_count, inserted_count")
-print(f"  3. {OUT.replace('.sql','_clear_pending.sql')}  (auto-clear synced contact-change badges)")
-print(f"  4. {OUT.replace('.sql','_moveout_flag.sql')} (auto-flag/restore Check for Moved Out households)")
-print(f"  5. {OUT.replace('.sql','_missing.sql')}        (audit: who's not in this LCR pull)")
+print(f"  2. {OUT.replace('.sql','_00_setup.sql')}       (create _lcr_import_staging)")
+print(f"  3. {OUT.replace('.sql','_01_chunk_XX.sql')} × {len(mem_chunks)} (populate staging)")
+print(f"  4. {OUT.replace('.sql','_02_members.sql')}     ← returns updated_count, inserted_count")
+print(f"  5. {OUT.replace('.sql','_03_teardown.sql')}    (drop _lcr_import_staging)")
+print(f"  6. {OUT.replace('.sql','_clear_pending.sql')}  (auto-clear synced contact-change badges)")
+print(f"  7. {OUT.replace('.sql','_moveout_flag.sql')} (auto-flag/restore Check for Moved Out households)")
+print(f"  8. {OUT.replace('.sql','_missing.sql')}        (audit: who's not in this LCR pull)")
