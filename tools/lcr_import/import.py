@@ -519,7 +519,9 @@ if changed_records:
     changed_json = json.dumps(changed_records, ensure_ascii=False)
     changed_sql = f"""
 -- Update only members whose data actually changed since last import.
--- lcr_status/lcr_last_seen_at also refreshed here (belt & suspenders with presence.sql).
+-- lcr_last_seen_at is refreshed here (belt & suspenders with presence.sql).
+-- lcr_status is NEVER touched by the importer under the full-separation model
+-- (2026-08-29): member status is app-owned only, LCR is not a source for it.
 WITH lcr_changed AS (
   SELECT * FROM jsonb_to_recordset($lcr${changed_json}$lcr$::jsonb) AS x(
     _id uuid, _pass int, household_name text, full_name text, preferred_name text,
@@ -586,13 +588,6 @@ UPDATE members m SET
   is_returned_missionary = l.is_returned_missionary,
   -- pass-2 rows: refresh original_full_name so pass-1 catches this next time
   original_full_name = CASE WHEN l._pass = 2 THEN l.full_name ELSE m.original_full_name END,
-  -- Only reset to 'active' if the member is currently in a transient LCR-import state
-  -- ('active' or 'check_for_moved_out'). Never overwrite manually-set statuses
-  -- like deceased, moved_out, on_mission, name_removed, less_active, do_not_contact, etc.
-  lcr_status = CASE
-    WHEN m.lcr_status IN ('active', 'check_for_moved_out') THEN 'active'::member_lcr_status
-    ELSE m.lcr_status
-  END,
   lcr_last_seen_at = now(),
   updated_at = now()
 FROM lcr_changed l
@@ -616,17 +611,13 @@ if matched_ids:
     ids_array = ','.join(f"'{i}'::uuid" for i in matched_ids)
     presence_sql = f"""
 -- Presence-ping: refresh lcr_last_seen_at for every member matched by LCR,
--- regardless of whether their data changed. This drives the moveout/missing
--- logic downstream. Runs in one bulk UPDATE — no per-row overhead.
--- lcr_status: only clear transient 'check_for_moved_out' (they came back in
--- this LCR pull). Never overwrite deceased/moved_out/on_mission/name_removed
--- etc. — those are clerk-managed decisions.
+-- regardless of whether their data changed. This drives the household-level
+-- moveout logic downstream. Runs in one bulk UPDATE — no per-row overhead.
+-- lcr_status is NEVER touched here under the full-separation model (2026-08-29):
+-- member status is app-owned, and the importer only records "we saw this row"
+-- via lcr_last_seen_at.
 UPDATE members
-SET lcr_last_seen_at = now(),
-    lcr_status = CASE
-      WHEN lcr_status = 'check_for_moved_out' THEN 'active'::member_lcr_status
-      ELSE lcr_status
-    END
+SET lcr_last_seen_at = now()
 WHERE id = ANY(ARRAY[{ids_array}]);
 
 SELECT {len(matched_ids)}::int AS presence_count;
@@ -684,7 +675,9 @@ SELECT
   l.ministering_sisters, l.mission_country, l.mission_language, l.priesthood_office,
   l.priesthood, l.move_in_date, l.ordination_date, l.sealing_to_spouse, l.seminary_status,
   l.is_attending_seminary, l.potential_seminary_student, l.endowment_date, l.endowment_status,
-  l.baptism_date, l.is_returned_missionary, 'active'::member_lcr_status, now(), FALSE
+  -- New members INSERT with 'not_active_unknown' per full-separation model (2026-08-29):
+  -- LCR does not tell us a member's status; clerks set it in the app.
+  l.baptism_date, l.is_returned_missionary, 'not_active_unknown'::member_lcr_status, now(), FALSE
 FROM lcr_new l
 JOIN households h ON h.household_name = l.household_name
 RETURNING id;
@@ -695,55 +688,28 @@ else:
         "SELECT 0::int AS inserted_count WHERE FALSE;\n"
     )
 
-# --- clear_pending / member_moveout_flag / moveout_flag / missing ----------
-# NEW step: individual-level moveout flag. Any member with lcr_status='active'
-# whose household DID appear in this LCR pull, but who themselves did NOT,
-# gets bumped to 'check_for_moved_out'. This catches the Watson/Garrett case:
-# household still active, one member vanished from LCR.
-member_moveout_sql = """
--- Individual moveout sweep: flag members whose household is still in LCR
--- (has at least one 'present_now' member) but who themselves were not
--- present in this LCR pull. Runs after presence.sql, so lcr_last_seen_at
--- is the reliable presence signal for this run.
-WITH hh_presence AS (
-  SELECT
-    household_id,
-    COUNT(*) FILTER (WHERE is_non_member IS DISTINCT FROM TRUE
-                       AND lcr_status = 'active'
-                       AND lcr_last_seen_at >= now() - interval '1 hour') AS present_now
-  FROM members
-  WHERE household_id IS NOT NULL
-  GROUP BY household_id
-),
-flagged AS (
-  UPDATE members m
-  SET lcr_status = 'check_for_moved_out'::member_lcr_status,
-      updated_at = now()
-  FROM hh_presence hp
-  WHERE m.household_id = hp.household_id
-    AND hp.present_now > 0                            -- household still exists in LCR
-    AND m.is_non_member IS DISTINCT FROM TRUE
-    AND m.lcr_status = 'active'                        -- only touch active members
-    AND (m.lcr_last_seen_at IS NULL
-         OR m.lcr_last_seen_at < now() - interval '1 hour')  -- but this member was not in LCR pull
-  RETURNING m.id, m.full_name, m.household_id
-)
-SELECT COUNT(*) AS member_flagged_count,
-       json_agg(json_build_object('id', id, 'name', full_name) ORDER BY full_name) AS flagged_members
-FROM flagged;
-"""
-Path(OUT.replace('.sql','_member_moveout_flag.sql')).write_text(member_moveout_sql)
+# --- clear_pending / moveout_flag / missing --------------------------------
+#
+# NOTE (2026-08-29 full-separation refactor): the individual-level moveout
+# sweep (member_moveout_flag.sql) has been REMOVED. Under the new model,
+# LCR is not a source of member status — clerks set every member's
+# lcr_status manually in the app. When a member disappears from LCR while
+# their household stays, that fact is surfaced in the missing.sql report
+# below (as an audit list) but the importer no longer writes any status.
 
 missing_sql = """
 -- Members in DB with no lcr_last_seen_at touched in the last hour = missing from LCR.
--- After member_moveout_flag runs, active-and-missing here means an anomaly:
--- likely the whole household is missing (handled by household moveout_flag) or
--- a data race. Look for check_for_moved_out below to see individual flags.
+-- This is an audit list only — the importer no longer writes any status here.
+-- Clerks review this list and adjust individual member statuses in the app.
+--
+-- Filter excludes members whose current status already explains their absence
+-- from LCR (deceased, moved_out, name_removed, on_mission — these members are
+-- not expected to appear in a routine LCR pull).
 SELECT id, full_name, household_id, lcr_status
 FROM members
 WHERE (is_non_member IS DISTINCT FROM TRUE)
   AND (lcr_last_seen_at IS NULL OR lcr_last_seen_at < now() - interval '1 hour')
-  AND lcr_status IN ('active', 'check_for_moved_out')
+  AND lcr_status NOT IN ('deceased', 'moved_out', 'name_removed', 'on_mission', 'name_removal_requested')
 ORDER BY lcr_status, full_name;
 """
 Path(OUT.replace('.sql','_missing.sql')).write_text(missing_sql)
@@ -767,13 +733,19 @@ RETURNING mcc.id;
 Path(OUT.replace('.sql','_clear_pending.sql')).write_text(clear_sql)
 
 moveout_sql = """
+-- Household-level moveout flag. A household is flagged 'Check for Moved Out'
+-- when it has at least one non-terminal member on file but zero members were
+-- present in this LCR pull. "Non-terminal" = not deceased, moved_out,
+-- name_removed, on_mission, or name_removal_requested — those members are
+-- not expected to appear in a routine LCR pull, so we exclude them from the
+-- presence math.
 WITH hh_status AS (
   SELECT
     household_id,
     COUNT(*) FILTER (WHERE is_non_member IS DISTINCT FROM TRUE
-                       AND lcr_status = 'active') AS total_active,
+                       AND lcr_status NOT IN ('deceased','moved_out','name_removed','on_mission','name_removal_requested')) AS total_active,
     COUNT(*) FILTER (WHERE is_non_member IS DISTINCT FROM TRUE
-                       AND lcr_status = 'active'
+                       AND lcr_status NOT IN ('deceased','moved_out','name_removed','on_mission','name_removal_requested')
                        AND lcr_last_seen_at >= now() - interval '1 hour') AS present_now
   FROM members
   WHERE household_id IS NOT NULL
@@ -820,8 +792,7 @@ print("Next: run the SQL files via Supabase in this order:")
 print(f"  1. lcr_import_households.sql          (2 phases: renames + upsert)")
 print(f"  2. lcr_import_changed.sql             ← {len(changed_records)} rows changed")
 print(f"  3. lcr_import_presence.sql            ← {len(matched_ids)} bulk presence pings")
-print(f"  4. lcr_import_inserts.sql             ← {len(new_records)} new members")
+print(f"  4. lcr_import_inserts.sql             ← {len(new_records)} new members (INSERT with 'not_active_unknown')")
 print(f"  5. lcr_import_clear_pending.sql")
-print(f"  6. lcr_import_member_moveout_flag.sql (individual moveout flag)")
-print(f"  7. lcr_import_moveout_flag.sql        (household moveout flag)")
-print(f"  8. lcr_import_missing.sql             (audit)")
+print(f"  6. lcr_import_moveout_flag.sql        (household-level moveout flag ONLY)")
+print(f"  7. lcr_import_missing.sql             (audit list of members not in this LCR pull)")
