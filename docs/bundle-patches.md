@@ -119,7 +119,7 @@ Note: `Less-Active` (hyphen) → `Less Active` (space). `Not Active - Contact OK
 
 - Bundle hash unchanged (same filename `index-CDdqaBQN.js`) — we're editing in place, not rebuilding.
 - **Bundle size:** 897003 bytes (started at 895270, net +1733).
-- Household activity_status dropdown: **7 clerk-facing values** (Active, Less Active, Not Active, Not Active - Unknown, Do NOT Contact, Do NOT Contact - Hostile, Moved Out). `Check for Moved Out` still allowed by CHECK constraint but not in the dropdown.
+- Household activity_status dropdown: **7 clerk-facing values** (Active, Less Active, Not Active, Unknown, Do NOT Contact, Do NOT Contact - Hostile, Moved Out). `Check for Moved Out` still allowed by CHECK constraint but not in the dropdown.
 - Household filter checkboxes (`eA`): still 13 (pending future patch to trim to 8).
 - Member filter checkboxes (`oA`): still 13 (pending future patch to add 2 new enum values — `do_not_contact_hostile`, `name_removal_requested`).
 - Member Directory (`sP`): reads `members.lcr_status` (not household join), shows everyone (members + Friends).
@@ -127,6 +127,35 @@ Note: `Less-Active` (hyphen) → `Less Active` (space). `Not Active - Contact OK
 - Existing member status badges (Deceased / Moved Out / Name Removed) inside the header still render (from earlier bundle build). The new Select is additive.
 - All member status pills across the app: read from `members.lcr_status`.
 
+---
+
+## Patch: Unknown rename (later 2026-08-29)
+
+**Motivation:** the value `Not Active - Unknown` conflated "not active" with "we don't know." Dave clarified the intent is just "Unknown" — no assertion about activity level. This matches the full-separation model: new LCR households and new LCR members should land on `Unknown` because LCR tells us the person/family exists, not what their engagement is.
+
+**Bundle changes:** 5 string literals + 3 structural renames.
+
+1. **VO + XO household dropdown arrays** — replaced `"Not Active - Unknown"` → `"Unknown"` (2 occurrences).
+2. **Member Detail Select options** (YO) — `{v:"not_active_unknown",l:"Not Active - Unknown"}` → `{v:"unknown",l:"Unknown"}`.
+3. **Member Directory enum-to-display map** (`sP` inline map) — `not_active_unknown:"Not Active - Unknown"` → `unknown:"Unknown"`.
+4. **Color maps** (`rP` and its light-mode twin) — key `"Not Active - Unknown":"bg-gray-100 text-gray-800"` → `"Unknown":"bg-gray-100 text-gray-800"` (4 occurrences across two maps).
+5. **Filter checkbox arrays** (`eA`/`oA`) — the 13-value list where `"Not Active - Unknown"` was one entry → `"Unknown"` (2 occurrences).
+
+All accomplished by a single `.replace('"Not Active - Unknown"', '"Unknown"')` on the whole bundle after the 3 structural (enum-key-and-label) renames.
+
+**DB migration** (executed same session):
+
+- `ALTER TYPE member_lcr_status RENAME VALUE 'not_active_unknown' TO 'unknown'`
+- Dropped `households_activity_status_check`, migrated 215 rows (`Not Active - Unknown` → `Unknown`) plus any `prior_activity_status` matches, re-created CHECK with the new value.
+- `ALTER TABLE households ALTER COLUMN activity_status SET DEFAULT 'Unknown'` (was `'Active'`).
+
+**Importer changes:**
+
+- New-household INSERT now explicitly sets `activity_status='Unknown'` (belt-and-suspenders with the new DB default).
+- New-member INSERT now writes `'unknown'::member_lcr_status` (was `'not_active_unknown'`).
+
+**Verification:** `node --check` on the bundle passed. Bundle size 896864 bytes (net -139 from previous 897003 state — the shorter labels shaved some bytes).
+
 ## Last verified
 
-- 2026-08-29 — first entry added during household-status-simplification session. This file is new.
+- 2026-08-29 (afternoon) — Unknown rename applied end-to-end (DB + importer + bundle + docs).

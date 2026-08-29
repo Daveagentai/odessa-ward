@@ -7,7 +7,7 @@ The app tracks activity/engagement status at **two levels**, independently. This
 - **Household `activity_status` and member `lcr_status` are fully independent.** No cascade, no clamp, no cross-write.
 - **LCR is the source of truth for household-level status.** Importer writes `households.activity_status`.
 - **LCR is NOT the source of truth for member-level status.** The LCR importer must never write `members.lcr_status` on existing rows.
-- **New members from LCR arrive with `lcr_status = 'not_active_unknown'`.** Clerk updates from there.
+- **New members from LCR arrive with `lcr_status = 'unknown'`.** Clerk updates from there.
 - **`households.activity_status` has 7 clerk-facing values + 1 importer-set value = 8 total, enforced by a CHECK constraint.**
 - **`members.lcr_status` has 15 values in the enum (13 original + 2 added 2026-08-29).**
 
@@ -22,7 +22,7 @@ TEXT column with a `CHECK` constraint (added 2026-08-29). Allowed values:
 | `Active` | Family is engaged with the ward. |
 | `Less Active` | Family attends occasionally / on the way in or out. |
 | `Not Active` | Family is not attending but contact is welcome. |
-| `Not Active - Unknown` | We don't yet know the state of this family. Default for new arrivals. |
+| `Unknown` | We don't yet know the state of this family. Default for new arrivals. |
 | `Do NOT Contact` | Family has asked not to be contacted. |
 | `Do NOT Contact - Hostile` | Family has asked not to be contacted, hostile response expected. |
 | `Moved Out` | Family has moved out of ward boundaries (LCR-set or clerk-confirmed). |
@@ -35,17 +35,22 @@ TEXT column with a `CHECK` constraint (added 2026-08-29). Allowed values:
 
 ### Mapping applied 2026-08-29 migration
 
-Old values collapsed:
+Old values collapsed / renamed:
 
 - `Active - Serving` → `Active`
 - `Active - Ready to Serve` → `Active`
 - `Active - Hold` → `Active`
 - `Less-Active` (hyphen) → `Less Active` (space, no hyphen)
 - `Not Active - Contact OK` → `Not Active`
+- `Not Active - Unknown` → `Unknown` (subsequent rename same day)
 
-Kept as-is: `Active`, `Not Active - Unknown`, `Do NOT Contact`, `Do NOT Contact - Hostile`, `Moved Out`, `Check for Moved Out`.
+Kept as-is: `Active`, `Do NOT Contact`, `Do NOT Contact - Hostile`, `Moved Out`, `Check for Moved Out`.
 
 The pre-migration distribution had 10 distinct values; post-migration has 7 (`Do NOT Contact - Hostile` had zero rows at migration time but is a valid future value).
+
+Also done in the same session:
+- **DB default** for `households.activity_status` was `'Active'`, now `'Unknown'`. New households (LCR-inserted or app-created) land on Unknown unless the caller specifies otherwise.
+- **Importer** now explicitly writes `activity_status='Unknown'` on new-household INSERT (belt-and-suspenders with the default) and never touches `activity_status` on existing households.
 
 ## Member status (`members.lcr_status`)
 
@@ -59,7 +64,7 @@ PostgreSQL enum `member_lcr_status`. **All 15 values are clerk-facing** (unlike 
 | `active_hold` | Active - Hold | Active but temporarily on hold (health, life circumstances). |
 | `less_active` | Less-Active | Sporadic engagement. |
 | `not_active_contact_ok` | Not Active - Contact OK | Not attending but welcomes contact. |
-| `not_active_unknown` | Not Active - Unknown | State unknown. **Default for LCR imports.** |
+| `unknown` | Unknown | State unknown. **Default for LCR imports.** |
 | `do_not_contact` | Do NOT Contact | Requested no contact. |
 | `do_not_contact_hostile` | Do NOT Contact - Hostile | Added 2026-08-29. Requested no contact, hostile response expected. |
 | `check_for_moved_out` | Check for Moved Out | Manually flagged for review (importer no longer sets this). |
@@ -75,7 +80,7 @@ PostgreSQL enum `member_lcr_status`. **All 15 values are clerk-facing** (unlike 
 |-------|--------------|-------------|
 | `households.activity_status` | Yes (LCR is source of truth for household state; importer syncs) | Yes (clerks override, especially `Check for Moved Out` → `Moved Out` or restore) |
 | `members.lcr_status` on **existing** rows | **Never** | **Only** |
-| `members.lcr_status` on **new-from-LCR** rows | Seeds `not_active_unknown` at INSERT | Then clerks update |
+| `members.lcr_status` on **new-from-LCR** rows | Seeds `unknown` at INSERT | Then clerks update |
 
 ## Rendering rules
 
@@ -105,7 +110,7 @@ Do NOT Contact              1
 ### 2026-08-29 post-migration (households)
 
 ```
-Not Active - Unknown  215
+Unknown  215
 Active                 95   (39 + 49 + 5 + 2 = 95 ✓)
 Not Active             21
 Check for Moved Out     7

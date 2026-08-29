@@ -501,8 +501,12 @@ WITH lcr_households AS (
   FROM jsonb_to_recordset('{esc(hh_json)}'::jsonb)
     AS x(household_name text, address text, city text, state text, zip text)
 )
-INSERT INTO households (household_name, address, city, state, zip)
-SELECT household_name, address, city, state, zip FROM lcr_households
+-- New households INSERT with activity_status='Unknown' per full-separation model (2026-08-29):
+-- LCR does not tell us a household's status; clerks set it in the app. Existing
+-- households are NEVER touched by this ON CONFLICT DO UPDATE for activity_status
+-- (only address/city/state/zip refresh).
+INSERT INTO households (household_name, address, city, state, zip, activity_status)
+SELECT household_name, address, city, state, zip, 'Unknown' FROM lcr_households
 ON CONFLICT (household_name) DO UPDATE SET
   address = EXCLUDED.address,
   city = EXCLUDED.city,
@@ -675,9 +679,9 @@ SELECT
   l.ministering_sisters, l.mission_country, l.mission_language, l.priesthood_office,
   l.priesthood, l.move_in_date, l.ordination_date, l.sealing_to_spouse, l.seminary_status,
   l.is_attending_seminary, l.potential_seminary_student, l.endowment_date, l.endowment_status,
-  -- New members INSERT with 'not_active_unknown' per full-separation model (2026-08-29):
+  -- New members INSERT with 'unknown' per full-separation model (2026-08-29):
   -- LCR does not tell us a member's status; clerks set it in the app.
-  l.baptism_date, l.is_returned_missionary, 'not_active_unknown'::member_lcr_status, now(), FALSE
+  l.baptism_date, l.is_returned_missionary, 'unknown'::member_lcr_status, now(), FALSE
 FROM lcr_new l
 JOIN households h ON h.household_name = l.household_name
 RETURNING id;
@@ -792,7 +796,7 @@ print("Next: run the SQL files via Supabase in this order:")
 print(f"  1. lcr_import_households.sql          (2 phases: renames + upsert)")
 print(f"  2. lcr_import_changed.sql             ← {len(changed_records)} rows changed")
 print(f"  3. lcr_import_presence.sql            ← {len(matched_ids)} bulk presence pings")
-print(f"  4. lcr_import_inserts.sql             ← {len(new_records)} new members (INSERT with 'not_active_unknown')")
+print(f"  4. lcr_import_inserts.sql             ← {len(new_records)} new members (INSERT with 'unknown')")
 print(f"  5. lcr_import_clear_pending.sql")
 print(f"  6. lcr_import_moveout_flag.sql        (household-level moveout flag ONLY)")
 print(f"  7. lcr_import_missing.sql             (audit list of members not in this LCR pull)")

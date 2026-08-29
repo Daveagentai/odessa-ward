@@ -14,7 +14,7 @@ Update this whenever we identify a new identifier. Group by concern.
 
 ## Status option arrays (13 hardcoded values, all identical today)
 
-All four contain the same list: `["Active", "Active - Ready to Serve", "Active - Serving", "Active - Hold", "Less-Active", "Not Active - Contact OK", "Not Active - Unknown", "Do NOT Contact", "Do NOT Contact - Hostile", "Moved Out", "Deceased", "Name Removal Requested", "Check for Moved Out"]`
+All four contain the same list: `["Active", "Active - Ready to Serve", "Active - Serving", "Active - Hold", "Less-Active", "Not Active - Contact OK", "Unknown", "Do NOT Contact", "Do NOT Contact - Hostile", "Moved Out", "Deceased", "Name Removal Requested", "Check for Moved Out"]` (as of 2026-08-29 afternoon; "Not Active - Unknown" was renamed to "Unknown" in place)
 
 | ID  | Offset  | Used at | What it drives | Notes |
 |-----|---------|---------|----------------|-------|
@@ -25,7 +25,7 @@ All four contain the same list: `["Active", "Active - Ready to Serve", "Active -
 
 **Which arrays get shortened when we simplify to 7 household values:**
 
-- `VO`, `XO` → shorten to the 7 clerk-facing household values: `["Active", "Less Active", "Not Active", "Not Active - Unknown", "Do NOT Contact", "Do NOT Contact - Hostile", "Moved Out"]`
+- `VO`, `XO` → shorten to the 7 clerk-facing household values: `["Active", "Less Active", "Not Active", "Unknown", "Do NOT Contact", "Do NOT Contact - Hostile", "Moved Out"]`
 - `eA`, `oA` → these are FILTERS. Filters need to match whatever statuses actually exist. After the DB migration, `households.activity_status` only has 8 values (7 above + `Check for Moved Out`). Filter list should be all 8 values. **Do NOT shorten these to 7 — clerks still need to filter for the importer-set "Check for Moved Out" state.**
 
 ## Color map for household status pills
