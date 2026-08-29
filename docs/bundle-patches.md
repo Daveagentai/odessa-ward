@@ -175,6 +175,22 @@ Anchors used: `const eA=<old>,tA=` for household filter, `ward_clerk"],oA=<old>`
 
 **Verification:** `node --check` passed. Bundle size 896782 bytes (net -82 from previous 896864).
 
+---
+
+## Patch: Clerk Report missing-members section (2026-08-29 evening)
+
+**Motivation:** the Clerk Report page already had a "Check for Moved Out" section showing households the importer auto-flagged AND a sub-list of individually-missing members whose households weren't flagged. But the query filtered `.eq("lcr_status", "active")`, which after the full-separation model no longer catches anyone with `lcr_status='unknown'`, `less_active`, `not_active_contact_ok`, etc. Also flat table instead of grouped-by-household, and no visual distinction for the priority case (missing AND status unknown — means we don't know they're here AND we don't know their engagement).
+
+**Bundle changes (3 patches, all in the Clerk Report component around offset ~864000-880000):**
+
+1. **Query filter fix** — `clerk-moveout-members` query: `.eq("lcr_status","active")` → `.not("lcr_status","in","(deceased,moved_out,name_removed,on_mission,name_removal_requested)")`. Same terminal-status-exclusion pattern the importer uses. Now catches ALL non-terminal members whose LCR presence is stale.
+2. **Inline household-flagged filter fix** (2 occurrences) — in the render code that lists members under already-flagged households, `mm.lcr_status==="active"` → the same terminal-status exclusion. Otherwise members under flagged households showed as an empty list because none of them were still "active" after the flag flipped the household.
+3. **Grouped-by-household render** — replaced the flat `<table>` render of `indMissing` with a grouped `<div>` structure. Each household gets a subtle header with its name; members list under it. Any member with `lcr_status==="unknown"` gets a **"Missing + Unknown" amber pill** (bg-amber-100 text-amber-800 border-amber-200) so clerks can quickly see the priority cases — members where we know neither their engagement nor whether they're still in the ward.
+
+**index.html:** bumped cache buster to `?v=2026-08-29-3`.
+
+**Verification:** `node --check` passed. Bundle size 897241 bytes (net +459).
+
 ## Last verified
 
-- 2026-08-29 (late afternoon) — filter arrays trimmed + cache buster shipped.
+- 2026-08-29 (evening) — Clerk Report missing-members grouping + Missing+Unknown badge shipped.
