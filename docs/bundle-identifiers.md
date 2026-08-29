@@ -12,9 +12,13 @@ Update this whenever we identify a new identifier. Group by concern.
 - **These offsets change every time the bundle is rebuilt.** Names may too (Vite/rollup mangler is not stable across builds). Treat offsets as a starting hint; always verify with a grep of the surrounding context (a nearby test-id or a unique string literal).
 - `Ce` is the lucide-react icon factory. Anything declared as `Ce("IconName", [...])` is a lucide icon component.
 
-## Status option arrays (13 hardcoded values, all identical today)
+## Status option arrays (split as of 2026-08-29 late afternoon)
 
-All four contain the same list: `["Active", "Active - Ready to Serve", "Active - Serving", "Active - Hold", "Less-Active", "Not Active - Contact OK", "Unknown", "Do NOT Contact", "Do NOT Contact - Hostile", "Moved Out", "Deceased", "Name Removal Requested", "Check for Moved Out"]` (as of 2026-08-29 afternoon; "Not Active - Unknown" was renamed to "Unknown" in place)
+`VO`, `XO`, `eA` — household statuses (8 values: Active, Less Active, Not Active, Unknown, Do NOT Contact, Do NOT Contact - Hostile, Moved Out, Check for Moved Out).
+
+`oA` — member statuses (15 display labels matching the `member_lcr_status` enum).
+
+Before the trim, `eA` and `oA` were both a shared 13-value list.
 
 | ID  | Offset  | Used at | What it drives | Notes |
 |-----|---------|---------|----------------|-------|
@@ -25,8 +29,9 @@ All four contain the same list: `["Active", "Active - Ready to Serve", "Active -
 
 **Which arrays get shortened when we simplify to 7 household values:**
 
-- `VO`, `XO` → shorten to the 7 clerk-facing household values: `["Active", "Less Active", "Not Active", "Unknown", "Do NOT Contact", "Do NOT Contact - Hostile", "Moved Out"]`
-- `eA`, `oA` → these are FILTERS. Filters need to match whatever statuses actually exist. After the DB migration, `households.activity_status` only has 8 values (7 above + `Check for Moved Out`). Filter list should be all 8 values. **Do NOT shorten these to 7 — clerks still need to filter for the importer-set "Check for Moved Out" state.**
+- `VO`, `XO` — already the 7 clerk-facing household edit values (no `Check for Moved Out`, which is importer-set only).
+- `eA` — household filter, 8 values (adds `Check for Moved Out` so clerks can filter to review).
+- `oA` — member filter, 15 values matching the enum (all 15 statuses are clerk-facing).
 
 ## Color map for household status pills
 

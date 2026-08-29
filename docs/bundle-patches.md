@@ -156,6 +156,25 @@ All accomplished by a single `.replace('"Not Active - Unknown"', '"Unknown"')` o
 
 **Verification:** `node --check` on the bundle passed. Bundle size 896864 bytes (net -139 from previous 897003 state — the shorter labels shaved some bytes).
 
+---
+
+## Patch: Filter arrays trim + cache buster (later 2026-08-29)
+
+**Motivation:** the household filter (`eA`) still had 13 old collapsed statuses (Active - Serving, Less-Active, etc.), and the member filter (`oA`) was missing the two new enum values (`do_not_contact_hostile`, `name_removal_requested`). Both need to match the current DB vocabularies. Also, the cache invariant discovered when Dave had to hard-refresh after the Unknown rename means we should ship a query-string cache buster on every in-place patch.
+
+**Bundle changes:**
+
+1. **Household filter `eA`** at offset ~695791 — trimmed 13 → 8 values: `["Active","Less Active","Not Active","Unknown","Do NOT Contact","Do NOT Contact - Hostile","Moved Out","Check for Moved Out"]`. Includes `Check for Moved Out` (allowed by CHECK constraint, importer-set) so clerks can filter to review those.
+2. **Member filter `oA`** at offset ~706969 — rebuilt to 15 values matching the enum: added `On Mission`, `Name Removed`, `Name Removal Requested` (previously missing). Uses display labels: `["Active","Active - Ready to Serve","Active - Serving","Active - Hold","Less-Active","Not Active - Contact OK","Unknown","Do NOT Contact","Do NOT Contact - Hostile","Check for Moved Out","Moved Out","Deceased","On Mission","Name Removed","Name Removal Requested"]`.
+
+Anchors used: `const eA=<old>,tA=` for household filter, `ward_clerk"],oA=<old>` for member filter.
+
+**index.html change:**
+
+- Added `?v=2026-08-29-2` query-string cache buster on the `<script>` src for `index-CDdqaBQN.js`. This forces both Cloudflare edge and browsers to fetch the new bundle on next page load, so Dave doesn't need to hard-refresh manually. **Bump the version string on every future in-place bundle patch.**
+
+**Verification:** `node --check` passed. Bundle size 896782 bytes (net -82 from previous 896864).
+
 ## Last verified
 
-- 2026-08-29 (afternoon) — Unknown rename applied end-to-end (DB + importer + bundle + docs).
+- 2026-08-29 (late afternoon) — filter arrays trimmed + cache buster shipped.
