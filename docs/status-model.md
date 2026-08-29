@@ -90,7 +90,47 @@ PostgreSQL enum `member_lcr_status`. **All 15 values are clerk-facing** (unlike 
 
 Rendering of member status previously read `households(activity_status)` (via the members table's joined household). That was wrong once we separated the two levels. The 2026-08-29 patch repoints those reads.
 
+## Clerk Report: "Missing + Unknown" badge (added 2026-08-29 evening)
+
+The Clerk Report page has a "Check for Moved Out" section with two lists:
+
+1. **Household-level:** households with `activity_status='Check for Moved Out'` (importer-flagged).
+2. **Individual-member-level:** non-terminal members whose `lcr_last_seen_at` predates the most recent LCR pull (with a 1-hour buffer), grouped by household name.
+
+Any member in the individual-level list whose `lcr_status='unknown'` gets an amber **"Missing + Unknown"** pill next to their name. This is the highest-priority triage case: we don't know their engagement AND they're not showing up in LCR.
+
+The clerk decides what to do. Nothing is auto-flipped. This preserves the full-separation invariant (importer never writes member status; only the app / clerk does).
+
+**Query filter that defines "non-terminal":** `lcr_status NOT IN (deceased, moved_out, name_removed, on_mission, name_removal_requested)`. Same list the importer uses when computing missing members.
+
 ## Distribution snapshots
+
+### 2026-08-29 evening (current)
+
+Households (`activity_status`):
+
+```
+Unknown              215
+Active                94
+Not Active            22
+Check for Moved Out    7
+Less Active            4
+Moved Out              3
+Do NOT Contact         1
+```
+
+Members (`lcr_status`, active members only, i.e. Friends excluded):
+
+```
+active                 592
+not_active_contact_ok    3
+deceased                 2
+check_for_moved_out      1
+unknown                  1
+moved_out                1
+```
+
+All but a handful of members are still `active` — this is the LCR-defaulted state prior to the full-separation migration. As clerks minister they'll update these to match reality.
 
 ### 2026-08-29 pre-migration (households)
 
@@ -132,4 +172,5 @@ All 596 `active` values were LCR-defaulted, not clerk-set. Clerks are expected t
 
 ## Last verified
 
-- 2026-08-29 — status model rewritten from "Hostile clamp / cascade" design to full-separation design. Migration applied. Docs written.
+- 2026-08-29 (evening) — added Missing+Unknown badge convention; refreshed distribution snapshots against live DB.
+- 2026-08-29 (earlier) — status model rewritten from "Hostile clamp / cascade" design to full-separation design. Migration applied. Docs written.

@@ -2,14 +2,16 @@
 
 Durable knowledge about this deployment. Update these files whenever we learn something we'd otherwise re-discover next session.
 
+**Start here:** [`../DESIGN_DOCUMENT.md`](../DESIGN_DOCUMENT.md) at repo root is the executive-summary orientation. The files below are the deep-dive references.
+
 ## Files
 
-- **[bundle-identifiers.md](./bundle-identifiers.md)** — Map of minified identifiers in `assets/index-CDdqaBQN.js` to their real names. Update every time we identify a new one.
-- **[bundle-patches.md](./bundle-patches.md)** — History of every hand-patch applied to the compiled bundle. What we changed, where, and why. So we know what to reapply if a rebuild ever happens.
-- **[architecture.md](./architecture.md)** — How the app is structured: routes, tables, data flow, deploy pipeline.
-- **[status-model.md](./status-model.md)** — The status model: household `activity_status` vs member `lcr_status`. What values mean, who writes them, when they're rendered.
-- **[deploy.md](./deploy.md)** — How the deploy pipeline works. Cloudflare Workers via wrangler + GitHub push.
-- **[importer.md](./importer.md)** — LCR importer behavior, invariants, and edge cases. Complements the `lcr-import` user skill.
+- **[architecture.md](./architecture.md)** — How the app is structured: routes, tables, data hooks, dependencies.
+- **[status-model.md](./status-model.md)** — Household `activity_status` (8 values) vs. member `lcr_status` (15 values). Who writes what. Rendering rules. Clerk Report "Missing + Unknown" convention.
+- **[deploy.md](./deploy.md)** — Cloudflare Worker + gh-pages deploy pipeline. Cache-buster convention.
+- **[importer.md](./importer.md)** — LCR importer design: two-pass matcher, chunk-staging, terminal statuses, status-write rules. Complements the `lcr-import` user skill (which is the operational routine).
+- **[bundle-identifiers.md](./bundle-identifiers.md)** — Map of minified identifiers (VO, eA, oA, Ue, Ne, …) in `assets/index-CDdqaBQN.js` to their real names. Update every time we identify a new one.
+- **[bundle-patches.md](./bundle-patches.md)** — Chronological history of every hand-patch applied to the compiled bundle. What we changed, where, and why.
 
 ## Why this exists
 

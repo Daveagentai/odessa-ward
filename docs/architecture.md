@@ -36,19 +36,22 @@ The deployed app is a static single-page React bundle served from `Daveagentai/o
 /update-password         — Password reset flow
 ```
 
-## Supabase tables (accessed by bundle)
+## Supabase tables (12 public tables)
 
-| Table | Sites | Notes |
-|-------|-------|-------|
-| `members` | 24 | Largest surface. Includes `lcr_status`, `original_full_name`, `preferred_name`, `household_id`, ministering, temple, contact fields. |
-| `calling_assignments` | 21 | Calling workflow state, candidates, interview tracking. |
-| `households` | 9 | Includes `activity_status`, `household_name`, address fields, `updated_at`. |
-| `tasks` | 9 | Task management. |
-| `visits` | 7 | Ministering / bishopric visits. |
-| `callings` | 6 | Master calling catalog (orgs, positions). |
-| `profiles` | 6 | Ward CRM app users. |
-| `member_contact_changes` | 4 | Pending contact change reviews. |
-| `visit_attendees` | 4 | Multi-attendee visits. |
+| Table | Rows (2026-08-29) | Sites in bundle | Notes |
+|-------|-------------------|-----------------|-------|
+| `members` | 601 (600 active + 1 Friend) | 24 | Largest surface. Includes `lcr_status`, `original_full_name`, `preferred_name`, `household_id`, ministering, temple, contact fields, `lcr_last_seen_at`. |
+| `households` | 346 | 9 | Includes `activity_status`, `prior_activity_status`, `household_name`, address fields, `updated_at`. |
+| `ministering_assignments` | 274 | (not fetched via a hook — read inline) | Ministering brother/sister pairings. **Only table without RLS.** |
+| `calling_assignments` | 198 | 21 | Calling workflow state, candidates, interview tracking. |
+| `callings` | 97 | 6 | Master calling catalog (orgs, positions). |
+| `visits` | 32 | 7 | Ministering / bishopric visits. |
+| `tasks` | 20 | 9 | Task management. |
+| `profiles` | 14 | 6 | Ward CRM app users. |
+| `member_contact_changes` | 6 | 4 | Pending contact-change reviews awaiting LCR sync. |
+| `visit_attendees` | (in use) | 4 | Multi-attendee visits. |
+| `bishop_notes` | (in use) | (few) | Private bishop notes on a member. |
+| `leadership_notes` | (in use) | (few) | Auxiliary-leader notes on a member. |
 
 ## Data hooks (React Query keys, ~50)
 
@@ -83,6 +86,15 @@ Categorized by domain:
 
 Deployed bundle logs `Odessa Ward CRM 1.3.1` at startup (`console.log`).
 
+## Related docs
+
+- **`status-model.md`** — household `activity_status` vs. member `lcr_status`.
+- **`deploy.md`** — Cloudflare Worker deploy pipeline and cache-buster convention.
+- **`importer.md`** — LCR importer design.
+- **`bundle-identifiers.md`** — minified-name → real-name map.
+- **`bundle-patches.md`** — chronological hand-patch log.
+
 ## Last verified
 
-- 2026-08-29 — captured during household-status-simplification bundle patch.
+- 2026-08-29 (evening) — refreshed row counts against live DB; added `ministering_assignments`, `bishop_notes`, `leadership_notes` to the table catalog; added related-docs section.
+- 2026-08-29 (earlier) — captured during household-status-simplification bundle patch.
