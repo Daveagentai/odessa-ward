@@ -10,3 +10,6 @@ tools/lcr_import/*.sql
 tools/lcr_import/*.xlsx
 __pycache__/
 *.pyc
+
+# Drive mirror local state (not committed)
+tools/drive_mirror/*.json
