@@ -191,6 +191,43 @@ Anchors used: `const eA=<old>,tA=` for household filter, `ward_clerk"],oA=<old>`
 
 **Verification:** `node --check` passed. Bundle size 897241 bytes (net +459).
 
+## Patch: Add Friend UI in three places (2026-09-01)
+
+**Motivation:** Friends could only be added on the Admin page. Dave wants to add Friends anywhere in the app they naturally belong — from the Directory (unattached Friend, like Tia Drain), from a Household detail page (Friend joins that household), and from a Friend detail page (promote a lone Friend to head-of-household, which creates a new household and attaches them). This also unlocks mixed households in both directions: a Friend household can have members and a member household can have Friends.
+
+**Approach:** rather than duplicate the entire dialog three times, we injected two small reusable components at the top of the bundle (right after the initial modulepreload IIFE, before `function rv`):
+
+1. **`__AddFriendButton({ householdId, buttonSize, buttonVariant, label, onCreated })`** — renders nothing if the caller lacks the `canManageFriends` role (bishop / bishopric / exec_sec / ward_clerk). Otherwise renders a `we`-styled button that opens a `ps`/`Yr`/`Xr`/`Zr` dialog with Full Name / Preferred Name / Phone / Email / Gender / Notes fields. When called without `householdId` it also collects Address / City / State / Zip and geocodes via Nominatim (same flow as the Admin dialog). When called with `householdId` the row is inserted with `household_id = <that id>` and no address fields (household owns the address). On success invalidates `["members"]`, `["friends-list"]`, and `["household-members-list", householdId]`.
+2. **`__MakeFriendHeadOfHouseholdButton({ friend })`** — only renders when the current member is a Friend (`is_non_member=true`) with no `household_id` and the caller has the manage-friends role. Renders a small button in the Friend's profile that opens a dialog with Household Name / Address / City / State / Zip (pre-filled from the Friend's own address if they have one) and a two-step INSERT: creates the households row, then UPDATEs the member's `household_id`. Suggested household name is the Friend's `full_name` (which is the `Last, First` LCR convention — the same shape existing household names use).
+
+**Bundle changes:**
+
+1. **Component injection** — 2 top-level `function` declarations added right after the initial `})();` IIFE, before `function rv(e)`. All dependencies (`bt`, `Ue`, `Zt`, `vr`, `Ne`, `we`, `ps`, `ro`, `Yr`, `Xr`, `Zr`, `Ie`, `ae`, `Nh`, `$t`, `n`, `g`, `_t`) are top-level `const`/`function` declarations already, so the hoisted components can use them from anywhere in the bundle.
+2. **Directory page `sP`** (chars ~570940–575156) — wrapped the header's `<h1>` + count `<p>` in a `flex justify-between` row and appended `<__AddFriendButton />` on the right. Anchor: the exact `bg-[hsl(222,47%,18%)] px-4 pt-6 pb-4` div containing `data-testid="text-directory-title"`.
+3. **Household detail `ZO`** (Members section, ~char 5981 into the component) — wrapped the `<h2>Members</h2>` in a `flex items-center justify-between` row and appended `<__AddFriendButton householdId={e.id} label="Add Friend" buttonVariant="outline" />`. Anchor: the exact `flex items-center gap-1.5` h2 containing the `Fn` (Users) icon and ` Members` text. Insertions here go into the household with `household_id=e.id`.
+4. **Member detail `YO`** — inserted a sibling before the existing `u.household_id && <Fragment>` (View Household link). When the member has no `household_id` and is a Friend, renders `<__MakeFriendHeadOfHouseholdButton friend={u} />`. Anchor: `]}),u.household_id&&n.jsxs(n.Fragment,{children:[` — first occurrence only.
+
+**Design decisions:**
+
+- **Additive JSX, no destructive rewrites.** Every anchor is preserved verbatim inside the replacement string.
+- **No new imports needed.** All Radix Dialog primitives (`ps` = Dialog, `ro` = DialogTrigger, `Yr` = DialogContent, `Xr` = DialogHeader, `Zr` = DialogTitle), Button (`we`), Input (`Ie`), Label (`ae`), UserPlus icon (`Nh`), LoaderCircle icon (`$t`), and the hook triad `bt`/`Ue`/`Zt`/`vr` are all already top-level.
+- **Role gate matches the Admin page.** `canManageFriends = ["bishop","bishopric","exec_sec","ward_clerk"].includes(role)`. Ward council members see nothing; auto-hidden if role missing.
+- **Idempotency guard.** The patch script aborts if `__AddFriendButton` is already in the bundle, so re-running it can't double-inject.
+- **Cache invalidation is broad on purpose.** Directory list, per-household member list, and any "friends-list" query. If a query key we didn't invalidate turns out to be needed later, it's easy to add without changing UI code.
+- **Mixed households work in both directions** because both entry points ultimately just set `members.household_id`. A member household can accept Friends via the household's Add Friend button; a Friend household can accept members the normal ways (LCR import, admin flows). The `is_non_member` flag on the person and the `activity_status` on the household are fully separate axes.
+
+**index.html:** bumped cache buster to `?v=2026-09-01-1`.
+
+**Verification:**
+- `node --check` passes on the patched bundle.
+- Bracket balance preserved: `()` diff −1, `{}` diff 0, `[]` diff +1 (identical to pre-patch baseline).
+- Bundle size delta: +10636 bytes (897441 → 907877).
+
+**Post-deploy check for Dave:**
+- Directory page → top-right `+ Add Friend` button. Click → dialog with full form including address. Submit → toast + Friend appears in the list.
+- Household detail page → Members section header has `+ Add Friend` on the right. Click → dialog without address fields. Submit → Friend appears under Members.
+- Friend detail page for someone like Tia Drain (no household_id) → `+ Create Household` button appears in the header. Click → dialog pre-filled with her name and address. Submit → household created, page refreshes showing View Household link.
+
 ## Last verified
 
-- 2026-08-29 (evening) — Clerk Report missing-members grouping + Missing+Unknown badge shipped.
+- 2026-09-01 — Add Friend UI shipped in three places (Directory, Household detail, Friend detail with Create-Household-as-Head). Two reusable components (`__AddFriendButton`, `__MakeFriendHeadOfHouseholdButton`) injected at bundle top. Cache buster `2026-09-01-1`.
