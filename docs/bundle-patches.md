@@ -228,6 +228,25 @@ Anchors used: `const eA=<old>,tA=` for household filter, `ward_clerk"],oA=<old>`
 - Household detail page → Members section header has `+ Add Friend` on the right. Click → dialog without address fields. Submit → Friend appears under Members.
 - Friend detail page for someone like Tia Drain (no household_id) → `+ Create Household` button appears in the header. Click → dialog pre-filled with her name and address. Submit → household created, page refreshes showing View Household link.
 
+## Patch: Add Friend UI role-check fix (2026-09-01)
+
+**Motivation:** the Add Friend buttons shipped in `2026-09-01-1` were invisible in production. Root cause: the components destructured `_t()` as `const auth=_t(); const role=auth?.user?.role||auth?.profile?.role||"";`. In the deployed AuthProvider, `_t()` returns `{user, session, profile, loading, signIn, signOut}` and `role` lives on `profile`, but the optional-chain fallback silently produced `role=""` in the running client for reasons that could not be reproduced statically. Result: every render returned null and no button appeared.
+
+**Fix:** mirror the exact pattern the working Admin page (`cA`) uses:
+
+```js
+const {profile:__prof}=_t();
+const canManageFriends=["bishop","bishopric","exec_sec","ward_clerk"].includes(__prof?.role);
+```
+
+Applied to both `__AddFriendButton` and `__MakeFriendHeadOfHouseholdButton`.
+
+**Rule for future bundle patches:** when reading anything from `_t()`, always destructure the exact field, `const {profile:x}=_t()`, and read `x?.role`. Do NOT construct a fallback chain like `auth?.user?.role || auth?.profile?.role` — that pattern is not what any existing page uses and is unreliable in this bundle.
+
+**index.html:** bumped cache buster to `?v=2026-09-01-2`.
+
+**Verification:** `node --check` passed. Bundle size 907805 bytes (net −72 from `-1`). Bracket balance preserved.
+
 ## Last verified
 
-- 2026-09-01 — Add Friend UI shipped in three places (Directory, Household detail, Friend detail with Create-Household-as-Head). Two reusable components (`__AddFriendButton`, `__MakeFriendHeadOfHouseholdButton`) injected at bundle top. Cache buster `2026-09-01-1`.
+- 2026-09-01 (evening) — Add Friend UI role check fixed to destructure `{profile}` from `_t()` directly, matching the working Admin-page pattern. Cache buster `2026-09-01-2`.

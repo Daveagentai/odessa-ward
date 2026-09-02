@@ -1,8 +1,7 @@
 function z_(e,t){for(var r=0;r<t.length;r++){const a=t[r];if(typeof a!="string"&&!Array.isArray(a)){for(const o in a)if(o!=="default"&&!(o in e)){const l=Object.getOwnPropertyDescriptor(a,o);l&&Object.defineProperty(e,o,l.get?l:{enumerable:!0,get:()=>a[o]})}}}return Object.freeze(Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}))}(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))a(o);new MutationObserver(o=>{for(const l of o)if(l.type==="childList")for(const u of l.addedNodes)u.tagName==="LINK"&&u.rel==="modulepreload"&&a(u)}).observe(document,{childList:!0,subtree:!0});function r(o){const l={};return o.integrity&&(l.integrity=o.integrity),o.referrerPolicy&&(l.referrerPolicy=o.referrerPolicy),o.crossOrigin==="use-credentials"?l.credentials="include":o.crossOrigin==="anonymous"?l.credentials="omit":l.credentials="same-origin",l}function a(o){if(o.ep)return;o.ep=!0;const l=r(o);fetch(o.href,l)}})();
 function __AddFriendButton(props){
-  const auth=_t();
-  const role=auth?.user?.role||auth?.profile?.role||"";
-  const canManageFriends=["bishop","bishopric","exec_sec","ward_clerk"].includes(role);
+  const {profile:__prof}=_t();
+  const canManageFriends=["bishop","bishopric","exec_sec","ward_clerk"].includes(__prof?.role);
   if(!canManageFriends) return null;
   const householdId=props&&props.householdId?props.householdId:null;
   const buttonSize=(props&&props.buttonSize)||"sm";
@@ -102,9 +101,8 @@ function __AddFriendButton(props){
 }
 
 function __MakeFriendHeadOfHouseholdButton(props){
-  const auth=_t();
-  const role=auth?.user?.role||auth?.profile?.role||"";
-  const canManageFriends=["bishop","bishopric","exec_sec","ward_clerk"].includes(role);
+  const {profile:__prof}=_t();
+  const canManageFriends=["bishop","bishopric","exec_sec","ward_clerk"].includes(__prof?.role);
   if(!canManageFriends) return null;
   const friend=props&&props.friend;
   if(!friend||friend.household_id) return null;
