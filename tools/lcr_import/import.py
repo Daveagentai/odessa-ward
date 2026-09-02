@@ -386,6 +386,11 @@ for r in records:
 
 hh_json = json.dumps(list(households.values()), ensure_ascii=False)
 
+# Escape single-quotes for embedding inside a REGULAR ('...') SQL string literal.
+# NEVER call esc() inside a dollar-quoted string ($tag$...$tag$) — dollar quotes
+# do NOT need apostrophe escaping, and doubling apostrophes inside them bakes
+# the doubled apostrophe into the JSON string data. Sept.1.2026 import hit this
+# bug on the Tikhomirova household name; fix committed 2026-09-01.
 def esc(s): return s.replace("'", "''")
 
 # --- households.sql -------------------------------------------------------
@@ -428,7 +433,7 @@ sql = f"""
 -- left behind with no members.
 -- =====================================================================
 WITH lcr_hh AS (
-  SELECT * FROM jsonb_to_recordset($lcr${esc(hh_full_json)}$lcr$::jsonb) AS x(
+  SELECT * FROM jsonb_to_recordset($lcr${hh_full_json}$lcr$::jsonb) AS x(
     household_name text, address text, city text, state text, zip text,
     member_full_names jsonb
   )
