@@ -1,0 +1,11 @@
+{
+  "name": "odessa-ward-recovered",
+  "private": true,
+  "scripts": {
+    "build": "esbuild src/recovered-app.js --minify-whitespace --outfile=assets/index-CDdqaBQN.js",
+    "test": "node --test tests/*.test.cjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.10"
+  }
+}
