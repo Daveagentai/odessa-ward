@@ -21,7 +21,9 @@ This is formatted recovered bundle source, not the original React project.
   dates. Desktop/mobile screens inspected; no horizontal mobile overflow or JS errors.
 - Live database transition tests ran inside a rolled-back transaction. No real
   calling's interviewer was changed by testing.
-- Asset query version: `2026-10-07-1`.
+- Interviewer selection is hydrated from query data in an effect, including
+  cached detail-page navigation; it must not depend on a network fetch occurring.
+- Asset query version: `2026-10-07-2`.
 
 Running log of every hand-patch applied to `assets/index-CDdqaBQN.js` (or its successor). Each entry documents what changed, where, why, and how to reapply if the bundle is ever rebuilt from source (which will shift all offsets and mangled names).
 

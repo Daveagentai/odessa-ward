@@ -38,6 +38,6 @@ test("invalid values rejected before DB", () => {
 test("both save paths use helper and queue loads group", () => {
   assert.equal((source.match(/\.\.\.interviewerAssignment\(b\)/g) || []).length, 2);
   assert.ok(source.includes("interview_assigned_to, interview_assigned_group, interview_date"));
-  assert.ok(source.includes("N(interviewerSelection(ce))"));
+  assert.ok(source.includes("N(interviewerSelection(D))"));
   assert.ok(source.includes('["Approved", "Extended", "Accepted", "Sustained"]'));
 });

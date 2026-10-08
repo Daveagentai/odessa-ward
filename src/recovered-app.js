@@ -47436,7 +47436,6 @@ function yA({ params: e }) {
         const ce = K;
         return (
           H(ce.notes || ""),
-          N(interviewerSelection(ce)),
           k(ce.interview_date ? ce.interview_date.split("T")[0] : ""),
           O(ce.interview_due_date || ""),
           M(ce.interview_notes || ""),
@@ -47492,6 +47491,9 @@ function yA({ params: e }) {
         a({ title: "Error", description: K.message, variant: "destructive" });
       },
     });
+  g.useEffect(() => {
+    if (D) N(interviewerSelection(D));
+  }, [D?.id, D?.interview_assigned_to, D?.interview_assigned_group]);
   const [propOpen, setPropOpen] = g.useState(false);
   const [propMemberQuery, setPropMemberQuery] = g.useState("");
   const [propMemberResults, setPropMemberResults] = g.useState([]);
