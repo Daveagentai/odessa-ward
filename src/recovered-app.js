@@ -32458,13 +32458,17 @@ function lh() {
     }),
     w = t && tP.includes(t.role),
     { data: y } = Ue({
-      queryKey: ["pending-interviews", r?.id],
+      queryKey: ["pending-interviews", r?.id, t?.role],
       queryFn: async () => {
         const { data: j, error: b } = await Ne.from("calling_assignments")
           .select(
             "id, status, callings(calling_name), members!calling_assignments_member_id_fkey(full_name)",
           )
-          .eq("interview_assigned_to", r.id)
+          .or(
+            ["bishop", "bishopric"].includes(t?.role)
+              ? `interview_assigned_to.eq.${r.id},interview_assigned_group.eq.bishopric`
+              : `interview_assigned_to.eq.${r.id}`,
+          )
           .in("status", ["Approved", "Pending Release"]);
         if (b) throw b;
         return j || [];
@@ -43653,6 +43657,7 @@ function dA() {
         (a({ title: "Calling updated" }),
           o.invalidateQueries({ queryKey: ["callings"] }),
           o.invalidateQueries({ queryKey: ["active-assignments"] }),
+          o.invalidateQueries({ queryKey: ["pending-interviews"] }),
           setEditCallingState({ open: false, row: null }));
       },
       onError: (ee) =>
@@ -43725,7 +43730,7 @@ function dA() {
             released_date: ee ? rd_today : null,
             released_at: ee ? rd_now : null,
             released_by: ee ? r?.id || null : null,
-            interview_assigned_to: !ee && Fr ? Fr : null,
+            ...interviewerAssignment(!ee && Fr ? Fr : null),
             updated_at: rd_now,
           },
           { error: er } = await Ne.from("calling_assignments")
@@ -45508,7 +45513,7 @@ function xA() {
     queryFn: async () => {
       const { data: k, error: E } = await Ne.from("calling_assignments")
         .select(
-          "id, status, archived_at, proposed_date, notes, interview_assigned_to, interview_date, releasing_member_name, member_id, candidate_ids, members!calling_assignments_member_id_fkey(full_name), callings(calling_name, organization)",
+          "id, status, archived_at, proposed_date, notes, interview_assigned_to, interview_assigned_group, interview_date, releasing_member_name, member_id, candidate_ids, members!calling_assignments_member_id_fkey(full_name), callings(calling_name, organization)",
         )
         .not("status", "eq", "Released");
       if (E) throw E;
@@ -45558,8 +45563,7 @@ function xA() {
       }
       return O.map(($) => ({
         ...$,
-        interviewer:
-          ($.interview_assigned_to && M.get($.interview_assigned_to)) || null,
+        interviewer: interviewerDisplay($, M),
       }));
     },
     enabled: !!e && u && !w,
@@ -47377,6 +47381,28 @@ function _TT(e) {
     ],
   });
 }
+function interviewerAssignment(value) {
+  if (value === "bishopric") {
+    return { interview_assigned_to: null, interview_assigned_group: "bishopric" };
+  }
+  if (!value || value === "none") {
+    return { interview_assigned_to: null, interview_assigned_group: null };
+  }
+  if (!/^[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}$/i.test(value)) {
+    throw new Error("Please select a valid interviewer.");
+  }
+  return { interview_assigned_to: value, interview_assigned_group: null };
+}
+function interviewerSelection(row) {
+  return row.interview_assigned_group === "bishopric"
+    ? "bishopric"
+    : row.interview_assigned_to || "";
+}
+function interviewerDisplay(row, profiles) {
+  return row.interview_assigned_group === "bishopric"
+    ? { full_name: "Bishopric", email: "" }
+    : (row.interview_assigned_to && profiles.get(row.interview_assigned_to)) || null;
+}
 function yA({ params: e }) {
   const { profile: t, user: r } = _t(),
     { toast: a } = Zt(),
@@ -47410,7 +47436,7 @@ function yA({ params: e }) {
         const ce = K;
         return (
           H(ce.notes || ""),
-          N(ce.interview_assigned_to || ""),
+          N(interviewerSelection(ce)),
           k(ce.interview_date ? ce.interview_date.split("T")[0] : ""),
           O(ce.interview_due_date || ""),
           M(ce.interview_notes || ""),
@@ -47459,6 +47485,7 @@ function yA({ params: e }) {
         (o.invalidateQueries({ queryKey: ["calling-detail", e.id] }),
           o.invalidateQueries({ queryKey: ["calling-queue"] }),
           o.invalidateQueries({ queryKey: ["active-assignments"] }),
+          o.invalidateQueries({ queryKey: ["pending-interviews"] }),
           a({ title: "Updated successfully" }));
       },
       onError: (K) => {
@@ -47628,6 +47655,7 @@ function yA({ params: e }) {
           member_id: null,
           household_id: null,
           interview_assigned_to: null,
+          interview_assigned_group: null,
           interview_date: null,
           interview_due_date: null,
           interview_notes: null,
@@ -47711,7 +47739,7 @@ function yA({ params: e }) {
       F = D.member_id,
       ce = D.household_id || D.members?.household_id;
     (await W.mutateAsync({
-      interview_assigned_to: b || null,
+      ...interviewerAssignment(b),
       interview_date: C || null,
       interview_due_date: E || null,
       interview_notes: P || null,
@@ -49031,6 +49059,7 @@ function yA({ params: e }) {
                                           }),
                                           n.jsxs(Fe, {
                                             children: [
+                                              n.jsx(de, { value: "none", children: "Unassigned" }),
                                               n.jsxs(de, {
                                                 value: "bishopric",
                                                 children: [
@@ -49071,7 +49100,7 @@ function yA({ params: e }) {
                                           "border-[hsl(222,47%,18%)]/30 text-[hsl(222,47%,18%)]",
                                         onClick: () =>
                                           W.mutate({
-                                            interview_assigned_to: b || null,
+                                            ...interviewerAssignment(b),
                                           }),
                                         disabled: W.isPending,
                                         "data-testid":
@@ -49720,6 +49749,7 @@ function yA({ params: e }) {
                                         }),
                                         n.jsxs(Fe, {
                                           children: [
+                                            n.jsx(de, { value: "none", children: "Unassigned" }),
                                             n.jsxs(de, {
                                               value: "bishopric",
                                               children: [

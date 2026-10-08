@@ -1,5 +1,28 @@
 # Bundle patches
 
+### 2026-10-07: Bishopric interviewer group
+
+Source now lives in `src/recovered-app.js`; rebuild with `npm ci && npm run build`.
+This is formatted recovered bundle source, not the original React project.
+
+- Migration `migrations/20261007_bishopric_interviewer.sql` adds nullable
+  `interview_assigned_group`, limited to `bishopric`, mutually exclusive with the
+  individual UUID. All 222 assignments and 53 assigned-person values were preserved.
+- `interviewerAssignment`, `interviewerSelection`, and `interviewerDisplay` encode,
+  reload, and render group assignments without putting text into a UUID field.
+- Both detail save paths use the same encoder. Release assignment and Revert to
+  Discussing clear stale groups; whole-row duplication retains group assignments.
+- Queue SELECT includes the group; existing Approved/Extended/Accepted/Sustained
+  visibility rules apply to group labels and optional dates.
+- Home pending interviews include group assignments only for bishop/counselor roles.
+  Administrative Bishopric membership including clerk/secretary remains unchanged.
+- Five automated tests passed. Mocked-network browser tests exercised both real
+  save controls, reload, person/group/unassigned switching, Board/Table labels and
+  dates. Desktop/mobile screens inspected; no horizontal mobile overflow or JS errors.
+- Live database transition tests ran inside a rolled-back transaction. No real
+  calling's interviewer was changed by testing.
+- Asset query version: `2026-10-07-1`.
+
 Running log of every hand-patch applied to `assets/index-CDdqaBQN.js` (or its successor). Each entry documents what changed, where, why, and how to reapply if the bundle is ever rebuilt from source (which will shift all offsets and mangled names).
 
 Format for each patch:
